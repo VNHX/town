@@ -35,3 +35,5 @@
     |-- build/ 前端 build 任务
     |-- config/ 配置文件
     |-- lib/ 依赖库
+##打包
+#node lib/create-index-html.js
