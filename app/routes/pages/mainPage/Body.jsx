@@ -4,19 +4,22 @@ import FixedContent from '../../../components/common/FixedContent.jsx';//屏幕�
 var actions = require('redux/actions');
 var $ = require('jquery');
 import css from './Body.scss';
-
+import Overview from './overview/Overview.jsx';
+import Main from './main/Main.jsx';
 
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
   },
   render() {
-    let {}=this.props;
+    let {params}=this.props;
+    console.log(555,params)
     return (
       <FixedContent mode="fullWidth">
         {
-          <div className={css.whole}>
-            <div className={css.circle}></div>
+          <div params={params} className={css.whole}>
+            {params.page=='main' && <Main/>}
+            {params.page=='overview' && <Overview/>}
           </div>
         }
       </FixedContent>    

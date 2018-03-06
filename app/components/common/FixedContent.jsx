@@ -6,21 +6,13 @@ import $ from 'jquery';
 let FixedContent = React.createClass({
 
   getContentStyle(){
-    let {mode, origin} = this.props;  
-
-    let actWidth=window.innerWidth;
-    let desWidth;//设计宽度
-    if(actWidth>1920){
-      desWidth='100%';//大屏宽度
-    }else{
-      desWidth=actWidth*3;//小屏*3
-    }
-    var remSize = window.innerWidth / 192;
+    let {mode, origin} = this.props;    
+    var remSize = window.screen.height / 64;
     document.querySelector("html").style.fontSize = remSize + "px";
     if (mode === 'fullWidth') {
       return {
         'height':'100%',
-        'width':desWidth,
+        'width':'100%',
       };
     } else {
       return {};
@@ -29,10 +21,12 @@ let FixedContent = React.createClass({
 
   componentDidMount() {
     window.addEventListener("resize", this.adjustWidth);
+    console.log('resize','111')
   },
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.adjustWidth);
+    console.log('resize','000')
   },
 
   adjustWidth() {
