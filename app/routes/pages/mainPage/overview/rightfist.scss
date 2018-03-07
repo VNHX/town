@@ -1,0 +1,98 @@
+ .hxconfist{
+        width: 33.4%;
+        height: 100%;
+    position: absolute;
+        right: 0;
+        top: 0;
+        .hxEchar{
+            width: 47%;
+            height: 48%;
+            position: relative;
+            top: 2%;
+            left: 0%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            display: inline-table;
+        }
+        .hxEchar01{
+            width: 47%;
+            height: 48%;
+            position: relative;
+            top: 2%;
+            left: 2%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            display: inline-table;
+        }
+        .hxEchar02{
+            width: 47%;
+            height: 48%;
+            position: relative;
+            top: 2%;
+            left: 0%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            display: inline-table;
+        }
+        .hxEchar03{
+            width: 47%;
+            height: 48%;
+            position: relative;
+            top: 2%;
+            left: 2%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            display: inline-table;
+        }
+        .hxEchad span:nth-child(1){
+            position: absolute;
+            right:0%;
+            top: 0%;
+            padding: 2%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 2px 2px 0 0;
+        }
+        .hxEchad span:nth-child(2){
+            position: absolute;
+            left: -1%;
+            top: -1%;
+            padding: 2%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 2px 0 0 2px;
+        }
+        .hxEchad span:nth-child(3){
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            padding: 2%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width:0 2px 2px 0;
+        }
+        .hxEchad span:nth-child(4){
+            position: absolute;
+            left: -1%;
+            bottom: -1%;
+            padding: 2%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 0  0 2px 2px;
+        }
+        .hxEchad p{
+            background: #48a6cc;
+            width: 51%;
+            height: 0%;
+            margin-left: 2%;
+            margin-top: 2%;
+            text-align: center;
+            font-size: 0.02rem;
+            color: #ffffff;
+        }
+    }
+   
