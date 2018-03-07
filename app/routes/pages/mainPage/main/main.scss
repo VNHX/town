@@ -71,7 +71,6 @@
 		}
 		.circleBig_bottom{
 			position:absolute;
-			bottom:16%;
 			z-index:1;
 			display:inline-block;
 			height:36rem;
@@ -265,8 +264,8 @@
 			background: url(../img/line_right1.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:-1rem;
-			top:8.5rem;
+			left:-2rem;
+			top:9.5rem;
 			height:12rem;
 			width:14rem;
 		}	
@@ -338,9 +337,9 @@
 			background-size: 100% 100%;
 			position:absolute;
 			left:-11rem;
-			top:0;
+			top:-1rem;
 			height:8rem;
-			width:16rem;
+			width:17rem;
 		}	
 		img{
 			height:100%;
@@ -531,14 +530,18 @@
 		background: url(../img/4.png);
 		background-size: 100% 100%;
 		color: #fff;
-		padding: 5rem 2rem;
-		.icon{
-			display:inline-block;
-			height:1rem;
-			width:1.5rem;
-			background:url(../img/icon6.png);
-			background-size:100% 100%;
-		}
+		padding: 3rem 2rem;
+		.name{
+			padding-top: 2rem;
+			padding-left: 1rem;
+			.icon{
+				display:inline-block;
+				height:1rem;
+				width:1.5rem;
+				background:url(../img/icon6.png);
+				background-size:100% 100%;
+			}
+		}		
 		.part1{
 			display:inline-block;
 			height:7rem;
@@ -548,6 +551,8 @@
 			text-align:center;
 			padding-top:3rem;
 			font-size:1rem;
+			position:relative;
+			top: 1rem;
 		}
 		.part2{
 			display:inline-block;

@@ -159,7 +159,7 @@ let Component = React.createClass({
             </table>
         </div>
         <div className={css.boardRight}>
-          <div><span className={css.icon}></span>招商引资看板</div>
+          <div className={css.name}><span className={css.icon}></span>招商引资看板</div>
           <div className={css.part1}>意向企业<div>1</div><div className={css.time}>本月</div></div>
           <div className={css.part2}>意向企业<div>1</div><div className={css.time}>本年</div></div>
           <div className={css.part3}>签约企业<div>1</div><div className={css.time}>本月</div></div>
