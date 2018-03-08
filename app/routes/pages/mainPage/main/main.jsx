@@ -6,6 +6,8 @@ import css from './main.scss';
 import circle1 from './../img/circle.png';
 import circle2 from './../img/circleBig.png';
 import MainChart from './chart/MainChart.jsx';
+var {browserHistory} = require('react-router');
+import Sun from '../img/tianqi.png';
 //import webSocket from '../functionCom/socketClient.js';
 
 let Component = React.createClass({
@@ -19,34 +21,17 @@ let Component = React.createClass({
     $("#nav").hide('slow')
   },
   render() {
-    let {}=this.props;
+    let {toOverview,weekday,timeNow,dateNow}=this.props;
     return (
       <div className={css.main}>
         <div className={`${css.circle} ${css.circle1}`}>
           <div className={css.line_left1}></div>
-          <img src={circle1}/>
+          <img className={css.bg} src={circle1}/>
           <div className={css.text1}>
-            <div className={css.title}><span className={css.icon}></span>企业档案管理</div>
-            <table>
-              <tbody>
-                <tr>
-                  <td className={css.num}>100/269</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>在办/累计</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td className={css.num}>2</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>知识份数</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className={css.time}>{timeNow}</div>
+            <div className={css.date}>{dateNow}</div>
+            <div className={css.weekday}>{weekday}</div>
+            <div className={css.sun}><img src={Sun}/></div>
           </div>
         </div>
         <div className={`${css.circle} ${css.circle2}`}>
@@ -63,12 +48,20 @@ let Component = React.createClass({
           <img src={circle1}/>
           <div className={css.text3}>
             <div className={css.title}><span className={css.icon}></span>产业分析</div>
-            <div className={css.num}>0%</div>
-            <div className={css.word}>小镇占比率</div>
-            <div><div></div></div>
+            <table>
+              <tbody>
+                <tr className={css.two}>
+                  <td className={css.color}>A区</td><td className={css.color}>B区</td>
+                </tr>
+                <tr className={css.two}>
+                  <td>14家</td><td>15家</td>
+                </tr>
+              </tbody>              
+            </table>
+            <div className={`${css.name} ${css.color}`}>服务外包核心区</div>
+            <div className={css.num}>15家企业</div>
           </div>
         </div>
-
         <div className={css.middle}>
           <div className={css.circleBig}></div>
           <div className={css.textBig}>
@@ -92,7 +85,7 @@ let Component = React.createClass({
               </table>
           </div>   
           <div className={css.circleBig_bottom}></div>
-        </div>        
+        </div>   
 
         <div className={`${css.circle} ${css.circle4}`}>
           <div className={css.line_right1}></div>
@@ -123,12 +116,9 @@ let Component = React.createClass({
             <div className={css.word}>小镇占比率</div>
           </div>
         </div>
-
         <div className={css.leftBg}></div>   
-        
         <div className={css.line_bar1}></div>
         <div className={css.line_bar2}></div>
-
         <div className={css.overviewPro}>
           <div className={css.title}><span className={css.icon}></span>项目孵化概览</div>
           <div className={css.name}>苗圃项目</div>
@@ -168,7 +158,7 @@ let Component = React.createClass({
         <div className={css.menu} onMouseLeave={()=>this.hideNav()}>
           <div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>
           <ul className={css.nav} id="nav">
-              <li>nav1</li>
+              <li onClick={()=>toOverview()}>nav1</li>
               <li>nav2</li>
               <li>nav3</li>
               <li>nav4</li>
@@ -180,7 +170,9 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-         
+        timeNow: state.vars.timeNow,
+        dateNow: state.vars.dateNow,
+        weekday: state.vars.weekday,
     }
 };
 
@@ -194,8 +186,21 @@ const mapDispatchToProps = (dispatch) => {
       // function success(res){
       //   console.log(999,res)
       // }
+      function setTime(){
+        let myDate = new Date();
+        let timeNow=myDate.getHours()+':'+myDate.getMinutes()+":"+myDate.getSeconds();
+        let dateNow=myDate.toLocaleDateString();//获取当前日期
+        let day=myDate.getDay();//星期
+        let weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+        dispatch(actions.setVars('timeNow',timeNow));
+        dispatch(actions.setVars('dateNow',dateNow));
+        dispatch(actions.setVars('weekday',weekday[day]));
+      }      
+      setInterval(setTime, 1000);
     },
-    
+    toOverview: ()=>{
+      browserHistory.push('/app/all/project/town/overview')
+    }
     
   }
 };
