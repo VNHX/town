@@ -20,7 +20,7 @@
 			width:24rem;
 			background: url(./../img/bigCircle.png);
 			background-size:100% 100%;
-			animation:turn 15s infinite linear;
+			animation:turn 20s infinite linear;
 			z-index:2;			
 		}
 		.textBig{
@@ -78,12 +78,11 @@
 			background: url(./../img/bottom.png);
 			background-size:100% 100%;
 		}
-	}
-	
+	}	
 	.circle1{
 		display:inline-block;		
-		height:13rem;
-		width:13rem;
+		height:14rem;
+		width:14rem;
 		position:absolute;
 		left:6%;
 		top:8%;	
@@ -96,10 +95,10 @@
 			height:15rem;
 			width:35rem;
 		}	
-		img{
+		img.bg{
 			height:100%;
 			width:100%;
-			animation:turn 9s infinite linear;
+			animation:turn 25s infinite linear;
 		}
 		.text1{
 			position:absolute;
@@ -107,28 +106,35 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:3.5rem 2rem 0 2rem;
-			.title{
-				height:2rem;
-				line-height:2rem;
-				color:#fff;
-				font-size:1rem;
-				text-align:center;
-				border:1px solid #337ab7;
-				border-radius:1rem;
-				span.icon{
-					display:inline-block;
-					height:1rem;
-					width:1.2rem;
-					background:url(../img/file.png) no-repeat;
-					background-size:100% 100%;
-				}
+			padding:2rem 2rem 0 2rem;
+			color: #fff;
+			.time{
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				font-size: 1.8rem;
 			}
-			table{
-				color:#fff;
-				font-size:1rem;
-				.num{
-					color:#ca953b;
+			.date{
+				height: 2rem;
+				line-height: 2rem;
+				text-align: center;
+				font-size: 1.4rem;
+			}
+			.weekday{
+				height: 1.5rem;
+				line-height: 2rem;
+				text-align: center;
+				font-size: 1rem;
+			}
+			.sun{
+				height: 4rem;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				items-align: center;
+				img{
+					height: 4rem;
+					width: 4rem;
 				}
 			}
 		}
@@ -152,7 +158,7 @@
 		img{
 			height:100%;
 			width:100%;
-			animation:turn 12s infinite linear;
+			animation:turn 28s infinite linear;
 		}
 		.text2{
 			position:absolute;
@@ -220,9 +226,11 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:3rem 2rem;
+			padding:2.2rem 2rem;
 			.title{
 				height:2rem;
+				width: 86%;
+				margin-left: 7%;
 				line-height:2rem;
 				color:#fff;
 				font-size:1.2rem;
@@ -237,20 +245,27 @@
 					background-size:100% 100%;
 				}
 			}
-			.num{
-				color:#ca953b;
-				text-align:center;
-				height:3rem;
-				line-height:4rem;
-				font-size:1rem;
+			table{
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 3rem;
+				color: #fff;
+				font-size: 1rem;
+				td{
+					width: 50%;
+					text-align: center;
+				}
 			}
-			.word{
-				color:#fff;
-				text-align:center;
-				height:2rem;
-				line-height:2rem;
-				font-size:1rem;
+			.name,.num{
+				color: #fff;
+				font-size: 1rem;
+				text-align: center;
+				color: #fff;
 			}
+			.color{
+				color: #ca953b;;
+			}			
 		}
 	}
 	.circle4{
@@ -344,7 +359,7 @@
 		img{
 			height:100%;
 			width:100%;
-			animation:turn 12s infinite linear;
+			animation:turn 26s infinite linear;
 		}
 		.text5{
 			position:absolute;
@@ -597,8 +612,7 @@
 			height:2.5rem;
 			line-height:2.5rem;
 		}
-	}
-	
+	}	
 	.line_bar1{
 		background: url(../img/hx_guang.png);
 		background-size: 100% 100%;
@@ -655,6 +669,7 @@
 				background: red;
 				color: #fff;
 				margin-left: .5rem;
+				cursor: pointer;
 			}
 		}
 	}	
