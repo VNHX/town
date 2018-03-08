@@ -26,14 +26,14 @@ let Component = React.createClass({
     <div className={style.hxEchad}>
     <span></span> <span></span> <span></span> <span></span>
     <p>签约项目产业分布</p>
-    <div className={style.sdf}><Rightchar/></div>
+ <Rightchar/>
     </div>
     </div>
     <div className={style.hxEchar02}>
     <div className={style.hxEchad}>
     <span></span> <span></span> <span></span> <span></span>
     <p>项目同比排名</p>
-    <div className={style.sdf}><RightCha/></div>
+   <RightCha/>
     </div>
 
     </div>

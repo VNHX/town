@@ -16,7 +16,9 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:190,
+                height:160,
+                reflow:true,
+                plotShadow: false,
             },
             title: {
                 text: '',
@@ -47,7 +49,7 @@ let Component = React.createClass({
                 enabled: false
             },
             series: [{
-                name: '预算拨款',
+ 
                 data: [5, 10, 15, 20, 25],
                 pointPlacement: 'on'
             }]
