@@ -11,7 +11,7 @@ let Component = React.createClass({
     let {}=this.props;
     return (
         <div className={style.ss}>
-        <div className={style.sd}>
+        {/* <div className={style.sd}>
         <p>项目名称</p>
         <p>累计</p>
         <p>上年年度</p>
@@ -52,7 +52,29 @@ let Component = React.createClass({
         <span>4</span>
         <span>0</span>
         <span>0.00%</span>
-        </div>
+        </div> */}
+ <table >
+<tr>
+  <th>Company</th>
+  <th>Contact</th>
+  <th>Country</th>
+</tr>
+<tr>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Germany</td>
+</tr>
+<tr >
+<td>Ernst Handel</td>
+<td>Roland Mendel</td>
+<td>Austria</td>
+</tr>
+<tr>
+<td>Island Trading</td>
+<td>Helen Bennett</td>
+<td>UK</td>
+</tr>
+</table>
         </div>            
     )
   }

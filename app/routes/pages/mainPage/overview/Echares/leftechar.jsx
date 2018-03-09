@@ -15,8 +15,9 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:190,
-                // top:-10,
+                height:170,
+                plotShadow: false,
+                reflow:true,
             },
             
             title: {
@@ -38,19 +39,7 @@ let Component = React.createClass({
                         enabled:false
                     }
             },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'top',
-                x: 20,
-                y: -12,
-                itemStyle: {
-                    color: '#ffffff',
-                    fontWeight: 'bold'
-                },
-                itemMarginTop: 2,
-                itemMarginBottom: 2
-            },
+           
             plotOptions: {
                 series: {
                     // stacking: 'normal'
@@ -64,7 +53,7 @@ let Component = React.createClass({
                 data: [5, 3, 7, 9,]
             },{
                 name: '累计签约项目',
-                data: [3, 4, 4, 2,]
+                data: [3, 4, 4, 9,]
             }]
         };
         return (

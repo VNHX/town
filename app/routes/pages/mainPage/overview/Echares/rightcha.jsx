@@ -16,7 +16,10 @@ let Component = React.createClass({
                 plotBorderWidth: 0,
                 borderWidth: 0,
                 height:190,
+                // width:100,
                 // top:-10,
+                plotShadow: false,
+                reflow:true,
             },
             
             title: {
@@ -38,19 +41,19 @@ let Component = React.createClass({
                         enabled:false
                     }
             },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'top',
-                x: 20,
-                y: -12,
-                itemStyle: {
-                    color: '#ffffff',
-                    fontWeight: 'bold'
-                },
-                itemMarginTop: 2,
-                itemMarginBottom: 2
-            },
+            // legend: {
+            //     layout: 'vertical',
+            //     align: 'right',
+            //     verticalAlign: 'top',
+            //     x: 20,
+            //     y: -12,
+            //     itemStyle: {
+            //         color: '#ffffff',
+            //         fontWeight: 'bold'
+            //     },
+            //     itemMarginTop: 2,
+            //     itemMarginBottom: 2
+            // },
             plotOptions: {
                 series: {
                     // stacking: 'normal'

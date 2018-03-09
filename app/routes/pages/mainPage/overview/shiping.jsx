@@ -11,7 +11,7 @@ let Component = React.createClass({
   render() {
     let {}=this.props;
     return (
-        <div className={style.shiping}>eqweqwe </div>
+        <div className={style.shiping}> </div>
                   
     )
   }

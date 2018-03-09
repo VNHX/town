@@ -15,8 +15,10 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:190,
-                plotShadow: false
+                height:147,
+                plotShadow: false,
+                reflow:true,
+              
             },
             title: {
                 text: ''
@@ -25,7 +27,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [0, 0.1, 0.2,  0.3,  0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1, 1.0, 1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2],
+                categories: [0, 0.1, 0.2,  0.3, 1.0, 1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2],
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
