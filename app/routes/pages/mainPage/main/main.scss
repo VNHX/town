@@ -6,6 +6,7 @@
 	height:100%;
 	width:100%;
 	position:relative;
+	color: #fff;
 	.middle{
 		position:absolute;
 		width:30%;
@@ -16,8 +17,8 @@
 		align-items:center;
 		.circleBig{
 			display:inline-block;
-			height:24rem;
-			width:24rem;
+			height:32rem;
+			width:32rem;
 			background: url(./../img/bigCircle.png);
 			background-size:100% 100%;
 			animation:turn 20s infinite linear;
@@ -25,13 +26,12 @@
 		}
 		.textBig{
 			position: absolute;
-			height:24rem;
-			width:100%;
-			z-index: 3;
-			padding:6rem 30%;
+		    height: 24rem;
+		    width: 20rem;
+		    z-index: 3;
+		    padding-top: 6rem;
 			.title{
 				display: inline-block;
-				color:#fff;
 				font-size:1rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -49,11 +49,9 @@
 				height:3rem;
 				line-height: 3rem;
 				font-size: 1.5rem;
-				color: #fff;
 			}
 			table{
 				width: 100%;
-				color: #fff;
 				font-size: 1rem;
 				tr{
 					height: 2rem;
@@ -73,7 +71,7 @@
 			position:absolute;
 			z-index:1;
 			display:inline-block;
-			height:36rem;
+			height:46rem;
 			width:57rem;
 			background: url(./../img/bottom.png);
 			background-size:100% 100%;
@@ -81,19 +79,19 @@
 	}	
 	.circle1{
 		display:inline-block;		
-		height:14rem;
-		width:14rem;
+		height:24rem;
+		width:24rem;
 		position:absolute;
-		left:6%;
+		left:3%;
 		top:8%;	
 		.line_left1{
 			background: url(../img/line_left1.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:6.5rem;
-			top: -4rem;
-			height:15rem;
-			width:35rem;
+			left:9rem;
+			top: -6rem;
+			height:22rem;
+			width:145rem;
 		}	
 		img.bg{
 			height:100%;
@@ -106,25 +104,24 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:2rem 2rem 0 2rem;
-			color: #fff;
+			padding:5rem 2rem 0 2rem;
 			.time{
+				height: 4rem;
+				line-height: 4rem;
+				text-align: center;
+				font-size: 3rem;
+			}
+			.date{
 				height: 3rem;
 				line-height: 3rem;
 				text-align: center;
-				font-size: 1.8rem;
-			}
-			.date{
-				height: 2rem;
-				line-height: 2rem;
-				text-align: center;
-				font-size: 1.4rem;
+				font-size: 2.5rem;
 			}
 			.weekday{
-				height: 1.5rem;
-				line-height: 2rem;
+				height: 3rem;
+				line-height: 3rem;
 				text-align: center;
-				font-size: 1rem;
+				font-size: 2rem;
 			}
 			.sun{
 				height: 4rem;
@@ -142,18 +139,18 @@
 	.circle2{
 		position:absolute;
 		display:inline-block;
-		height:15rem;
-		width:15rem;
+		height:24rem;
+		width:24rem;
 		left:22%;
-		top:35%;
+		top:32%;
 		.line_left2{
 			background: url(../img/line_left2.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:7.5rem;
-			top:-4.8rem;
-			height:10rem;
-			width:15rem;
+			left:8rem;
+			top:-9rem;
+			height:20rem;
+			width:80rem;
 		}		
 		img{
 			height:100%;
@@ -166,11 +163,10 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:4rem;
+			padding:6rem;
 			.title{
 				height:2rem;
 				line-height:2rem;
-				color:#fff;
 				font-size:1.2rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -191,7 +187,6 @@
 				font-size:1.2rem;
 			}
 			.word{
-				color:#fff;
 				text-align:center;
 				height:2rem;
 				line-height:2rem;
@@ -204,16 +199,16 @@
 		left:30%;
 		top:65%;
 		display:inline-block;
-		height:12rem;
-		width:12rem;	
+		height:16rem;
+		width:16rem;	
 		.line_left3{
 			background: url(../img/line_left3.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left: 2rem;
-			top:-7.5rem;
-			height: 10rem;
-			width:12rem;
+			left: -6rem;
+			top:-16rem;
+			height: 20rem;
+			width: 72rem;
 		}	
 		img{
 			height:100%;
@@ -226,13 +221,12 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:2.2rem 2rem;
+			padding:4rem 2rem;
 			.title{
 				height:2rem;
 				width: 86%;
 				margin-left: 7%;
 				line-height:2rem;
-				color:#fff;
 				font-size:1.2rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -250,7 +244,6 @@
 				margin: 0;
 				width: 100%;
 				height: 3rem;
-				color: #fff;
 				font-size: 1rem;
 				td{
 					width: 50%;
@@ -258,10 +251,8 @@
 				}
 			}
 			.name,.num{
-				color: #fff;
 				font-size: 1rem;
 				text-align: center;
-				color: #fff;
 			}
 			.color{
 				color: #ca953b;;
@@ -271,18 +262,18 @@
 	.circle4{
 		position:absolute;
 		display:inline-block;
-		height:15rem;
-		width:15rem;
-		left:60%;
-		top:8%;	
+		height:25rem;
+		width:25rem;
+		left:65%;
+		top:5%;	
 		.line_right1{
 			background: url(../img/line_right1.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:-2rem;
-			top:9.5rem;
+			left:-41rem;
+			top:20rem;
 			height:12rem;
-			width:14rem;
+			width:60rem;
 		}	
 		img{
 			height:100%;
@@ -295,11 +286,10 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:3.5rem 3rem;
+			padding:8rem 4rem;
 			.title{
 				height:2rem;
 				line-height:2rem;
-				color:#fff;
 				font-size:1rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -324,7 +314,6 @@
 				display: inline-block;
 				height: 1.5rem;
 				width: 50%;
-				color:#fff;
 				font-size:1rem;
 			}
 			.total{
@@ -343,18 +332,18 @@
 	.circle5{
 		position:absolute;
 		display:inline-block;
-		height:18rem;
-		width:18rem;
-		left:68%;
-		top:58%;	
+		height:24rem;
+		width:24rem;
+		left:76%;
+		top:50%;	
 		.line_right2{
 			background: url(../img/line_right2.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:-11rem;
-			top:-1rem;
-			height:8rem;
-			width:17rem;
+			left:-94rem;
+			top:0rem;
+			height:20rem;
+			width:125rem;
 		}	
 		img{
 			height:100%;
@@ -367,7 +356,7 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding-top:4rem;
+			padding-top:6rem;
 			padding-left:2.5rem;
 			padding-right:2.5rem;
 			.title{
@@ -375,7 +364,6 @@
 				line-height:2rem;
 				width: 80%;
 				margin-left: 10%;
-				color:#fff;
 				font-size:1rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -396,10 +384,10 @@
 	.circle6{
 		position:absolute;
 		display:inline-block;
-		left:75%;
-		top:18%;
-		height:12rem;
-		width:12rem;
+		left:82%;
+		top:7%;
+		height:20rem;
+		width:20rem;
 		img{
 			height:100%;
 			width:100%;
@@ -411,11 +399,10 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:2.5rem 2.2rem;
+			padding:5rem 4rem;
 			.title{
 				height:2rem;
 				line-height:2rem;
-				color:#fff;
 				font-size:1rem;
 				text-align:center;
 				border:1px solid #337ab7;
@@ -436,7 +423,6 @@
 				line-height:1.2rem;
 			}
 			.word{
-				color:#fff;
 				text-align:center;
 				font-size:1rem;
 			}
@@ -447,21 +433,19 @@
 		left:0;
 		top:0;
 		height:100%;
-		width:14rem;
+		width:18rem;
 		background: url(../img/left_bg.png);
 		background-size: 100% 100%;
 	}
 	.overviewPro{
 		position :absolute;
-		left:10%;
+		left:7%;
 		top: 58%;
-		height: 16rem;
-		width: 14rem;
+		height: 18rem;
+		width: 19rem;
 		background: url(../img/2.png);
-		background-size: 100% 100%;
-		color: #fff;
-		padding: 2rem 1.5rem; 
-		font-size:1.2rem;
+		background-size: 100% 100%;		
+		padding: 3rem 1.5rem;
 		.title{
 			border:1px solid #337ab7;
 			border-radius: 0.5rem;
@@ -496,21 +480,38 @@
 	}
 	.boardPro{
 		position :absolute;
-		left:22%;
+		left:14%;
 		top: 11%;
-		height: 12rem;
-		width: 13rem;
+		height: 16rem;
+		width: 16rem;
 		background: url(../img/3.png);
 		background-size: 100% 100%;
-		color: #fff;
-		padding: 1rem 0.5rem;
+		padding: 2rem 0.5rem;
 		.title{
 			border:1px solid #337ab7;
 			border-radius: 0.5rem;
 			text-align: center;
 			height:2rem;
 			line-height: 2rem;
-			font-size:1.2rem;
+			font-size:1.2rem;			
+		}
+		table{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			font-size: 1rem;
+			tr{
+				width: 100%;
+				height: 2rem;
+				line-height: 3rem;
+				td{
+					text-align: center;
+					span.num{
+						font-size: 1.5rem;
+						color: #2299ff;
+					}
+				}
+			}
 		}
 		.icon{
 			display:inline-block;
@@ -541,13 +542,12 @@
 		right:1%;
 		top: 5%;
 		height: 90%;
-		width: 15rem;
+		width: 30rem;
 		background: url(../img/4.png);
 		background-size: 100% 100%;
-		color: #fff;
-		padding: 3rem 2rem;
+		padding: 1rem 6rem;
 		.name{
-			padding-top: 2rem;
+			padding-top: 3rem;
 			padding-left: 1rem;
 			.icon{
 				display:inline-block;
@@ -559,53 +559,53 @@
 		}		
 		.part1{
 			display:inline-block;
-			height:7rem;
-			width:7rem;
+			height:10rem;
+			width:10rem;
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
 			padding-top:3rem;
 			font-size:1rem;
 			position:relative;
-			top: 1rem;
+			top: 0rem;
 		}
 		.part2{
 			display:inline-block;
-			height:7rem;
-			width:7rem;
+			height:10rem;
+			width:10rem;
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
 			padding-top:3rem;
 			position:relative;
-			left:4rem;
-			top: 1rem;
+			left:9rem;
+			top: -1rem;
 			font-size:1rem;
 		}
 		.part3{
 			display:inline-block;
-			height:7rem;
-			width:7rem;
+			height:10rem;
+			width:10rem;
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
 			padding-top:3rem;
 			position:relative;
 			left:0rem;
-			top: 1rem;
+			top: -1rem;
 			font-size:1rem;
 		}
 		.part4{
 			display:inline-block;
-			height:7rem;
-			width:7rem;
+			height:10rem;
+			width:10rem;
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
 			padding-top:3rem;
 			position:relative;
-			left:4rem;
-			top: 1rem;
+			left:9rem;
+			top: -1rem;
 			font-size:1rem;
 		}
 		.time{
@@ -617,8 +617,8 @@
 		background: url(../img/hx_guang.png);
 		background-size: 100% 100%;
 		position:absolute;
-		left:52%;
-		top:0;
+		left:55%;
+		top:10%;
 		height:190px;
 		width:8%;
 	}
@@ -626,8 +626,8 @@
 		background: url(../img/hx_guang.png);
 		background-size: 100% 100%;
 		position:absolute;
-		left:78%;
-		top:15%;
+		left:80%;
+		top:11%;
 		height:190px;
 		width:15%;
 	}
@@ -667,7 +667,6 @@
 				width: 7rem;
 				text-align: center;
 				background: red;
-				color: #fff;
 				margin-left: .5rem;
 				cursor: pointer;
 			}

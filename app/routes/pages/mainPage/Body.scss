@@ -4,11 +4,14 @@
   to {bottom: 0;}
 }
 .whole{
-  width: 100%;
+  width: 300%;
   height: 100%;
   position: relative; 
+  left: 0;
   background: url(./img/bg.jpg) no-repeat;
   background-size: 100% 100%;
+  transform:scale(.33333333333333333333333333333,1);
+  transform-origin: 0 0 0;
 }
 .circle{
   height:40rem;
