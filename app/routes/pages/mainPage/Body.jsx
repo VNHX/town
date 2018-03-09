@@ -4,6 +4,7 @@ import FixedContent from '../../../components/common/FixedContent.jsx';//屏幕�
 var actions = require('redux/actions');
 var $ = require('jquery');
 import css from './Body.scss';
+import NotFoundPage from "../../../components/common/NotFoundPage";
 import Overview from './overview/Overview.jsx';
 import Main from './main/Main.jsx';
 
