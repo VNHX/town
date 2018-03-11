@@ -8,6 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
+        let {height}=this.props;
         let configPie = {
             chart: {
                 type: 'bar',
@@ -15,11 +16,10 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:190,
-                // width:100,
-                // top:-10,
+                height: height,
                 plotShadow: false,
                 reflow:true,
+                marginRight: 120,
             },
             
             title: {
@@ -41,19 +41,28 @@ let Component = React.createClass({
                         enabled:false
                     }
             },
-            // legend: {
-            //     layout: 'vertical',
-            //     align: 'right',
-            //     verticalAlign: 'top',
-            //     x: 20,
-            //     y: -12,
-            //     itemStyle: {
-            //         color: '#ffffff',
-            //         fontWeight: 'bold'
-            //     },
-            //     itemMarginTop: 2,
-            //     itemMarginBottom: 2
-            // },
+           
+            legend: {
+                layout: 'vertical',
+                floating: true,
+                align: 'right',
+                verticalAlign: 'top',
+                x: 0,///间隔x轴的间隔
+                y: 0,///间隔y轴的间隔
+                itemStyle: {
+                    color: ' #ffffff', //开始颜色
+            },
+            itemHoverStyle: {
+                color: '#5c99ef'  // 鼠标移上颜色
+            },
+            itemHiddenStyle: {
+                color: 'green'  //点击后颜色
+            },
+            itemMarginTop: 5,  //上下间距
+            itemMarginBottom: 5,  //上下间距
+            symbolPadding: 15,  //标志间距
+            // symbolWidth:10,//标志间距
+        },
             plotOptions: {
                 series: {
                     // stacking: 'normal'
@@ -64,10 +73,12 @@ let Component = React.createClass({
             },
             series: [{
                 name: '损耗量',
-                data: [0,40,60,120]
+                data: [1,40,60,120],
+                color:'#7cb5ec',
             },{
                 name: '完成量',
-                // data: [3, 4, 4, 2,]
+                data: [3, 4, 4, 2,140],
+                color:'#0b4e6f',
             }]
         };
         return (

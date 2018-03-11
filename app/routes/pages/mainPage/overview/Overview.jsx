@@ -10,13 +10,28 @@ let Component = React.createClass({
   componentDidMount() {
     this.props.init();
   },
+  showNav: ()=> {
+    $("#nav").show('slow')
+  },
+  hideNav: ()=> {
+    $("#nav").hide('slow')
+  },
   render() {
-    let {}=this.props;
+    let {toOverview}=this.props;
     return (
         <div className={style.conet}>
        <Leftfist/>
       <Hxfist/>
      <Rightfist/>
+     <div className={style.menu} onMouseLeave={()=>this.hideNav()}>
+          <div className={style.img}><div className={style.src} onClick={()=>this.showNav()}></div></div>
+          <ul className={style.nav} id="nav">
+              <li onClick={()=>toOverview()}>nav1</li>
+              <li>nav2</li>
+              <li>nav3</li>
+              <li>nav4</li>
+          </ul>
+        </div>
         </div>
                   
     )
@@ -31,7 +46,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     init: ()=> {
-      
+      toOverview: ()=>{
+        browserHistory.push('/app/all/project/town/main')
+      }  
     }
   }
 };

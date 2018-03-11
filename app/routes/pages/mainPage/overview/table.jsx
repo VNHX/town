@@ -54,6 +54,7 @@ let Component = React.createClass({
         <span>0.00%</span>
         </div> */}
  <table >
+   <tbody>
 <tr>
   <th>Company</th>
   <th>Contact</th>
@@ -74,6 +75,17 @@ let Component = React.createClass({
 <td>Helen Bennett</td>
 <td>UK</td>
 </tr>
+<tr>
+<td>Island Trading</td>
+<td>Helen Bennett</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>Island Trading</td>
+<td>Helen Bennett</td>
+<td>UK</td>
+</tr>
+</tbody>
 </table>
         </div>            
     )

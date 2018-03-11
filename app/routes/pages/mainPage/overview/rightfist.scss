@@ -5,8 +5,8 @@
         right: 0;
         top: 0;
         .hxEchar{
-            width: 48%;
-            height: 48%;
+            width: 42%;
+            height: 47%;
             position: relative;
             top: 2%;
             left: 0%;
@@ -14,59 +14,46 @@
             background: rgba(0, 0, 0, 0.1);
             border: 1px solid #4a7cc1;
             overflow: hidden;
-            // display: inline-table;
+                     p{
+                background: #48a6cc;
+                width: 22%;
+                height: 9%;
+                margin-left: 2%;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: #ffffff;
+            }
+             .xaila{
+                width: 7%;
+                height: 10%;
+                position: absolute;
+                top: 3%;
+                left: 90%;
+                    .latu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/xaila.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }  
+             }
         }
-        .hxEchar01{
-            width: 48%;
-            height: 48%;
-            position: relative;
-            top: -45.7%;
-            left: -2%;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid #4a7cc1;
-            float: right;
-            overflow: hidden;
-        }
-        .hxEchar02{
-            width: 48%;
-            height: 48%;
-            position: relative;
-            top: 2%;
-            left: 0%;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid #4a7cc1;
-            // display: inline-table;
-            overflow: hidden;
-        }
-        .hxEchar03{
-            width: 48%;
-            height: 48%;
-            position: relative;
-            top: -46%;
-            left: -2%;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid #4a7cc1;
-            float: right;
-            overflow: hidden;
-            // display: inline-table;
-        }
+       
         .hxEchad span:nth-child(1){
             position: absolute;
             right:0%;
             top: 0%;
-            padding: 2%;
+            padding: 1%;
             border-style: solid;
             border-color: #6cebfc;
             border-width: 2px 2px 0 0;
         }
         .hxEchad span:nth-child(2){
             position: absolute;
-            left: -1%;
+            left: 0%;
             top: 0%;
-            padding: 2%;
+            padding: 1%;
             border-style: solid;
             border-color: #6cebfc;
             border-width: 2px 0 0 2px;
@@ -75,30 +62,150 @@
             position: absolute;
             right: 0%;
             bottom: 0%;
-            padding: 2%;
+            padding: 1%;
             border-style: solid;
             border-color: #6cebfc;
             border-width:0 2px 2px 0;
         }
         .hxEchad span:nth-child(4){
             position: absolute;
-            left: -1%;
+            left: 0%;
             bottom: 0%;
-            padding: 2%;
+            padding: 1%;
             border-style: solid;
             border-color: #6cebfc;
             border-width: 0  0 2px 2px;
         }
-        .hxEchad p{
-            background: #48a6cc;
-            width: 51%;
-            height: 0%;
-            margin-left: 2%;
-            margin-top: 2%;
-            text-align: center;
-            font-size: 0.02rem;
-            color: #ffffff;
-            margin-bottom: 18%;
+       
+        .hxEchar01{
+            width: 56%;
+            height: 51%;
+            position: relative;
+            top: -45%;
+            left: -1%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            float: right;
+            overflow: hidden;
+               p{
+                background: #48a6cc;
+                width: 22%;
+                height: 9%;
+                margin-left: 2%;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: #ffffff;
+            }
+            .xaila{
+                width: 5%;
+                height: 10%;
+                position: absolute;
+                top: 3%;
+                left: 90%;
+                    .latu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/xaila.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    ul{
+                        display: none;
+                        list-style: none;
+                        width: 1%;
+                        height: 4rem;
+                        margin: 0;
+                        padding: 0;
+                        background: rgba(0, 38, 82, 0.8);
+                        border-top: 1px solid #337ab7;
+                        padding: 0.5rem;
+                        li{
+                            float: left;
+                            height: 3rem;
+                            line-height: 3rem;
+                            width: 7rem;
+                            text-align: center;
+                            background: red;
+                            color: #fff;
+                            margin-left: .5rem;
+                            cursor: pointer;
+                        }
+                    }  
+             }
+              
+        }
+        .hxEchar02{
+            width: 42%;
+            height: 47%;
+            position: relative;
+            top: 3%;
+            left: 0%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            overflow: hidden;
+                p{
+                background: #48a6cc;
+                width: 22%;
+                height: 9%;
+                margin-left: 2%;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: #ffffff;
+             }
+             .xaila{
+                width: 7%;
+                height: 10%;
+                position: absolute;
+                top: 3%;
+                left: 90%;
+                    .latu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/xaila.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }  
+             }
+        }
+        .hxEchar03{
+            width: 56%;
+            height: 43%;
+            position: relative;
+            top: -44%;
+            left: -1%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #4a7cc1;
+            float: right;
+            overflow: hidden;
+                 p{
+                background: #48a6cc;
+                width: 22%;
+                height: 9%;
+                margin-left: 2%;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: #ffffff;
+            }
+            .xaila{
+                width: 5%;
+                height: 10%;
+                position: absolute;
+                top: 3%;
+                left: 90%;
+                    .latu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/xaila.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }  
+             }
         }
     }
    

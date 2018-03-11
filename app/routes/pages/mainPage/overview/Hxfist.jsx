@@ -11,57 +11,108 @@ let Component = React.createClass({
     let {timeNow,dateNow,weekday}=this.props;
     return (
         <div className={style.hxconfist}>
-        <div className={style.hxcosd}><div className={style.hxcont}> </div> </div>
-          <div className={style.hxcont01}>
-          <div className={style.sdf}> <div className={style.hxcont02}> </div> </div>
-          {/* <div className={style.dahezi}><div className={style.quan}><div className={style.quan01}></div></div></div> */}
-         
-          <div className={style .hxssd}>
-          <div className={style.hsdf}>
-        <span></span>
-          <p>本月意向项目</p>
-          <span>19个</span>
-          <span>+</span>
-          </div>
-          <div className={style.hsdf01}>
-        <span></span>
-          <p>本月意向项目</p>
-          <span>19个</span>
-          <span>+</span>
-          </div>
-          <div className={style.hsdf02}>
-        <span></span>
-          <p>本月意向项目</p>
-          <span>19个</span>
-          <span>+</span>
-          </div>
-          <div className={style.hsdf03}>
-        <span></span>
-          <p>本月意向项目</p>
-          <span>19个</span>
-          <span>+</span>
-          </div>
-          </div>
-          <div className={style.hxcontu}>
-            <div className={style.mg}></div>
-            <div className={style.hxcon09}><span></span><p>招商引资看板</p></div>
-            <div className={style.hxcvn}></div>
-            <div className={style.hxcvn01}></div>
-            <div className={style.hxasd}>
-         <div className={style.hxsd}><div className={style.mg}></div><div className={style.hxsdzi}><p>72</p> <span>累计意向</span></div></div>
-         <div className={style.hxsd01}><div className={style.mg}></div><div classNamw={style.hxsd02}><div className={style.hxsdzi}><p>1</p> <span>累计关闭</span></div></div></div>
-         <div className={style.hxsdas}><div className={style.mg}></div><div className={style.hxsdzi}><p>80</p> <span>累计签约</span></div></div>
-            </div>
-            <div className={style.tianqi}>
-            <div className={style.tianqi0}>
-            <div className={style.time}>{timeNow}</div>
-            <div className={style.day}>{dateNow}</div>
-            <div className={style.weweq}>{weekday}</div>
-            <div className={style.taiyang}></div>
-            </div>
-            </div>
-            </div>
-          </div>
+              <div className={style.biaoti}>
+                  <div className={style.biao}></div>
+              </div>
+                    <div className={style.cmtoa}>
+                        <div className={style.coi}>
+                            <div className={style.topz}></div>
+                        </div>
+                            <div className={style.voiyuan}>
+                                  <div className={style.yuanle}></div>
+                            </div>
+                                <div className={style.wezi}>
+                                    <div className={style.tubiao}>
+                                      <div className={style.tubiao2}></div>
+                                    </div>
+                                    <p>招商引资看板</p>
+                                </div>
+                                    <div className={style.wenzi2}>
+                                     <div className={style.tubiao3}>
+                                        <span className={style.tubiao3_1}></span>
+                                        <p className={style.weizi}>本月意向项目</p>
+                                        <span className={style.shuzi}>
+                                            19 
+                                            <p>个</p>
+                                        </span>
+                                        <span className={style.jia}>+</span>
+                                     </div>
+                                          <div className={style.tubiao4}>
+                                              <span className={style.tubiao3_1}></span>
+                                              <p className={style.weizi}>本月意向项目</p>
+                                              <span className={style.shuzi}>
+                                                  19 
+                                                  <p>个</p>
+                                              </span>
+                                              <span className={style.jia}>+</span>
+                                          </div>
+                                                <div className={style.tubiao5}>
+                                                    <span className={style.tubiao3_1}></span>
+                                                    <p className={style.weizi}>本月意向项目</p>
+                                                    <span className={style.shuzi}>
+                                                        19 
+                                                        <p>个</p>
+                                                    </span>
+                                                    <span className={style.jia}>+</span>
+                                                </div>
+                                                    <div className={style.tubiao6}>
+                                                        <span className={style.tubiao3_1}></span>
+                                                        <p className={style.weizi}>本月意向项目</p>
+                                                        <span className={style.shuzi}>
+                                                            19 
+                                                            <p>个</p>
+                                                        </span>
+                                                        <span className={style.jia}>+</span>
+                                                    </div>
+                                    </div>
+                                {/* 左边圆 */}
+                                    <div className={style.leftyuan}>
+                                        <div className={style.leftxain}>
+                                            <div className={style.xiaotao}></div>
+                                        </div>
+                                        <div className={style.yuanquan}>
+                                            <div className={style.yuan}></div>
+                                            <div className={style.yuanwenzi}>
+                                                <p className={style.yuanwenzi01}>72</p> 
+                                                  <span className={style.yuanwenzi02}>累计意向</span>
+                                            </div>
+                                        </div>
+                                        <div className={style.leftxain02}>
+                                            <div className={style.xiaotao}></div>
+                                        </div>
+                                        <div className={style.yuanquan02}>
+                                            <div className={style.yuan}></div>
+                                            <div className={style.yuanwenzi}>
+                                                <p className={style.yuanwenzi01}>72</p> 
+                                                  <span className={style.yuanwenzi02}>累计意向</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            {/* 右边圆 */}
+                                      <div className={style.rightyuan}>
+                                            <div className={style.rightxian}>
+                                                <div className={style.xiaotao}></div>
+                                            </div>
+                                                 <div className={style.rightyuanquan}>
+                                                        <div className={style.yuan}></div>
+                                                             <div className={style.yuanwenzi}>
+                                                                     <p className={style.yuanwenzi01}>72</p> 
+                                                                            <span className={style.yuanwenzi02}>累计意向</span>
+                                                             </div>
+                                                </div>
+                                                <div className={style.rqi}>
+                                                    <div className={style.rqbj}>
+                                                        <div className={style.rqks}>
+                                                            <span className={style.time}>{timeNow}</span>
+                                                            <span className={style.day}>{dateNow}</span>
+                                                            <span className={style.dayks}>{weekday}</span>
+                                                        </div>
+                                                            <div className={style.taiyang}></div>
+                                                    </div>
+                                                </div>
+                                      </div>
+                    </div>
+            
           </div>
         
                   
