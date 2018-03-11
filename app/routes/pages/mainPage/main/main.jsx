@@ -141,9 +141,9 @@ let Component = React.createClass({
                     <td>竣工</td>
                   </tr>
                   <tr>
-                    <td>80%</td>
-                    <td>6%</td>
-                    <td>14%</td>
+                    <td><span className={css.num}>80</span>%</td>
+                    <td><span className={css.num}>6</span>%</td>
+                    <td><span className={css.num}>14</span>%</td>
                   </tr>
                 </tbody>
             </table>
