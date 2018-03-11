@@ -8,6 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
+        let {height}=this.props;
         let configPie = {
             chart: {
                 polar: true,
@@ -16,27 +17,27 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:160,
+                height:height,
                 reflow:true,
-                plotShadow: false,
+                plotShadow: false,  marginRight: 120,
             },
             title: {
                 text: '',
             },
             pane: {
-                size: '20%'
+                startAngle: 0,
+                endAngle: 360
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
             xAxis: {
                 categories: ['N', 'NE', 'E', 'SE','S', 'SN','W','NW'],
-                tickmarkPlacement: 'on',
-                lineWidth: 0
+                tickInterval: 45,
+                min: 0,
+                max: 360,
             },
             yAxis: {
-                gridLineInterpolation: 'polygon',
-                lineWidth: 0,
                 min: 0,
                 title:{
                     enabled:false
@@ -48,10 +49,20 @@ let Component = React.createClass({
             legend: {
                 enabled: false
             },
+            plotOptions: {
+                series: {
+                    pointStart: 0,
+                    pointInterval: 45
+                },
+                column: {
+                    pointPadding: 0,
+                    groupPadding: 0
+                }
+            },
+            colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
             series: [{
- 
                 data: [5, 10, 15, 20, 25],
-                pointPlacement: 'on'
+                // pointPlacement: 'on'
             }]
         };
         return (
