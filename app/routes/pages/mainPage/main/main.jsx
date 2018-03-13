@@ -6,7 +6,7 @@ import css from './main.scss';
 import circle1 from './../img/circle.png';
 import circle2 from './../img/circleBig.png';
 import MainChart from './chart/MainChart.jsx';
-var {browserHistory} = require('react-router');
+import Nav from '../functionCom/nav.jsx';//导航
 import Sun from '../img/tianqi.png';
 //import webSocket from '../functionCom/socketClient.js';
 
@@ -155,15 +155,7 @@ let Component = React.createClass({
           <div className={css.part3}>签约企业<div>1</div><div className={css.time}>本月</div></div>
           <div className={css.part4}>签约企业<div>1</div><div className={css.time}>本年</div></div>
         </div>
-        <div className={css.menu} onMouseLeave={()=>this.hideNav()}>
-          <div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>
-          <ul className={css.nav} id="nav">
-              <li onClick={()=>toOverview()}>nav1</li>
-              <li>nav2</li>
-              <li>nav3</li>
-              <li>nav4</li>
-          </ul>
-        </div>
+        <Nav></Nav>
       </div>   
     )
   }
