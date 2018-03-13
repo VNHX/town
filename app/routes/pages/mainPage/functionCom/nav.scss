@@ -1,0 +1,41 @@
+.menu{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	.img{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		height: 100%;
+		width: 100%;
+		.src{
+			display:inline-block;
+			height:3rem;
+			width:6rem;
+			background: url('../img/down.png');
+			background-size: 100% 100%;
+			cursor: pointer;
+		}
+	}
+	ul.nav{
+		display: none;
+		list-style: none;
+		height: 4rem;
+		margin: 0;
+		padding: 0;
+		background: rgba(0, 38, 82, 0.8);
+		border-top: 1px solid #337ab7;
+		padding: 0.5rem;
+		li{
+			float: left;
+			height: 3rem;
+			line-height: 3rem;
+			width: 8rem;
+			text-align: center;
+			background: red;
+			margin-left: .5rem;
+			cursor: pointer;
+		}
+	}
+}
