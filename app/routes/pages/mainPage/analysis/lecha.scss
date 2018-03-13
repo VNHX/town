@@ -4,7 +4,6 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    border: 2px solid teal;
     overflow: hidden;
 //注册资本情况
     .hcomit{
@@ -74,7 +73,7 @@
                         height: 77%;
                         position: absolute;
                         top: 18%;
-                        left: 5%;
+                        left: 0%;
                      }
           }
      }
@@ -146,7 +145,7 @@
                     height: 77%;
                     position: absolute;
                     top: 18%;
-                    left: 5%;
+                    left: 0%;
                  }
       }
  }
@@ -214,8 +213,10 @@
                 color: #ffffff;
                  }
                  .tubiao{
-                    width: 100%;
-                    height: 77%;
+                    width: 13rem;
+                    height: 13rem;
+                    border-radius: 50%;
+                    border: 1px solid silver;
                     position: absolute;
                     top: 18%;
                     left: 5%;

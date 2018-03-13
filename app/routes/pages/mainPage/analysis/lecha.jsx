@@ -3,7 +3,10 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './lecha.scss';
-// import  Leftchrt from './Echar/lmi.jsx'
+import  Leftchrt from './Echar/lmi.jsx'  //注册资本情况
+import Lmicha from './Echar/Lmicha.jsx'  //在圆项目分布情况
+import Lcot from './Echar/lcot.jsx'//项目考核、成长情况
+//
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -23,11 +26,12 @@ let Component = React.createClass({
                             </div>
                             <p className={style.wenzi}>注册资本情况</p>
                                 <div className={style.tubiao}>
+                                <Leftchrt height={height}/>
                                 </div>
                         </div>
               </div>
 
-               <div className={style.hcomit2} id='meini'>
+               <div className={style.hcomit2} >
                         <div className={style.htu1}>
                             <div className={style.hbk}>
                                 <span></span>
@@ -37,12 +41,13 @@ let Component = React.createClass({
                             </div>
                             <p className={style.wenzi}>在圆项目分布情况</p>
                                 <div className={style.tubiao}>
+                                <Lmicha height={height}/>
                                 </div>
                         </div>
               </div>
 
               
-              <div className={style.hcomit3} id='meini'>
+              <div className={style.hcomit3} >
                         <div className={style.htu1}>
                             <div className={style.hbk}>
                                 <span></span>
@@ -52,6 +57,7 @@ let Component = React.createClass({
                             </div>
                             <p className={style.wenzi}>项目考核、成长情况</p>
                                 <div className={style.tubiao}>
+                                <Lcot height={height}/>
                                 </div>
                         </div>
               </div>
@@ -68,7 +74,7 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      
+        height:state.vars.height,
     }
 };
 
