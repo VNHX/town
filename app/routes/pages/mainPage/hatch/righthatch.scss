@@ -1,0 +1,534 @@
+.comit{
+    width: 33.4%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    // 企业性质
+    .rigfst{
+        width: 42%;
+        height: 42%;
+        position: relative;
+        top: 2.3%;
+        left: 3%;
+          .rigfstb{
+            width: 100%;
+            height: 100%;
+            background: rgba(25, 128, 216, 0.1);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px rgba(104, 94, 94, 0.5);
+              .hxbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hxbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hxbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hxbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    width: 16%;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: #ffffff;
+                     }
+                     .tubiao{
+                        width: 48%;
+                        height: 74%;
+                        position: absolute;
+                        top: 18%;
+                        left: 2%;
+                     }
+                     .rigtk{
+                        width: 44%;
+                        height: 80%;
+                        position: absolute;
+                        top: 15%;
+                        left: 53%;
+                        overflow: hidden;
+                            .rigtu{
+                                width: 100%;
+                                height: 63%;
+                                position: absolute;
+                                top: -7%;
+                                left: 0%;
+                                .rightu{
+                                   width: 100%;
+                                   height: 100%;
+                                   background: url(../img/xingk.png) no-repeat center;
+                                   background-size: 100% 100%; 
+                                }
+                            }
+                            .rigtu2{
+                                width: 89%;
+                                height: 50%;
+                                position: absolute;
+                                top: 0%;
+                                left: 5%;
+                                .rightu2{
+                                   width: 100%;
+                                   height: 100%;
+                                   background: url(../img/xing.png) no-repeat center;
+                                   background-size: 100% 100%; 
+                                }
+                            }
+                            .wenzi2{
+                                width: 100%;
+                                height: 60%;
+                                position: absolute;
+                                left: 2%;
+                                top: 59%;
+                                overflow: hidden;
+                                 p{
+                                    text-align: center;
+                                    font-size: 1rem;
+                                    color: #d6c25a;
+                                 }
+                            }
+                     }
+          }
+}
+// 行业分布情况
+     .rigtwo{
+        width: 42%;
+        height: 52%;
+        position: relative;
+        top: 3.3%;
+        left: 3%;
+          .rigfstb{
+            width: 100%;
+            height: 100%;
+            background: rgba(25, 128, 216, 0.1);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px rgba(104, 94, 94, 0.5);
+              .hxbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hxbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hxbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hxbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    width: 22%;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: #ffffff;
+                     }
+                     .tuwenzi{
+                        width: 42%;
+                        height: 84%;
+                        position: absolute;
+                        top: 15%;
+                        left: 1%;
+                        .tuwenzibj{
+                            width: 100%;
+                            height: 100%;
+                            background: url(../img/fenbu.png) no-repeat center;
+                            background-size: 100% 100%;
+                        }
+                        .tuwenz{
+                            width: 69%;
+                            position: absolute;
+                            left: 17%;
+                            top: 16%;
+                            overflow:hidden;
+                             p{
+                                text-align: center;
+                                font-size: 1rem;
+                                color: #ffffff;
+                             }
+                        }
+                     }
+                     .yuan{
+                        width: 6rem;
+                        height: 6rem;
+                        border: 1px solid slategrey;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 15%;
+                        left: 46%;
+                     }
+                     .yuanrig{
+                        width: 36%;
+                        height: 27%;
+                        position: absolute;
+                        top: 18%;
+                        left: 60%;
+                        .kmit{
+                            font-size: 1.6rem;
+                            color: #a99017;
+                            position: absolute;
+                            top: -6%;
+                            left: 0%;
+                        }
+                        .kmit01{
+                            font-size: 1.2rem;
+                            color: #ffffff;
+                            position: absolute;
+                            top: 25%;
+                            left: 0%;
+                        }
+                            .kmit02{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 25%;
+                                left: 18%;
+                            }
+                            .kmit03{
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                                position: absolute;
+                                top: 25%;
+                                left: 53%;
+                            }
+                            .kmit04{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 25%;
+                                left: 71%;
+                            }
+                        .kmit05{
+                            font-size: 1.2rem;
+                            color: #ffffff;
+                            position: absolute;
+                            top: 51%;
+                            left: 0%;
+                        }
+                            .kmit06{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 51%;
+                                left: 18%;
+                            }
+                            .kmit07{
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                                position: absolute;
+                                top: 51%;
+                                left: 53%;
+                            }
+                            .kmit08{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 51%;
+                                left: 71%;
+                            }
+                     }
+
+                     .yuan2{
+                        width: 6rem;
+                        height: 6rem;
+                        border: 1px solid slategrey;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 48%;
+                        left: 46%;
+                     }
+                     .yuanrig2{
+                        width: 36%;
+                        height: 27%;
+                        position: absolute;
+                        top: 46%;
+                        left: 60%;
+                        .kmit{
+                            font-size: 1.6rem;
+                            color: #a99017;
+                            position: absolute;
+                            top: -6%;
+                            left: 0%;
+                        }
+                        .kmit01{
+                            font-size: 1.2rem;
+                            color: #ffffff;
+                            position: absolute;
+                            top: 25%;
+                            left: 0%;
+                        }
+                            .kmit02{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 25%;
+                                left: 18%;
+                            }
+                            .kmit03{
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                                position: absolute;
+                                top: 25%;
+                                left: 53%;
+                            }
+                            .kmit04{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 25%;
+                                left: 71%;
+                            }
+                        .kmit05{
+                            font-size: 1.2rem;
+                            color: #ffffff;
+                            position: absolute;
+                            top: 51%;
+                            left: 0%;
+                        }
+                            .kmit06{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 51%;
+                                left: 18%;
+                            }
+                            .kmit07{
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                                position: absolute;
+                                top: 51%;
+                                left: 53%;
+                            }
+                            .kmit08{
+                                font-size: 1.2rem;
+                                color: #0f90ff;
+                                position: absolute;
+                                top: 51%;
+                                left: 71%;
+                            }
+                     }
+          }
+}
+// 企业占用面积情况
+    .riglef{
+        width: 53%;
+        height: 48%;
+        position: relative;
+        top: -91.6%;
+        left: 45.6%;
+          .riglefb{
+            width: 100%;
+            height: 100%;
+            background: rgba(25, 128, 216, 0.1);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px rgba(104, 94, 94, 0.5);
+              .hxbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hxbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hxbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hxbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    width: 22%;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: #ffffff;
+                     }
+                     .tubioa02{
+                        width: 96%;
+                        height: 77%;
+                        position: absolute;
+                        top: 18%;
+                        left: 2%;
+                     }
+                    
+          }
+
+}
+// 资质情况
+    .rigleftop{
+            width: 53%;
+            height: 46%;
+            position: relative;
+            top: -90.6%;
+            left: 45.6%;
+      .rigleftopb{
+        width: 100%;
+        height: 100%;
+        background: rgba(25, 128, 216, 0.1);
+        border: 1px solid rgba(108, 235, 252, 0.1);
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        box-shadow: 0px 1px rgba(104, 94, 94, 0.5);
+          .hxbk span:nth-child(1){
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            padding: 1%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 1px 0 0 1px;
+        }
+        .hxbk span:nth-child(2){
+            position: absolute;
+            right:0%;
+            top: 0%;
+            padding: 1%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 1px 1px 0 0;
+        }
+        .hxbk span:nth-child(3){
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            padding: 1%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width:0 1px 1px 0;
+        }
+        .hxbk span:nth-child(4){
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            padding: 1%;
+            border-style: solid;
+            border-color: #6cebfc;
+            border-width: 0  0 1px 1px;
+        }
+        .wenzi{
+                background: #48a6cc;
+                width: 22%;
+                height: 8%;
+                position: absolute;
+                left: 2%;
+                top: 5%;
+                text-align: center;
+                font-size: 1.5rem;
+                color: #ffffff;
+                 }
+                 .tubiao{
+                    width: 42%;
+                    height: 74%;
+                    position: absolute;
+                    top: 18%;
+                    left: 2%;
+                 }
+                 .wenzi2{
+                    width: 37%;
+                    position: absolute;
+                    left: 57%;
+                    top: 38%;
+                     p{
+                        text-align: center;
+                        font-size: 1rem;
+                        color: #1782f1;
+                     }
+                }
+                
+      }
+ }
+}

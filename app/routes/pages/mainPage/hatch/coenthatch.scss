@@ -1,0 +1,441 @@
+.comit{
+    width: 33.4%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    margin: auto;
+    overflow: hidden;
+    .cao{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        .bioati{
+            width: 42%;
+            height: 16%;
+            position: absolute;
+            top: 2.3%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+             .biaotu{
+                 width: 100%;
+                 height: 100%;
+                 background: url(../img/yetou.png) no-repeat center;
+                 background-size: 100% 100%;
+             }
+        }
+        .zhongtu{
+            width: 100%;
+            height: 76%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            bottom: 4%;
+            margin: auto;
+                .zhongkung{
+                    width: 61%;
+                    height: 100%;
+                    position: relative;
+                    top: 0%;
+                    left: 20%;
+                    .kuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuangtu.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangtu1{
+                        width: 108%;
+                        height: 119%;
+                        position: absolute;
+                        top: -14%;
+                        left: -2%;
+                        .zhongdatu{
+                            width: 100%;
+                            height: 100%;
+                           background: url(../img/coent.png) no-repeat center;
+                           background-size: 100% 100%;
+                        }
+                    }
+                }
+                .leftkuang1{
+                    width: 16.5%;
+                    height: 20%;
+                    position: absolute;
+                    top: 7%;
+                    left: 3%;
+                    .leftkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang1.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2.9rem;
+                            margin-left: 18%;
+                            line-height: 2.5;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1.9rem;
+                            position: absolute;
+                            top: 16%;
+                            left: 40%;
+                            text-shadow: 0 0 0.2em #0cdee8, 0 0 0.2em #008fa2;
+                        }
+                        span:nth-child(3){
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 54%;
+                            left: 41%;
+                        }
+                        span:nth-child(4){
+                            width: 5%;
+                            height: 23%;
+                            position: absolute;
+                            top: 50%;
+                            left: 76%;
+                            background: url(../img/jt.png) no-repeat center;
+                            background-size: 100% 100%;
+                        }
+                    }
+                   
+                }
+
+                .leftkuang2{
+                    width: 16.5%;
+                    height: 20%;
+                    position: absolute;
+                    top: 34%;
+                    left: -1%;
+                    .leftkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang1.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2.9rem;
+                            margin-left: 18%;
+                            line-height: 2.5;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1.9rem;
+                            position: absolute;
+                            top: 16%;
+                            left: 40%;
+                            text-shadow: 0 0 0.2em #0cdee8, 0 0 0.2em #008fa2;
+                        }
+                        span:nth-child(3){
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 54%;
+                            left: 41%;
+                        }
+                        span:nth-child(4){
+                            width: 5%;
+                            height: 23%;
+                            position: absolute;
+                            top: 50%;
+                            left: 76%;
+                            background: url(../img/jt.png) no-repeat center;
+                            background-size: 100% 100%;
+                        }
+                    }
+                   
+                }
+
+                .leftkuang3{
+                    width: 16.5%;
+                    height: 20%;
+                    position: absolute;
+                    top: 60%;
+                    left: 3%;
+                    .leftkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang2.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2.4rem;
+                            margin-left: 37%;
+                            line-height: 2.7;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 56%;
+                            left: 34%;
+                        }
+                    }
+                   
+                }
+
+                .leftkuang4{
+                    width: 14%;
+                    height: 18%;
+                    position: absolute;
+                    top: 83%;
+                    left: 6%;
+                    .leftkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang2.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2rem;
+                            margin-left: 41%;
+                            line-height: 2.7;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 56%;
+                            left: 34%;
+                        }
+                    }
+                   
+                }
+
+                .rightkuang1{
+                    width: 16.5%;
+                    height: 20%;
+                    position: absolute;
+                    top: -10%;
+                    left: 80%;
+                    .rightkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang2.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2.4rem;
+                            margin-left: 37%;
+                            line-height: 2.7;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 56%;
+                            left: 34%;
+                        }
+                    }
+                }
+
+                .rightkuang2{
+                    width: 16.5%;
+                    height: 20%;
+                    position: absolute;
+                    top: 15%;
+                    left: 83%;
+                    .rightkuangtu{
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/kuang2.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                    .kuangwenzi{
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        span:nth-child(1){
+                            color: powderblue;
+                            font-size: 2rem;
+                            margin-left: 41%;
+                            line-height: 2.7;
+                            text-shadow: 0 0 1rem #00e1ff;
+                        }
+                        span:nth-child(2){
+                            display: inline;
+                            color: powderblue;
+                            font-size: 1rem;
+                            position: absolute;
+                            top: 56%;
+                            left: 34%;
+                        }
+                    }
+                }
+
+                .rightquan1{
+                    width: 7rem;
+                    height: 7rem;
+                    position: absolute;
+                    top: 42%;
+                    left: 84%;
+                        .rightquantu{
+                            width: 100%;
+                            height: 100%;
+                            background: url(../img/baiquan.png) no-repeat center;
+                            background-size: 100% 100%;
+                            animation: spin 10s infinite linear;
+                        }
+                        .quanwenzi{
+                            position: absolute;
+                            top: 0%;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            span:nth-child(1){
+                                color: #00d0ff;
+                                font-size: 1.2rem;
+                                margin-left: 26%;
+                                line-height: 6.3;
+                            }
+                        }
+                }
+
+                .rightquan2{
+                    width: 5rem;
+                    height: 5rem;
+                    position: absolute;
+                    top: 55%;
+                    left: 95%;
+                        .rightquantu{
+                            width: 100%;
+                            height: 100%;
+                            background: url(../img/baiquan.png) no-repeat center;
+                            background-size: 100% 100%;
+                            animation: spin 10s infinite linear;
+                        }
+                        .quanwenzi{
+                            position: absolute;
+                            top: 0%;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            span:nth-child(1){
+                                color: #00d0ff;
+                                font-size: 1rem;
+                                margin-left: 30%;
+                                line-height: 5.3;
+                            }
+                        }
+                }
+
+                .rightquan3{
+                    width: 7rem;
+                    height: 7rem;
+                    position: absolute;
+                    top: 74%;
+                    left: 87.5%;
+                        .rightquantu{
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.5;
+                            background: url(../img/baiquan.png) no-repeat center;
+                            background-size: 100% 100%;
+                            animation: spin 10s infinite linear;
+                        }
+                        .quanwenzi{
+                            position: absolute;
+                            top: 0%;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            span:nth-child(1){
+                                color: #00d0ff;
+                                font-size: 1.2rem;
+                                margin-left: 26%;
+                                line-height: 6.3;
+                            }
+                        }
+                }
+
+                .rightquan4{
+                    width: 5rem;
+                    height: 5rem;
+                    position: absolute;
+                    top: 91%;
+                    left: 76%;
+                        .rightquantu{
+                            width: 100%;
+                            height: 100%;
+                            background: url(../img/baiquan.png) no-repeat center;
+                            background-size: 100% 100%;
+                            animation: spin 10s infinite linear;
+                        }
+                        .quanwenzi{
+                            position: absolute;
+                            top: 0%;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            span:nth-child(1){
+                                color: #00d0ff;
+                                font-size: 1rem;
+                                margin-left: 30%;
+                                line-height: 5.3;
+                            }
+                        }
+                }
+        }
+    }
+}
+
+
+
+@keyframes spin{
+    0%   { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
