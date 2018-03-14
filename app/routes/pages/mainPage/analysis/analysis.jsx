@@ -6,7 +6,7 @@ import style from './analysis.scss'
 import Lecha from './lecha.jsx' //左边
 import Conchar from './conchar.jsx' //zhong
 import Rigchar from './rigchar.jsx' //右边
-
+import Nav from '../functionCom/nav.jsx';//导航
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -19,6 +19,7 @@ let Component = React.createClass({
           <Lecha/>
           <Conchar/>
           <Rigchar/>
+          <Nav></Nav>
         </div>
                   
     )
@@ -34,7 +35,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     init: ()=> {
      
-    }
+    },
+   
   }
 };
 

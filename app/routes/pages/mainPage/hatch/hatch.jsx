@@ -6,6 +6,7 @@ import style from './hatch.scss'
 import Lefthatch from './lefthatch.jsx' //左边
 import Coenthatch from './coenthatch.jsx' //中间coenthatch
 import Righthatch from './righthatch.jsx' //右边
+import Nav from '../functionCom/nav.jsx';//导航
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -23,7 +24,7 @@ let Component = React.createClass({
             <Lefthatch/>
             <Coenthatch/>
             <Righthatch/>
-           
+            <Nav></Nav>
         </div>
                   
     )
@@ -38,8 +39,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     init: ()=> {
-     
-    }
+       
+    },
+  
   }
 };
 

@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {height,bb,setTitle}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -20,10 +20,30 @@ let Component = React.createClass({
                 reflow:true,
             },
             title: {
+                floating:true,
+                text: '',
+                style: {
+                    // fontSize: "45px",
+                    // lineHeight: "45px"
+                }
+            },
+            subtitle: {
                 text: ''
             },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            tooltip : {
+               
+            },
+            xAxis: {
+                enabled:false
+            },
+            yAxis: {
+                min: 0,
+                title:{
+                    enabled:false
+                },
+            },
+            legend: {
+                enabled: false
             },
             plotOptions: {
                 pie: {
@@ -36,25 +56,30 @@ let Component = React.createClass({
                         events: {
                             mouseOver: function (e) {
                                 console.log(e,"123");
-                                
+                              
                             },
                         }
                     },
-                    
                 }
             },
             series: [{
                 type: 'pie',
-                innerSize: '80%',
+                innerSize: '60%',
+                name: '市场份额',
                 data: [
-                    {name:'Firefox',y: 4},
-                    ['IE',26],
-                    {name: 'Chrome',y: 12,url: 'http://www.hcharts.cn', }
+                    {name:'国际先进',   y: 22.0, color:'#FFC125',},
+                   
+                    {name:'国内先进',   y: 10.0, color:'#7EC0EE',},
+                    {name:'国内先进',   y: 22.0, color:'#EE8262',},
+                  
+                   
+                   
                 ]
             }],
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
+          
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -64,13 +89,15 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         init: () => {
-              
+          
         },
     };
 };
