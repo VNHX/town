@@ -1,18 +1,11 @@
 module.exports={
-	myAjax : function(obj,callback){
+	myAjax : function(obj,callbackparam){
 		$.ajax({
-		  	url: 'http://192.168.1.153:8080/'+obj.url,
+		  	url: 'http://116.62.33.209:9090/'+obj.url+"callback="+callbackparam,
 		  	data: obj.data,
 		  	dataType: obj.dataType,
 		  	type: obj.type,
-		  	timeout: 10000,
-		  	success: function(data){
-		  		if(data.success){
-		  			callback(data)
-		  		}else{
-		  			alert(data.errMsg)
-		  		}		  		
-		  	}, 
+		  	timeout: 10000, 
 		  	error: function(XMLHttpRequest, textStatus, errorThrown){
 		  		if(textStatus=='timeout'){
 		  			alert('请求超时')

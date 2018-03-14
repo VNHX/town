@@ -16,16 +16,17 @@ let Component = React.createClass({
     $("#nav").hide('slow')
   },
   render() {
-    let {toMain,toOverview,toHatch,toAnalysis,toManage}=this.props;
+    let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage}=this.props;
+    console.log('params2',nowPage)
     return (
     	<div className={css.menu} onMouseLeave={()=>this.hideNav()}>
           	<div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>
           	<ul className={css.nav} id="nav">
-              	<li onClick={()=>toMain()}>园区总览</li>
-              	<li onClick={()=>toOverview()}>招商引资看板</li>
-              	<li onClick={()=>toHatch()}>项目孵化概览</li>
-              	<li onClick={()=>toAnalysis()}>小镇产业分析</li>
-              	<li onClick={()=>toManage()}>工程管理看板</li>
+              	<li className={nowPage=='main' ? css.active:''} onClick={()=>toMain()}>园区总览</li>
+              	<li className={nowPage=='overview' ? css.active:''} onClick={()=>toOverview()}>招商引资看板</li>
+              	<li className={nowPage=='hatch' ? css.active:''} onClick={()=>toHatch()}>项目孵化概览</li>
+              	<li className={nowPage=='analysis' ? css.active:''} onClick={()=>toAnalysis()}>小镇产业分析</li>
+              	<li className={nowPage=='manage' ? css.active:''} onClick={()=>toManage()}>工程管理看板</li>
               	<li></li>
               	<li></li>
               	<li></li>
@@ -36,7 +37,7 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      
+      nowPage:state.vars.nowPage,
     }
 };
 

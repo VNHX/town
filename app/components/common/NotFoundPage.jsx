@@ -7,8 +7,8 @@ export default class NotFoundPage extends React.Component {
 
   render() {
     return <div>
-      <h2>Not found</h2>
-      <p>The page you requested was not found.</p>
+      <h2 style={{color:'#fff',margin:'0',padding:'0',lineHeight:'50px'}}>Not found</h2>
+      <p style={{color:'#fff',margin:'0',padding:'0',lineHeight:'50px'}}>The page you requested was not found.</p>
     </div>;
   }
 }

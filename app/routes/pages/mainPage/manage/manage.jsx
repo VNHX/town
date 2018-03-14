@@ -3,7 +3,7 @@ import React from "react";
 import {connect} from 'react-redux';
 var actions = require('redux/actions');
 import css from './manage.scss';
-
+import Nav from '../functionCom/nav.jsx';//导航
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -12,7 +12,230 @@ let Component = React.createClass({
     let {params}=this.props;
     return (
       <div className={css.manageBox}>
+        <div className={`${css.leftBox} ${css.contentBox}`}>
+          <div className={css.chartBox}>
+            <span className={css.leftTop}></span>
+            <span className={css.leftBottom}></span>
+            <span className={css.rightTop}></span>
+            <span className={css.rightBottom}></span>
 
+          </div>
+          <div className={css.tableBox}>
+            <div className={css.leftTable}>
+              <span className={css.leftTop}></span>
+              <span className={css.leftBottom}></span>
+              <span className={css.rightTop}></span>
+              <span className={css.rightBottom}></span>
+              <div className={css.nameBox}>项目预警</div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>项目名称</th><th>预警次数</th>
+                    <th>预警项</th><th>日期</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>工作计划</td><td>3</td><td>1季度</td><td>180312</td>
+                  </tr>
+                  <tr>
+                    <td>工作计划</td><td>4</td><td>2季度</td><td>180313</td>
+                  </tr>
+                  <tr>
+                    <td>工作计划</td><td>43</td><td>3季度</td><td>180314</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className={css.rightTable}>
+              <span className={css.leftTop}></span>
+              <span className={css.leftBottom}></span>
+              <span className={css.rightTop}></span>
+              <span className={css.rightBottom}></span>
+              <div className={css.nameBox}>重点项目推进情况</div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>项目名称</th><th>预警次数</th>
+                    <th>预警项</th><th>日期</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>工作计划</td><td>3</td><td>1季度</td><td>180312</td>
+                  </tr>
+                  <tr>
+                    <td>工作计划</td><td>4</td><td>2季度</td><td>180313</td>
+                  </tr>
+                  <tr>
+                    <td>工作计划</td><td>43</td><td>3季度</td><td>180314</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div className={`${css.middleBox} ${css.contentBox}`}>
+          <div className={css.header}>
+            <div className={css.logo}></div>
+          </div>
+          <div className={css.bg}></div>
+          <div className={css.table}>
+            <div className={`${css.textBox} ${css.textBox1}`} style={{width:'25%'}}>
+              <span>工程项目总数</span>
+            </div>
+            <div className={`${css.textBox} ${css.textBox2}`}>
+              <span>本年动工项目</span>
+            </div>
+            <div className={`${css.textBox} ${css.textBox3}`}>
+              <span>本年竣工项目</span>
+            </div>
+            <div className={`${css.textBox} ${css.textBox4}`}>
+              <span>本年投资总额（万元）</span>
+            </div>
+            <div className={`${css.textBox} ${css.textBox5}`}>
+              <span>本年动工占地（亩）</span>
+            </div>
+            <div className={`${css.textBox} ${css.textBox6}`}>
+              <span>本年建筑面积（平方米）</span>
+            </div>
+          </div>
+        </div>
+        <div className={`${css.rightBox} ${css.contentBox}`}>
+          <div className={css.textBox}>
+            <div className={css.header}>
+              <span className={css.nameBox}>项目预警</span>
+            </div>
+            <span className={css.leftTop}></span>
+            <span className={css.leftBottom}></span>
+            <span className={css.rightTop}></span>
+            <span className={css.rightBottom}></span>
+            <table>
+              <thead>
+                <tr>
+                  <th>项目名称</th><th>负责人</th>
+                  <th>可研编制</th><th>发改委批复（备案、核准）文件</th>
+                  <th>节能</th><th>选址</th>
+                  <th>环评</th><th>土地预审</th>
+                  <th>用地规划许可证</th><th>用地批准书</th>
+                  <th>设计</th><th>工程规划许可证</th>
+                  <th>施工监理招标</th><th>质量监督手续</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th>施理招标</th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th></th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th></th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th>施理招标</th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th></th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th></th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th>施理招标</th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th></th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th></th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th>施理招标</th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试</th><th>王艳玲</th>
+                  <th>√</th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th>批准书</th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+                <tr>
+                  <th>测试流水号</th><th>王艳玲</th>
+                  <th></th><th>发改委</th>
+                  <th></th><th></th>
+                  <th></th><th>土地预审</th>
+                  <th>许可证</th><th></th>
+                  <th>设计</th><th>划许可证</th>
+                  <th></th><th>监督手续</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>          
+        </div>
+        <Nav/>
       </div>    
     )
   }

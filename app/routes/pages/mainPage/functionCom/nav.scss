@@ -33,9 +33,14 @@
 			line-height: 3rem;
 			width: 8rem;
 			text-align: center;
-			background: red;
+			background: #48a6cc;
 			margin-left: .5rem;
 			cursor: pointer;
+			color: #fff;
+			border-radius: .5rem;
+		}
+		li.active{
+			background: #a94442;
 		}
 	}
 }

@@ -9,22 +9,39 @@ import Overview from './overview/Overview.jsx';//招商引资
 import Main from './main/Main.jsx';//总览
 import Hatch from './hatch/hatch.jsx';//项目孵化 
 import Analysis from './analysis/analysis.jsx';//产业分析
+import Manage from './manage/manage.jsx';//工程管理面板
 
 let Component = React.createClass({
-  componentDidMount() {
-    this.props.init();
+  componentWillMount() {
+    this.props.init(this.props.params);
   },
   render() {
-    let {params}=this.props;
+    let {params,childPage}=this.props;
+    switch(params.page)
+    {
+      case 'main':
+        childPage = <Main params={params}/>
+        break;
+      case 'overview':
+        childPage = <Overview params={params}/>
+        break;
+      case 'hatch':
+        childPage = <Hatch params={params}/>
+        break;
+      case 'analysis':
+        childPage = <Analysis params={params}/>
+        break;
+      case 'manage':
+        childPage = <Manage params={params}/>
+        break;
+      default:
+        childPage = <NotFoundPage/>
+    }
     return (
       <FixedContent mode="fullWidth">
         {
           <div params={params} className={css.whole}>
-            {params.page=='main' && <Main/>}
-            {params.page=='overview' && <Overview/>}
-            {params.page=='hatch' &&<Hatch/>}
-            {params.page=='analysis' &&<Analysis/>}
-            
+            {childPage}            
           </div>
         }
       </FixedContent>    
@@ -39,8 +56,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
-      
+    init: (params)=> {
+      dispatch(actions.setVars('nowPage',params.page))
     }
   }
 };

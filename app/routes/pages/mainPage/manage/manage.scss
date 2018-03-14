@@ -1,0 +1,305 @@
+.manageBox{
+	height:100%;
+	width:100%;
+	position:relative;
+	color:#fff;
+	margin: 0;
+	padding-bottom: 1rem;
+}
+.contentBox{
+	float: left;
+	height: 100%;
+}
+.leftBox{
+	padding-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	width:25%;
+	.chartBox{
+		position: relative;
+		height: 73%;
+		width: 100%;
+		border: 1px solid #2f507d;
+		.leftTop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.leftBottom{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-bottom: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.rightTop{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-right: 2px solid #6cebfc;
+		}
+		.rightBottom{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-right: 2px solid #6cebfc;
+			border-bottom: 2px solid #6cebfc;
+		}
+	}
+	.tableBox{
+		height: 25%;
+		margin-top: 2%;
+		.leftTable{
+			float: left;
+			height: 100%;
+			width: 49%;
+			border: 1px solid #2f507d;
+			position: relative;
+			padding: 5px;
+			.nameBox{
+				display: inline-block;
+			    height: 1.5rem;
+			    line-height: 1.5rem;
+			    background: #0794a7;
+			    text-align: center;
+			    padding: 0 5px;
+			}
+			table{
+				width: 100%;
+				font-size: 1rem;
+				font-weight: 100;
+				tr{
+					border: 1px solid #0f3d7b;
+				}
+			}
+			.leftTop{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-top: 2px solid #6cebfc;
+				border-left: 2px solid #6cebfc;
+			}
+			.leftBottom{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-bottom: 2px solid #6cebfc;
+				border-left: 2px solid #6cebfc;
+			}
+			.rightTop{
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-top: 2px solid #6cebfc;
+				border-right: 2px solid #6cebfc;
+			}
+			.rightBottom{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-right: 2px solid #6cebfc;
+				border-bottom: 2px solid #6cebfc;
+			}
+		}
+		.rightTable{
+			float: right;
+			height: 100%;
+			width: 49%;
+			border: 1px solid #2f507d;
+			position: relative;
+			padding: 5px;
+			.nameBox{
+				display: inline-block;
+			    height: 1.5rem;
+			    line-height: 1.5rem;
+			    background: #0794a7;
+			    text-align: center;
+			    padding: 0 5px;
+			}
+			table{
+				width: 100%;
+				font-size: 1rem;
+				font-weight: 100;
+				tr{
+					border: 1px solid #0f3d7b;
+				}
+			}
+			.leftTop{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-top: 2px solid #6cebfc;
+				border-left: 2px solid #6cebfc;
+			}
+			.leftBottom{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-bottom: 2px solid #6cebfc;
+				border-left: 2px solid #6cebfc;
+			}
+			.rightTop{
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-top: 2px solid #6cebfc;
+				border-right: 2px solid #6cebfc;
+			}
+			.rightBottom{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				border-right: 2px solid #6cebfc;
+				border-bottom: 2px solid #6cebfc;
+			}
+		}
+	}
+}
+.middleBox{
+	padding-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	width:50%;
+	.header{
+		height: 8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.logo{
+			display: inline-block;
+			height: 8rem;
+			width: 60rem;
+			background: url(../img/yetou.png) no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	.bg{
+		height: 35rem;
+		background: url(../img/manage.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	.table{
+		height: 7rem;
+		.textBox{
+			float: left;
+			width: 15%;
+		}
+	}
+}
+.rightBox{
+	padding-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	width:25%;
+	.textBox{
+		position: relative;
+		padding:1rem;
+		height: 100%;
+		border:1px solid #2f507d;
+		.leftTop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.leftBottom{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-bottom: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.rightTop{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-right: 2px solid #6cebfc;
+		}
+		.rightBottom{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-right: 2px solid #6cebfc;
+			border-bottom: 2px solid #6cebfc;
+		}
+		.header{
+			height: 2rem;
+			.nameBox{
+				display: inline-block;
+				height: 1.5rem;
+				line-height: 1.5rem;
+				width: 5rem;
+				background: #0794a7;
+				text-align: center;
+			}
+		}
+		table{
+			width: 100%;
+			font-size: 1rem;
+			th{
+				border: 1px solid #2f507d;
+				text-align: center;
+			}
+			thead{
+				tr{
+					height: 3rem;
+					line-height: 3rem;					
+				}
+			}
+			
+		}
+	}	
+}

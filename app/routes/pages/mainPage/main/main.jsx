@@ -1,13 +1,13 @@
 import React from "react";
 import {connect} from 'react-redux';
 var actions = require('redux/actions');
-var $ = require('jquery');
 import css from './main.scss';
 import circle1 from './../img/circle.png';
 import circle2 from './../img/circleBig.png';
 import MainChart from './chart/MainChart.jsx';
 import Nav from '../functionCom/nav.jsx';//导航
 import Sun from '../img/tianqi.png';
+import ajax from '../functionCom/myAjax.js';
 //import webSocket from '../functionCom/socketClient.js';
 
 let Component = React.createClass({
@@ -189,6 +189,19 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(actions.setVars('weekday',weekday[day]));
       }      
       setInterval(setTime, 1000);
+      
+      $.ajax({
+        url: "http://116.62.33.209:9090/rest/parkUsers/getUserss",
+        dataType: 'jsonp',
+        async:false,
+        timeout: 10000, 
+        jsonp: "callbackparam",
+        jsonpCallback: 'callbackparam',
+        success: function(data){
+          console.log('aa',data)
+        }
+      })
+      
     },
     toOverview: ()=>{
       browserHistory.push('/app/all/project/town/overview')
