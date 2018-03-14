@@ -6,6 +6,7 @@ import style from './Overview.scss';
 import Leftfist from './Leftfist.jsx';  //左边页面
 import Hxfist from './Hxfist.jsx';  //中间页面 
 import Rightfist from './rightfist.jsx';//右边页面
+import Nav from '../functionCom/nav.jsx';//导航
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -17,21 +18,13 @@ let Component = React.createClass({
     $("#nav").hide('slow')
   },
   render() {
-    let {toOverview}=this.props;
+    let {}=this.props;
     return (
         <div className={style.conet}>
        <Leftfist/>
       <Hxfist/>
      <Rightfist/>
-     <div className={style.menu} onMouseLeave={()=>this.hideNav()}>
-          <div className={style.img}><div className={style.src} onClick={()=>this.showNav()}></div></div>
-          <ul className={style.nav} id="nav">
-              <li onClick={()=>toOverview()}>nav1</li>
-              <li>nav2</li>
-              <li>nav3</li>
-              <li>nav4</li>
-          </ul>
-        </div>
+     <Nav></Nav>
         </div>
                   
     )
@@ -46,10 +39,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     init: ()=> {
-      toOverview: ()=>{
-        browserHistory.push('/app/all/project/town/main')
-      }  
-    }
+     
+    },
+   
   }
 };
 

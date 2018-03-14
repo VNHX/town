@@ -11,7 +11,6 @@ let Component = React.createClass({
         let {height}=this.props;
         let configPie = {
             chart: {
-                type: 'column',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
@@ -19,51 +18,43 @@ let Component = React.createClass({
                 height:height,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
             },
             title: {
                 text: ''
             },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                categories: [
-                    '500万以下',
-                    '500-1000万',
-                    '100-5000万',
-                    '300-5000万',
-                    '5000以上',
-                ],
-                crosshair: true,
-                // lineWidth :0,//去掉x轴线
-                tickWidth:0,//去掉刻度
-            },
-            yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
-                },
-                //  tickWidth:0,//去掉刻度
-                 gridLineWidth: 0,//去掉y轴方向的横线
-            },
             tooltip: {
-                enabled: false,
-            },
-            legend: {
-                enabled: false
-            },
-            credits: {
-                enabled: false //不显示highCharts版权信息
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
             },
             plotOptions: {
-                column: {
-                    borderWidth: 0
+                pie: {
+                    allowPointSelect: false,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    point: {
+                        events: {
+                            mouseOver: function (e) {
+                                console.log(e,"123");
+                                
+                            },
+                        }
+                    },
+                    
                 }
             },
             series: [{
-                data: [5,8,10,30],
-            }]
+                type: 'pie',
+                innerSize: '80%',
+                data: [
+                    {name:'Firefox',y: 4},
+                    ['IE',26],
+                    {name: 'Chrome',y: 12,url: 'http://www.hcharts.cn', }
+                ]
+            }],
+            credits: {
+                enabled: false //不显示highCharts版权信息
+            },
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -79,6 +70,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         init: () => {
+              
         },
     };
 };

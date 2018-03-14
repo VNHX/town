@@ -12,7 +12,19 @@ let Component = React.createClass({
     let {}=this.props;
     return (
         <div className={style.comit}>
-         qwq
+              <div className={style.hxmit}>
+                <div className={style.hxmittu}></div>
+              </div>
+              <div className={style.hxhumi}>
+                  <div className={style.hxztu}>
+                      <div className={style.hxbjk}></div>
+                  </div>
+                  <div className={style.hxhumi02}>
+                      <div className={style.hxbj}></div>
+                  </div>
+              </div>
+             
+             
         </div>
                   
     )
