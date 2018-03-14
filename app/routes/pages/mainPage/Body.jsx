@@ -12,7 +12,10 @@ import Analysis from './analysis/analysis.jsx';//产业分析
 import Manage from './manage/manage.jsx';//工程管理面板
 
 let Component = React.createClass({
-  componentWillMount() {
+  componentDidMount() {
+    this.props.init(this.props.params);
+  },
+  componentDidUpdate(){
     this.props.init(this.props.params);
   },
   render() {
