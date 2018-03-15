@@ -10,7 +10,7 @@ import Main from './main/Main.jsx';//总览
 import Hatch from './hatch/hatch.jsx';//项目孵化 
 import Analysis from './analysis/analysis.jsx';//产业分析
 import Manage from './manage/manage.jsx';//工程管理面板
-
+import Management from './management/management.jsx' //物业管理
 let Component = React.createClass({
   componentDidMount() {
     this.props.init(this.props.params);
@@ -36,6 +36,9 @@ let Component = React.createClass({
         break;
       case 'manage':
         childPage = <Manage params={params}/>
+        break;
+        case 'management':
+        childPage = <Management params={params}/>
         break;
       default:
         childPage = <NotFoundPage/>

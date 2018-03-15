@@ -1,0 +1,154 @@
+.cmt{
+    width: 33.4%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    .logo{
+        width: 42%;
+        height: 16%;
+        position: absolute;
+        top: 2.3%;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+            .logotu{
+                width: 100%;
+                height: 100%;
+                background: url(../img/yetou.png)  no-repeat center;
+                background-size: 100% 100%;
+            }
+    }
+    .zhongtu{
+        width: 100%;
+        height: 78%;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        .zbj{
+            width: 107%;
+            height: 100%;
+            position: relative;
+            top: 0%;
+            left: -2%;
+            .zbtu{
+                width: 100%;
+                height: 100%;
+                background: url(../img/zjtu.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        .bjkung{
+            width: 108%;
+            height: 100%;
+            position: relative;
+            top: -101%;
+            left: -2%;
+            .bjktu{
+                width: 100%;
+                height: 100%;
+                background: url(../img/zjk.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        .bjwen{
+            width: 95.7%;
+            height: 24%;
+            position: absolute;
+            top: 64%;
+            left: 2%;
+            background: rgba(10, 64, 130, 0.4);
+            overflow: hidden;
+            .bjwenzi01{
+                width: 23%;
+                height: 94%;
+                float: left;
+                border-right: 2px solid rgba(191, 163, 163, 0.3);
+                .p1{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    line-height: 3;
+                    text-align: center;
+                }
+                .p2{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 4;
+                    text-align: center;
+                }
+            }
+            .bjwenzi02{
+                width: 28%;
+                height: 94%;
+                float: left;
+                border-right: 2px solid rgba(191, 163, 163, 0.3);
+                .p1{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    line-height: 3;
+                    text-align: center;
+                }
+                .p2{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 4;
+                    text-align: center;
+                }
+            }
+            .bjwenzi03{
+                width: 29%;
+                height: 94%;
+                float: left;
+                border-right: 2px solid rgba(191, 163, 163, 0.3);
+                .p1{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    line-height: 3;
+                    text-align: center;
+                }
+                .p2{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 4;
+                    text-align: center;
+                }
+            }
+            .bjwenzi04{
+                width: 20%;
+                height: 94%;
+                float: left;
+                .p1{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    line-height: 3;
+                    text-align: center;
+                }
+                .p2{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 4;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

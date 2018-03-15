@@ -5,7 +5,7 @@ var $ = require('jquery');
 import style from './rigchar.scss'
 import Rigch from './Echar/rigch.jsx'
 import Tabck from './table/tbck.jsx' //表一
-// import Tabckwo from './table/tbcktwo.jsx' //表er
+import Tabckwo from './table/tbcktwo.jsx' //表er
 
 let Component = React.createClass({
   componentDidMount() {
@@ -59,7 +59,7 @@ let Component = React.createClass({
                                       </div>
                                       <p className={style.wenzi}>项目孵化情况</p>
                                       <div className={style.rigtable}>
-                                      {/* <Tabckwo/> */}
+                                      <Tabckwo/>
                                       </div>
                       </div>
               </div>

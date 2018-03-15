@@ -1,0 +1,333 @@
+.cmt{
+    width: 33.4%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    overflow: hidden;
+    //合同到期预警
+    .hcomit{
+        width: 53%;
+        height: 46%;
+        position: relative;
+        top: 1.5%;
+        left: 1%;
+          .htu1{
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 120, 128, 0.2);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px hsla(0, 5%, 39%, 0.5);
+              .hbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    font-size: 1.4rem;
+                    color: #ffffff;
+                     }
+                     .tubiao{
+                        width: 100%;
+                        height: 79%;
+                        position: absolute;
+                        top: 15%;
+                        left: 0%;
+                        table {  
+                            // border: 1px solid #B1CDE3;  
+                            padding:0;   
+                            margin:0 auto;  
+                            border-collapse: collapse;  
+                        }  
+                          tr{
+                            border: 1px solid #0889ef;
+                          }
+                        td {  
+                            // border: 1px solid #B1CDE3;
+                            font-size: 1.7rem;
+                            padding: 8px 39px 6px 8px;
+                            color: #e6e6e6;
+                        } 
+                     }
+          }
+     }
+//园区出租比例
+     .hcomit02{
+        width: 45%;
+        height: 46%;
+        position: relative;
+        top: -44.5%;
+        left: 55%;
+          .htu1{
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 120, 128, 0.2);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px hsla(0, 5%, 39%, 0.5);
+              .hbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    font-size: 1.4rem;
+                    color: #ffffff;
+                     }
+                     .tubiao{
+                        width: 100%;
+                        height: 79%;
+                        position: absolute;
+                        top: 15%;
+                        left: 0%;
+                        .lyuan{
+                            width: 7rem;
+                            height: 7rem;
+                            border: 2px solid lawngreen;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 10%;
+                            top: 12%;
+                        }
+                        .lwenzi{
+                            width: 30%;
+                            position: relative;
+                            top: 17%;
+                            left: 28%;
+                            .p1{
+                                color: khaki;
+                                font-size: 1.5rem;
+                                display: inline-block;
+                            }
+                            .p2{
+                                color: #c1c0b0;
+                                font-size: 1.4rem;
+                                display: inline-block;
+                            }
+                        }
+                        .lyuan02{
+                            width: 7rem;
+                            height: 7rem;
+                            border: 2px solid lawngreen;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 56%;
+                            top: 12%;
+                        }
+                        .lwenzi02{
+                            width: 30%;
+                            position: relative;
+                            top: -9%;
+                            left: 73%;
+                            .p1{
+                                color: khaki;
+                                font-size: 1.5rem;
+                                display: inline-block;
+                            }
+                            .p2{
+                                color: #c1c0b0;
+                                font-size: 1.4rem;
+                                display: inline-block;
+                            }
+                        }
+                        .lyuan03{
+                            width: 7rem;
+                            height: 7rem;
+                            border: 2px solid lawngreen;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 10%;
+                            top:59%;
+                        }
+                        .lwenzi03{
+                            width: 30%;
+                            position: relative;
+                            top: 5%;
+                            left: 28%;
+                            .p1{
+                                color: khaki;
+                                font-size: 1.5rem;
+                                display: inline-block;
+                            }
+                            .p2{
+                                color: #c1c0b0;
+                                font-size: 1.4rem;
+                                display: inline-block;
+                            }
+                        }
+                        .lyuan04{
+                            width: 7rem;
+                            height: 7rem;
+                            border: 2px solid lawngreen;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 56%;
+                            top: 59%;
+                        }
+                        .lwenzi04{
+                            width: 30%;
+                            position: relative;
+                            top: -24%;
+                            left: 73%;
+                            .p1{
+                                color: khaki;
+                                font-size: 1.5rem;
+                                display: inline-block;
+                            }
+                            .p2{
+                                color: #c1c0b0;
+                                font-size: 1.4rem;
+                                display: inline-block;
+                            }
+                        }
+                     }
+          }
+     }
+//物业收入情况
+     .hcomit03{
+        width: 100%;
+        height: 49%;
+        position: relative;
+        top: -43.5%;
+        left: 1%;
+          .htu1{
+            width: 100%;
+            height: 100%;
+            background: rgba(32, 120, 128, 0.2);
+            border: 1px solid rgba(108, 235, 252, 0.1);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            box-shadow: 0px 1px hsla(0, 5%, 39%, 0.5);
+              .hbk span:nth-child(1){
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 0 0 1px;
+            }
+            .hbk span:nth-child(2){
+                position: absolute;
+                right:0%;
+                top: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 1px 1px 0 0;
+            }
+            .hbk span:nth-child(3){
+                position: absolute;
+                right: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width:0 1px 1px 0;
+            }
+            .hbk span:nth-child(4){
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                padding: 1%;
+                border-style: solid;
+                border-color: #6cebfc;
+                border-width: 0  0 1px 1px;
+            }
+            .wenzi{
+                    background: #48a6cc;
+                    height: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 5%;
+                    font-size: 1.4rem;
+                    color: #ffffff;
+                     }
+                     .tubiao{
+                        width: 100%;
+                        height: 79%;
+                        position: absolute;
+                        top: 15%;
+                     }
+          }
+     }
+}

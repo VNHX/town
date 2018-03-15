@@ -16,7 +16,7 @@ let Component = React.createClass({
     $("#nav").hide('slow')
   },
   render() {
-    let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage}=this.props;
+    let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage,toManagement}=this.props;
     console.log('params2',nowPage)
     return (
     	<div className={css.menu} onMouseLeave={()=>this.hideNav()}>
@@ -27,7 +27,7 @@ let Component = React.createClass({
               	<li className={nowPage=='hatch' ? css.active:''} onClick={()=>toHatch()}>项目孵化概览</li>
               	<li className={nowPage=='analysis' ? css.active:''} onClick={()=>toAnalysis()}>小镇产业分析</li>
               	<li className={nowPage=='manage' ? css.active:''} onClick={()=>toManage()}>工程管理看板</li>
-              	<li></li>
+              	<li className={nowPage=='management' ? css.active:''} onClick={()=>toManagement()}>物业管理</li>
               	<li></li>
               	<li></li>
           	</ul>
@@ -38,6 +38,7 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
       nowPage:state.vars.nowPage,
+      
     }
 };
 
@@ -60,7 +61,10 @@ const mapDispatchToProps = (dispatch) => {
     },
     toManage: ()=>{
       	browserHistory.push('/app/all/project/town/manage')
-    }
+    },
+    toManagement: ()=>{
+      browserHistory.push('/app/all/project/town/management')
+  }
 
   }
 };

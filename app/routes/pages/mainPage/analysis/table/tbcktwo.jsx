@@ -15,9 +15,9 @@ let Component = React.createClass({
             <table  border="1" cellPadding="0" cellSpacing="0" >  
             <tbody>
   <tr>  
-  <th colspan="3"></th> 
-  <th></th>
-  <th></th>
+  <td></td> 
+  <td></td> 
+  <td></td> 
     <td>毕业</td>
     <td></td>    
     <td>加速</td>
@@ -39,8 +39,7 @@ let Component = React.createClass({
     <td>同比</td>
     <td>数量</td>
     <td>同比</td>  
-    <td>数量</td>
-    <td>同比</td>    
+       
   </tr>  
   <tr>  
   <td>2017</td>  

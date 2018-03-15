@@ -6,7 +6,8 @@ import style from './lecha.scss';
 import  Leftchrt from './Echar/lmi.jsx'  //注册资本情况
 import Lmicha from './Echar/Lmicha.jsx'  //在圆项目分布情况
 import Lcot from './Echar/lcot.jsx'//项目考核、成长情况
-import Jidu from './Echar/jindu.jsx' //累计项目总数
+// import Jidu from './Echar/jindu.jsx' //累计项目总数
+import Ttranfrom from './tranfrom.jsx' //进度条
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -77,7 +78,27 @@ let Component = React.createClass({
                                             <p className={style.zwejia}>3家</p>
                                         </div>
                                     </div>
-                                    
+                                    <div className={style.tubiao2}></div>
+                                <div className={style.tubiao03}>
+                                        <Lcot height={height}/>
+                                </div>
+                                <div className={style.wenkao1}>
+                                    <div className={style.wetu}>
+                                        <div className={style.tu}></div>
+                                    </div>
+                                </div>
+                                    <div className={style.zwen01}>
+                                        <div className={style.zwen01}>
+                                            <p className={style.zwex}>优秀项目：</p>
+                                            <p className={style.zwj}>3家</p>
+                                            <p className={style.zwg}>-合格项目：</p>
+                                            <p className={style.zwsj}>3家</p>
+                                        </div>
+                                        <div className={style.zwen02}>
+                                            <p className={style.zwebu}>不合格合格项目:</p>
+                                            <p className={style.zwejia}>3家</p>
+                                        </div>
+                                    </div>
                                 
                         </div>
               </div>
@@ -86,7 +107,7 @@ let Component = React.createClass({
                     <div className={style.cmou}></div>
                         <div className={style.comiwen}>o 累计项目总数</div>
                         <div className={style.comiwen2}>23 <p>个</p></div>
-
+                        <Ttranfrom />
               </div>
         </div>
                   
