@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 import css from './manage.scss';
 import Nav from '../functionCom/nav.jsx';//导航
+import Chart from "./chart.jsx";
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -18,7 +19,7 @@ let Component = React.createClass({
             <span className={css.leftBottom}></span>
             <span className={css.rightTop}></span>
             <span className={css.rightBottom}></span>
-
+            <Chart/>
           </div>
           <div className={css.tableBox}>
             <div className={css.leftTable}>
@@ -81,23 +82,40 @@ let Component = React.createClass({
           </div>
           <div className={css.bg}></div>
           <div className={css.table}>
-            <div className={`${css.textBox} ${css.textBox1}`} style={{width:'25%'}}>
-              <span>工程项目总数</span>
+            <span className={css.leftTop}></span>
+            <span className={css.leftBottom}></span>
+            <span className={css.rightTop}></span>
+            <span className={css.rightBottom}></span>
+            <div className={`${css.textBox1} ${css.textBox1}`} style={{width:'25%'}}>
+              <div className={css.totalBox}>
+                <span className={css.total}>工程项目总数</span>
+                <div className={css.num}>14</div>
+              </div>
+              <div className={css.chartBox}>
+                <div className={`${css.oneFloor} ${css.oneFloorFirst}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
+                <div className={`${css.oneFloor} ${css.oneFloorSecond}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
+                <div className={`${css.oneFloor} ${css.oneFloorThird}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
+              </div>              
             </div>
             <div className={`${css.textBox} ${css.textBox2}`}>
-              <span>本年动工项目</span>
+              <span><span className={css.logo}></span>本年动工项目</span>
+              <div><span className={css.num}>0</span> <span className={css.percent}>0%</span></div>
             </div>
             <div className={`${css.textBox} ${css.textBox3}`}>
-              <span>本年竣工项目</span>
+              <span><span className={css.logo}></span>本年竣工项目</span>
+              <div><span className={css.num}>0</span> <span className={css.percent}>0%</span></div>
             </div>
             <div className={`${css.textBox} ${css.textBox4}`}>
-              <span>本年投资总额（万元）</span>
+              <span><span className={css.logo}></span>本年投资总额（万元）</span>
+              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
             </div>
             <div className={`${css.textBox} ${css.textBox5}`}>
-              <span>本年动工占地（亩）</span>
+              <span><span className={css.logo}></span>本年动工占地（亩）</span>
+              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
             </div>
             <div className={`${css.textBox} ${css.textBox6}`}>
-              <span>本年建筑面积（平方米）</span>
+              <span><span className={css.logo}></span>本年建筑面积（平方米）</span>
+              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
             </div>
           </div>
         </div>
@@ -105,6 +123,7 @@ let Component = React.createClass({
           <div className={css.textBox}>
             <div className={css.header}>
               <span className={css.nameBox}>项目预警</span>
+              <span className={css.and}></span>
             </div>
             <span className={css.leftTop}></span>
             <span className={css.leftBottom}></span>
