@@ -23,22 +23,22 @@ let Component = React.createClass({
     switch(params.page)
     {
       case 'main':
-        childPage = <Main params={params}/>
+        childPage = <Main/>
         break;
       case 'overview':
-        childPage = <Overview params={params}/>
+        childPage = <Overview/>
         break;
       case 'hatch':
-        childPage = <Hatch params={params}/>
+        childPage = <Hatch/>
         break;
       case 'analysis':
-        childPage = <Analysis params={params}/>
+        childPage = <Analysis/>
         break;
       case 'manage':
-        childPage = <Manage params={params}/>
+        childPage = <Manage/>
         break;
         case 'management':
-        childPage = <Management params={params}/>
+        childPage = <Management/>
         break;
       default:
         childPage = <NotFoundPage/>
@@ -46,7 +46,7 @@ let Component = React.createClass({
     return (
       <FixedContent mode="fullWidth">
         {
-          <div params={params} className={css.whole}>
+          <div className={css.whole}>
             {childPage}            
           </div>
         }

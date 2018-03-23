@@ -11,7 +11,7 @@ let Component = React.createClass({
         let {heightChart1}=this.props;
         let configPie = {
             chart: {
-                type: 'column',
+                type: 'spline',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
@@ -19,7 +19,7 @@ let Component = React.createClass({
                 height:heightChart1,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 30,
+                marginRight: 30,             
             },
             title: {
                 text: ''
@@ -29,14 +29,16 @@ let Component = React.createClass({
             },
             xAxis: {
                 categories: [
-                    '500万以下',
-                    '500-1000万',
-                    '100-5000万',
-                    '300-5000万',
-                    '5000以上',
+                    '纺织园区',
+                    '生活供水',
+                    '含特标准',
+                    '供水工程',
+                    '新市科技',
+                    '二号园区',
+                    '7条道路'
                 ],
                 crosshair: true,
-                //lineWidth : 0,//去掉x轴线
+                // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
                 labels: {
                     style: {
@@ -49,7 +51,7 @@ let Component = React.createClass({
                 title:{
                     enabled:false
                 },
-                tickWidth:0,//去掉刻度
+                //  tickWidth:0,//去掉刻度
                 lineWidth : 1,
                 gridLineWidth: 0,//去掉y轴方向的横线
                 labels: {
@@ -74,7 +76,7 @@ let Component = React.createClass({
             },
             series: [{
                
-                data: [2,6,9,10,20],
+                data: [2,6,9,10,20,23,7],
             }]
         };
         return (
@@ -85,7 +87,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
