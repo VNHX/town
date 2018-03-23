@@ -14,12 +14,96 @@
 	padding-top: 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	width:25%;
-	.chartBox{
+	width:33.33%;
+	.chartBox1{
+		float: left;
 		position: relative;
 		height: 73%;
-		width: 100%;
+		width: 49%;
 		border: 1px solid #2f507d;
+		padding: 5px;	
+		.title{
+			select{
+				background: #31708f;
+				border: none;
+				float: right;
+			}
+			.name{
+				display: inline-block;
+			    height: 1.5rem;
+			    line-height: 1.5rem;
+			    background: #0794a7;
+			    text-align: center;
+			    padding: 0 5px;
+			}
+		}		
+		.leftTop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.leftBottom{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-bottom: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.rightTop{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-top: 2px solid #6cebfc;
+			border-right: 2px solid #6cebfc;
+		}
+		.rightBottom{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-right: 2px solid #6cebfc;
+			border-bottom: 2px solid #6cebfc;
+		}
+	}
+	.chartBox2{
+		position: relative;
+		float: right;
+		height: 73%;
+		width: 49%;
+		border: 1px solid #2f507d;
+		padding: 5px;
+		.title{
+			span.btn{
+				height: 1.5rem;
+				line-height: 1.5rem;
+				float: right;
+				background: #0794a7;
+				padding: 0 5px;
+				margin-right: 5px;
+				cursor: pointer;
+			}
+			.name{
+				display: inline-block;
+			    height: 1.5rem;
+			    line-height: 1.5rem;
+			    background: #0794a7;
+			    text-align: center;
+			    padding: 0 5px;
+			}
+		}		
 		.leftTop{
 			position: absolute;
 			top: 0;
@@ -63,7 +147,6 @@
 	}
 	.tableBox{
 		height: 24%;
-		margin-top: 1.5%;
 		.leftTable{
 			float: left;
 			height: 100%;
@@ -71,21 +154,21 @@
 			border: 1px solid #2f507d;
 			position: relative;
 			padding: 5px;
-			.nameBox{
-				display: inline-block;
-			    height: 1.5rem;
-			    line-height: 1.5rem;
-			    background: #0794a7;
-			    text-align: center;
-			    padding: 0 5px;
-			}
-			table{
-				width: 100%;
-				font-size: 1rem;
-				font-weight: 100;
-				tr{
-					border: 1px solid #0f3d7b;
+			margin-top: 1.5rem;
+			.title{
+				.nameBox{
+					display: inline-block;
+				    height: 1.5rem;
+				    line-height: 1.5rem;
+				    background: #0794a7;
+				    text-align: center;
+				    padding: 0 5px;
 				}
+				select{
+					background: #31708f;
+					border: none;
+					float: right;
+				}	
 			}
 			.leftTop{
 				position: absolute;
@@ -135,6 +218,7 @@
 			border: 1px solid #2f507d;
 			position: relative;
 			padding: 5px;
+			margin-top: 1.5rem;
 			.nameBox{
 				display: inline-block;
 			    height: 1.5rem;
@@ -198,7 +282,7 @@
 	padding-top: 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	width:50%;
+	width:33.33%;
 	height: 100%;
 	.header{
 		height: 20%;
@@ -408,7 +492,7 @@
 	padding-top: 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	width:25%;
+	width:33.33%;
 	.textBox{
 		position: relative;
 		padding:1rem;
@@ -460,7 +544,6 @@
 				display: inline-block;
 				height: 1.5rem;
 				line-height: 1.5rem;
-				width: 5rem;
 				background: #0794a7;
 				text-align: center;
 			}

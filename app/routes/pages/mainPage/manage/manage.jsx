@@ -5,48 +5,64 @@ var actions = require('redux/actions');
 import css from './manage.scss';
 import Nav from '../functionCom/nav.jsx';//导航
 import Chart from "./chart.jsx";
+import LineChart from "./lineChart.jsx";
+import PieChart from "./pieChart.jsx";
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
+    window.addEventListener("resize", this.props.chartHeight);
+  },
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.props.chartHeight);
   },
   render() {
-    let {params}=this.props;
+    let {params,heightChart1,heightPie}=this.props;
     return (
       <div className={css.manageBox}>
         <div className={`${css.leftBox} ${css.contentBox}`}>
-          <div className={css.chartBox}>
+          <div className={css.chartBox1} id="chart1">
+            <div className={css.title}>
+              <div className={css.name}>项目整体建设情况</div>
+              <select>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+              </select>
+            </div>            
             <span className={css.leftTop}></span>
             <span className={css.leftBottom}></span>
             <span className={css.rightTop}></span>
             <span className={css.rightBottom}></span>
-            <Chart/>
+            <Chart heightChart1={heightChart1}/>
+          </div>
+          <div className={css.chartBox2} id="chart2">
+            <div className={css.title}>
+              <div className={css.name}>工程项目投资额（万元）</div>
+              <span className={css.btn}>竣工</span>
+              <span className={css.btn}>在建</span>
+              <span className={css.btn}>筹建</span>
+            </div>
+            <span className={css.leftTop}></span>
+            <span className={css.leftBottom}></span>
+            <span className={css.rightTop}></span>
+            <span className={css.rightBottom}></span>
+            <LineChart heightChart1={heightChart1}/>
           </div>
           <div className={css.tableBox}>
-            <div className={css.leftTable}>
+            <div className={css.leftTable}  id="chart3">
               <span className={css.leftTop}></span>
               <span className={css.leftBottom}></span>
               <span className={css.rightTop}></span>
               <span className={css.rightBottom}></span>
-              <div className={css.nameBox}>项目预警</div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>项目名称</th><th>预警次数</th>
-                    <th>预警项</th><th>日期</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>工作计划</td><td>3</td><td>1季度</td><td>180312</td>
-                  </tr>
-                  <tr>
-                    <td>工作计划</td><td>4</td><td>2季度</td><td>180313</td>
-                  </tr>
-                  <tr>
-                    <td>工作计划</td><td>43</td><td>3季度</td><td>180314</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className={css.title}>
+                <div className={css.nameBox}>项目投资情况</div>
+                <select>
+                  <option>2016</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                </select>
+              </div>              
+              <PieChart heightPie={heightPie}/>
             </div>
             <div className={css.rightTable}>
               <span className={css.leftTop}></span>
@@ -122,7 +138,7 @@ let Component = React.createClass({
         <div className={`${css.rightBox} ${css.contentBox}`}>
           <div className={css.textBox}>
             <div className={css.header}>
-              <span className={css.nameBox}>项目预警</span>
+              <span className={css.nameBox}>重点项目看板</span>
               <span className={css.and}></span>
             </div>
             <span className={css.leftTop}></span>
@@ -261,15 +277,28 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      
+        heightChart1:state.vars.heightChart1,
+        heightPie:state.vars.heightPie
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
+    chartHeight:()=>{
+      let height=$('#chart1').css('height');
+      let num=height.length-2;
+      height=height.substr(0,num)*.9;
+      dispatch(actions.setVars('heightChart1',height));
+
+      let heightPie=$('#chart3').css('height');
+      let numPie=heightPie.length-2;
+      heightPie=heightPie.substr(0,numPie)*.9;
+      dispatch(actions.setVars('heightPie',heightPie));
+    },
+    init: ()=> {      
       
-    }
+          
+    },
   }
 };
 

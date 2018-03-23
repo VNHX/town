@@ -49,6 +49,7 @@
     "markdown-loader": "^0.1.2",
     "mkdirp": "^0.5.1",
     "moment": "^2.10.6",
+    "mqtt": "^2.16.0",
     "node-sass": "^3.4.1",
     "npm-zepto": "^1.1.7",
     "null-loader": "^0.1.0",

@@ -1,6 +1,6 @@
 module.exports = {
 	getConnect:function(topic,clientId,cb,bool) {
-		var clstrx ='192.168.1.108:1884';
+		var clstrx ='58.87.86.143:61623';
 		//var clstrx ='192.168.50.225:1884';
 		var clstr =clstrx.split(":");
 		console.log(555,clstr)
@@ -8,7 +8,7 @@ module.exports = {
 		var client = new Paho.MQTT.Client(clstr[0],clstr[1], clientId);//建立客户端实例  
 			client.onConnectionLost = onConnectionLost;//注册连接断开处理事件 
 			client.onMessageArrived = onMessageArrived;//注册消息接收处理事件
-			client.connect({onSuccess:onConnect});//连接服务器并注册连接成功处理事件
+			client.connect({onSuccess:onConnect,userName:'admin',password:'password'});//连接服务器并注册连接成功处理事件
 			function onConnect() {
 					// Once a connection has been made, make a subscription and send a message.
 					if(bool){

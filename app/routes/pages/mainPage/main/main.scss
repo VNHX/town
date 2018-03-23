@@ -115,7 +115,7 @@
 				height: 3rem;
 				line-height: 3rem;
 				text-align: center;
-				font-size: 2.5rem;
+				font-size: 2rem;
 			}
 			.weekday{
 				height: 3rem;
@@ -141,7 +141,7 @@
 		display:inline-block;
 		height:24rem;
 		width:24rem;
-		left:22%;
+		left:21%;
 		top:32%;
 		.line_left2{
 			background: url(../img/line_left2.png);
@@ -175,32 +175,53 @@
 					display:inline-block;
 					height:1.4rem;
 					width:1.4rem;
-					background:url(../img/house_2.png) no-repeat;
+					background:url(../img/people.png) no-repeat;
 					background-size:100% 100%;
 				}
 			}
-			.num{
-				color:#ca953b;
-				text-align:center;
-				height:3rem;
-				line-height:4rem;
-				font-size:1.2rem;
+			.percent{
+				display:inline-block;
+				height: 4rem;
+				line-height: 3rem;
+				width: 4rem;
+				border-radius: 2rem;
+				border: .5rem solid yellow;
+				font-size:1rem;
+				text-align: center;
 			}
-			.word{
-				text-align:center;
-				height:2rem;
-				line-height:2rem;
-				font-size:1.2rem;
+			.name{
+				display:inline-block;
+				height: 3rem;
+				width: 8rem;
+				margin-top: 1rem;
+			}
+			table{
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				font-size: 1rem;
+				tr{
+					width: 100%;
+					height: 2rem;
+					line-height: 3rem;
+					td{
+						text-align: center;
+						span.num{
+							font-size: 1.5rem;
+							color: #2299ff;
+						}
+					}
+				}
 			}
 		}
 	}
 	.circle3{
 		position:absolute;
 		left:30%;
-		top:65%;
+		top:62%;
 		display:inline-block;
-		height:16rem;
-		width:16rem;	
+		height:18rem;
+		width:18rem;	
 		.line_left3{
 			background: url(../img/line_left3.png);
 			background-size: 100% 100%;
@@ -221,11 +242,11 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:4rem 2rem;
+			padding:3rem 2rem;
 			.title{
 				height:2rem;
-				width: 86%;
-				margin-left: 7%;
+				width: 68%;
+				margin-left: 16%;
 				line-height:2rem;
 				font-size:1.2rem;
 				text-align:center;
@@ -239,24 +260,57 @@
 					background-size:100% 100%;
 				}
 			}
-			table{
-				padding: 0;
-				margin: 0;
-				width: 100%;
-				height: 3rem;
+			.percent1{
+				padding-left: .5rem;
 				font-size: 1rem;
-				td{
-					width: 50%;
-					text-align: center;
+				.total{
+					float: left;
+					width: 60%;
+					height: 1rem;
+					background: #57a247;
+					border-radius: .4rem;
+					margin-top: .3rem;
 				}
+				.num{
+					float: left;
+					width: 40%;
+					padding-left: 5%;
+				}	
 			}
-			.name,.num{
+			.percent2{
+				padding-left: 1rem;
 				font-size: 1rem;
-				text-align: center;
-			}
-			.color{
-				color: #ca953b;;
+				.total{
+					float: left;
+					width: 50%;
+					height: 1rem;
+					background: #ff7e26;
+					border-radius: .4rem;
+					margin-top: .3rem;
+				}
+				.num{
+					float: left;
+					width: 50%;
+					padding-left: 10%;
+				}	
 			}			
+			.percent3{
+				padding-left: 1.5rem;
+				font-size: 1rem;
+				.total{
+					float: left;
+					width: 40%;
+					height: 1rem;
+					background: #c1e799;
+					border-radius: .4rem;
+					margin-top: .3rem;
+				}
+				.num{
+					float: left;
+					width: 60%;
+					padding-left: 10%;
+				}	
+			}
 		}
 	}
 	.circle4{
@@ -356,9 +410,9 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding-top:6rem;
-			padding-left:2.5rem;
-			padding-right:2.5rem;
+			padding-top: 6rem;
+		    padding-left: 3rem;
+		    padding-right: 3rem;
 			.title{
 				height:2rem;
 				line-height:2rem;
@@ -376,9 +430,20 @@
 					background-size:100% 100%;
 				}
 			}
-			.chart{
-				height:12rem;
-			}
+			table{
+				width: 100%;
+				margin-top: 2rem;
+				tr{
+					display: inline-block;
+					height: 3rem;
+					width: 100%;
+					td{
+						display: inline-block;
+						width: 25%;
+						text-align: center;
+					}
+				}
+			}			
 		}
 	}
 	.circle6{
@@ -399,14 +464,17 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:5rem 4rem;
+			padding:4rem 3rem;
 			.title{
 				height:2rem;
+				width: 80%;
+				margin-left: 10%;
 				line-height:2rem;
 				font-size:1rem;
 				text-align:center;
 				border:1px solid #337ab7;
 				border-radius:1rem;
+				margin-bottom: 1rem;
 				span.icon{
 					display:inline-block;
 					height:1.5rem;
@@ -415,16 +483,56 @@
 					background-size:100% 100%;
 				}
 			}
-			.num{
-				color:#ca953b;
-				text-align:center;
-				font-size:1rem;
-				height:1.2rem;
-				line-height:1.2rem;
+			.percent1{
+				padding-left: .5rem;
+				font-size: 1rem;
+				.total{
+					float: left;
+					width: 60%;
+					height: 1rem;
+					background: #57a247;
+					border-radius: .4rem;
+					margin-top: .3rem;
+				}
+				.num{
+					float: left;
+					width: 40%;
+					padding-left: 5%;
+				}	
 			}
-			.word{
-				text-align:center;
-				font-size:1rem;
+			.percent2{
+				padding-left: 1rem;
+				font-size: 1rem;
+				.total{
+					float: left;
+					width: 50%;
+					height: 1rem;
+					background: #ff7e26;
+					border-radius: .4rem;
+					margin-top: .3rem;
+				}
+				.num{
+					float: left;
+					width: 50%;
+					padding-left: 10%;
+				}	
+			}			
+			.percent3{
+				padding-left: 1.5rem;
+				font-size: 1rem;
+				.total{
+					float: left;
+					width: 40%;
+					height: 1rem;
+					background: #c1e799;
+					border-radius: .4rem;
+					margin-top: .3rem;
+				}
+				.num{
+					float: left;
+					width: 60%;
+					padding-left: 10%;
+				}	
 			}
 		}
 	}
@@ -494,48 +602,17 @@
 			height:2rem;
 			line-height: 2rem;
 			font-size:1.2rem;			
-		}
-		table{
-			padding: 0;
-			margin: 0;
-			width: 100%;
-			font-size: 1rem;
-			tr{
-				width: 100%;
-				height: 2rem;
-				line-height: 3rem;
-				td{
-					text-align: center;
-					span.num{
-						font-size: 1.5rem;
-						color: #2299ff;
-					}
-				}
-			}
-		}
+		}		
 		.icon{
 			display:inline-block;
 			height:1rem;
 			width:1rem;
 			background:url(../img/people.png);
 			background-size:100% 100%;
-		}
-		.percent{
-			display:inline-block;
-			height: 4rem;
-			line-height: 3rem;
-			width: 4rem;
-			border-radius: 2rem;
-			border: .5rem solid yellow;
-			font-size:1rem;
-			text-align: center;
-		}
-		.name{
-			display:inline-block;
-			height: 4rem;
-			width: 8rem;
-			margin-top: 1rem;
-		}
+		}	
+		.chart{
+			height:12rem;
+		}	
 	}
 	.boardRight{
 		position :absolute;
@@ -564,7 +641,7 @@
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
-			padding-top:3rem;
+			padding-top:3.5rem;
 			font-size:1rem;
 			position:relative;
 			top: 0rem;
@@ -576,7 +653,7 @@
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
-			padding-top:3rem;
+			padding-top:3.5rem;
 			position:relative;
 			left:9rem;
 			top: -1rem;
@@ -589,7 +666,7 @@
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
-			padding-top:3rem;
+			padding-top:3.5rem;
 			position:relative;
 			left:0rem;
 			top: -1rem;
@@ -602,7 +679,7 @@
 			background:url(../img/data.png);
 			background-size:100% 100%;
 			text-align:center;
-			padding-top:3rem;
+			padding-top:3.5rem;
 			position:relative;
 			left:9rem;
 			top: -1rem;
