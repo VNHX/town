@@ -28,7 +28,7 @@ let Component = React.createClass({
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
                           <span>0</span>
-                          <span>今年入园</span>
+                          <span>本月意向</span>
                           <span>同比下降100%</span>
                           <span></span>
                         </div>
@@ -36,8 +36,8 @@ let Component = React.createClass({
                   <div className={style.leftkuang2}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>0</span>
-                          <span>今年退园</span>
+                          <span>1</span>
+                          <span>本年意向</span>
                           <span>同比下降100%</span>
                           <span></span>
                         </div>
@@ -45,55 +45,55 @@ let Component = React.createClass({
                   <div className={style.leftkuang3}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>70</span>
-                          <span>在园企业数</span>
+                          <span>20</span>
+                          <span>本月签约</span>
                         </div>
                   </div>
                   <div className={style.leftkuang4}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
                           <span>21</span>
-                          <span>规上企业数</span>
+                          <span>本年签约</span>
                         </div>
                   </div>  
                       <div className={style.rightkuang1}>
                           <div className={style.rightkuangtu}></div>
                             <div  className={style.kuangwenzi}>
-                              <span>18</span>
-                              <span>高新技术企业数</span>
+                              <span>1</span>
+                              <span>正在跟进</span>
                             </div>
                       </div> 
                       <div className={style.rightkuang2}>
                           <div className={style.rightkuangtu}></div>
                             <div  className={style.kuangwenzi}>
-                              <span>3</span>
-                              <span>线上企业数</span>
+                              <span>0</span>
+                              <span>关闭项目</span>
                             </div>
                       </div> 
                       <div className={style.rightquan1}>
                           <div className={style.rightquantu}></div>
                             <div  className={style.quanwenzi}>
-                              <span>创业版</span>
+                              <span>项目总览</span>
                             </div>
                       </div> 
-                      <div className={style.rightquan2}>
+                      {/* <div className={style.rightquan2}>
                           <div className={style.rightquantu}></div>
                             <div  className={style.quanwenzi}>
                               <span>主板</span>
                             </div>
-                      </div> 
-                      <div className={style.rightquan3}>
+                      </div>  */}
+                      {/* <div className={style.rightquan3}>
                           <div className={style.rightquantu}></div>
                             <div  className={style.quanwenzi}>
                               <span>第三版</span>
                             </div>
-                      </div> 
-                      <div className={style.rightquan4}>
+                      </div>  */}
+                      {/* <div className={style.rightquan4}>
                           <div className={style.rightquantu}></div>
                             <div  className={style.quanwenzi}>
                               <span>其他</span>
                             </div>
-                      </div> 
+                      </div>  */}
               </div>
             </div>
         </div>

@@ -67,10 +67,10 @@ let Component = React.createClass({
                 innerSize: '60%',
                 name: '市场份额',
                 data: [
-                    {name:'国际先进',   y: 22.0, color:'#FFC125',},
+                    {name:'私人',   y: 22.0, color:'#f5f274',},
                    
-                    {name:'国内先进',   y: 10.0, color:'#7EC0EE',},
-                    {name:'国内先进',   y: 22.0, color:'#EE8262',},
+                    {name:'外企',   y: 15.0, color:'#7EC0EE',},
+                    {name:'国企',   y: 22.0, color:'#EE8262',},
                   
                    
                    

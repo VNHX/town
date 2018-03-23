@@ -3,11 +3,11 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './lecha.scss';
-import  Leftchrt from './Echar/lmi.jsx'  //注册资本情况
-import Lmicha from './Echar/Lmicha.jsx'  //在圆项目分布情况
-import Lcot from './Echar/lcot.jsx'//项目考核、成长情况
+import  Leftchrt from './Echar/lmi.jsx'  //小镇分布及产值情况
+import Lmicha from './Echar/Lmicha.jsx'  //小镇收入情况
+import Lcot from './Echar/lcot.jsx'//企业纳税前10
 // import Jidu from './Echar/jindu.jsx' //累计项目总数
-import Ttranfrom from './tranfrom.jsx' //进度条
+import Ttranfrom from './tranfrom.jsx' //o产业总览
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -25,7 +25,7 @@ let Component = React.createClass({
                                 <span></span>
                                 <span></span>
                             </div>
-                            <p className={style.wenzi}>注册资本情况</p>
+                            <p className={style.wenzi}>小镇分布及产值情况</p>
                                 <div className={style.tubiao}>
                                 <Leftchrt height={height}/>
                                 </div>
@@ -40,7 +40,7 @@ let Component = React.createClass({
                                 <span></span>
                                 <span></span>
                             </div>
-                            <p className={style.wenzi}>在圆项目分布情况</p>
+                            <p className={style.wenzi}>小镇收入情况</p>
                                 <div className={style.tubiao}>
                                     <Lmicha height={height}/>
                                 </div>
@@ -56,57 +56,39 @@ let Component = React.createClass({
                                 <span></span>
                                 <span></span>
                             </div>
-                            <p className={style.wenzi}>项目考核、成长情况</p>
-                                <div className={style.tubiao}></div>
-                                <div className={style.tubiao02}>
-                                        <Lcot height={height}/>
-                                </div>
-                                <div className={style.wenkao}>
-                                    <div className={style.wetu}>
-                                        <div className={style.tu}></div>
-                                    </div>
-                                </div>
-                                    <div className={style.zwen}>
-                                        <div className={style.zwen01}>
-                                            <p className={style.zwex}>优秀项目：</p>
-                                            <p className={style.zwj}>3家</p>
-                                            <p className={style.zwg}>-合格项目：</p>
-                                            <p className={style.zwsj}>3家</p>
-                                        </div>
-                                        <div className={style.zwen02}>
-                                            <p className={style.zwebu}>不合格合格项目:</p>
-                                            <p className={style.zwejia}>3家</p>
-                                        </div>
-                                    </div>
-                                    <div className={style.tubiao2}></div>
-                                <div className={style.tubiao03}>
-                                        <Lcot height={height}/>
-                                </div>
-                                <div className={style.wenkao1}>
-                                    <div className={style.wetu}>
-                                        <div className={style.tu}></div>
-                                    </div>
-                                </div>
-                                    <div className={style.zwen01}>
-                                        <div className={style.zwen01}>
-                                            <p className={style.zwex}>优秀项目：</p>
-                                            <p className={style.zwj}>3家</p>
-                                            <p className={style.zwg}>-合格项目：</p>
-                                            <p className={style.zwsj}>3家</p>
-                                        </div>
-                                        <div className={style.zwen02}>
-                                            <p className={style.zwebu}>不合格合格项目:</p>
-                                            <p className={style.zwejia}>3家</p>
-                                        </div>
-                                    </div>
-                                
+                            <p className={style.wenzi}>企业纳税前10</p>
                         </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                        <div className={style.kuang}>
+                        <p className={style.p1}>河南至真食品有限公司</p>
+                        <p className={style.p2}>444,666,00元</p>
+                        </div>
+                       
               </div>
 
               <div className={style.cmi}>
                     <div className={style.cmou}></div>
-                        <div className={style.comiwen}>o 累计项目总数</div>
-                        <div className={style.comiwen2}>23 <p>个</p></div>
+                        <div className={style.comiwen}>o产业总览</div>
+                        <div className={style.comiwen2}>183<p>家</p></div>
                         <Ttranfrom />
               </div>
         </div>

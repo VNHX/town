@@ -19,7 +19,7 @@ let Component = React.createClass({
                 height:height,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
+                borderRadius:5,
             },
             title: {
                 text: ''
@@ -28,13 +28,13 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [
-                    '500万以下',
-                    '500-1000万',
-                    '100-5000万',
-                    '300-5000万',
-                    '5000以上',
-                ],
+                type: 'category',
+                // categories: [
+                //     '楼',
+                //     '三号楼',
+                //     '四号楼',
+                //     '八/九号楼',
+                // ],
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
@@ -48,7 +48,11 @@ let Component = React.createClass({
                  gridLineWidth: 0,//去掉y轴方向的横线
             },
             tooltip: {
-                enabled: false,
+                // enabled: false,
+                backgroundColor:'#12203a',
+                borderColor:'#486786',
+                borderRadius:6,
+               
             },
             legend: {
                 enabled: false
@@ -58,12 +62,39 @@ let Component = React.createClass({
             },
             plotOptions: {
                 column: {
-                    borderWidth: 0
+                    borderWidth: 0,
+                    borderRadius:5,
+                    animation: true,
+                    
                 }
             },
             series: [{
-                data: [5,8,10,30],
-            }]
+                name:'企业家数量',
+                data:[
+                    ['裙楼', 24],
+                    ['三号楼',15],
+                    ['四号楼', 12],
+                    ['八/九号楼', 10],
+                ],
+                dataLabels: {
+                    enabled: true,
+                    // rotation: -90,
+                    color: '#FFFFFF',
+                    // align: 'right',
+                    format: '{point.y:.1f}', // one decimal
+                    y: 5, // 10 pixels down from the top
+                    style: {
+                        fontSize: '16px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+               
+            }],
+            colors: ['#edd47a','#edd47a','#edd47a','#edd47a']
+            //     {
+            //     data: [20,50,60,100,],
+            //     color:'#edd47a',
+            // }
         };
         return (
             <ReactHighcharts config={configPie}/>

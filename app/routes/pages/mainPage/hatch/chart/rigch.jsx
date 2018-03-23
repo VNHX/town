@@ -19,7 +19,6 @@ let Component = React.createClass({
                 height:height,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
             },
             title: {
                 text: ''
@@ -27,37 +26,48 @@ let Component = React.createClass({
             subtitle: {
                 text: ''
             },
-            tooltip : {
-                
-            },
             xAxis: {
-               
-                crosshair: true,
-                // lineWidth :0,//去掉x轴线
-                tickWidth:0,//去掉刻度
+                categories: ['自主开发','企业介绍','主动上门','招商会','其他']
             },
             yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
+                title: {
+                    enabled: false
                 },
-                //  tickWidth:0,//去掉刻度
-                // gridLineWidth: 0,//去掉y轴方向的横线
+                min: 0
+            },
+            tooltip: {
+                layout: 'vertical',
+                align: 'center',
+                // verticalAlign: 'top',
+                y: 0,
+                floating: true,
+                borderWidth: 0,
             },
             legend: {
-                enabled: false
+                shared: true
             },
             plotOptions: {
-                line: {
-                    dataLabels: {
-                        // enabled: true          // 开启数据标签
-                    },
-                    // enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
-                }
+                // spline: {
+                //     marker: {
+                //         enabled: true
+                //     }
+                // }
             },
             series: [{
-                // name: '东京',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                name: '前期洽谈',
+                data:[
+                   20,20,50,70,1
+                 ]
+            }, {
+                name: '项目选止',
+                data:[
+                   9,10,20,60,12
+                ]
+            },{
+                name:'签订合同',
+                data:[
+                    2,6,9,10,20
+                ]
             }],
             credits: {
                 enabled: false //不显示highCharts版权信息

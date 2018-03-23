@@ -11,7 +11,7 @@ let Component = React.createClass({
         let {height}=this.props;
         let configPie = {
             chart: {
-                type: 'spline',
+                type: 'line',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
@@ -19,51 +19,46 @@ let Component = React.createClass({
                 height:height,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
+                borderRadius:5,
             },
             title: {
                 text: ''
+            },
+            credits: {
+                enabled: false //不显示highCharts版权信息
             },
             subtitle: {
                 text: ''
             },
             xAxis: {
-                enabled:false,
-                // categories: [
-                //     '500万以下',
-                //     '500-1000万',
-                //     '100-5000万',
-                //     '300-5000万',
-                //     '5000以上',
-                // ],
-                crosshair: true,
-                // lineWidth :0,//去掉x轴线
-                // tickWidth:0,//去掉刻度
+                categories: ['企业所得税', '增值税', '消费税', '营业税', '个人所得税',]
             },
             yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
-                },
-                //  tickWidth:0,//去掉刻度
-                //  gridLineWidth: 0,//去掉y轴方向的横线
-            },
-            tooltip: {
-                // enabled: false,
+                title: {
+                    text: ''
+                }
             },
             legend: {
                 enabled: false
             },
-            credits: {
-                enabled: false //不显示highCharts版权信息
+            tooltip:{
+                style: {  //提示框内容的样式  
+                    color: 'white',  
+                    padding: '10px',    //内边距 (这个会常用到)  
+                    fontSize: '9pt',              
+                }  
             },
             plotOptions: {
-                column: {
-                    borderWidth: 0
+                line: {
+                    dataLabels: {
+                        enabled: true          // 开启数据标签
+                    },
+                    enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
                 }
             },
             series: [{
-                data: [5,8,10,30],
+                // name: '东京',
+                data: [7.0, 6.9, 9.5, 14.5, 18.4,]
             }]
         };
         return (

@@ -19,8 +19,6 @@ let Component = React.createClass({
                 height:height,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
-              
             },
             title: {
                 text: ''
@@ -30,10 +28,10 @@ let Component = React.createClass({
             },
             xAxis: {
                 categories: [
-                    '1-3年',
-                    '3-5年',
-                    '5-10年',
-                    '10年以上',
+                    'I/信息传输和软件技术',
+                    'M/科学研究和服务业',
+                    'B/计算机 通信和电子设备制造业',
+                    'L/租凭和商务服务业',
                 ],
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
@@ -48,7 +46,7 @@ let Component = React.createClass({
                  gridLineWidth: 0,//去掉y轴方向的横线
             },
             tooltip: {
-                enabled: false,
+                shared: true
             },
             legend: {
                 enabled: false
@@ -58,12 +56,23 @@ let Component = React.createClass({
             },
             plotOptions: {
                 column: {
+                    grouping: false,
+                    shadow: false,
                     borderWidth: 0
                 }
             },
             series: [{
-               
-                data: [5,8,10,30],
+                name: '雇员',
+                color: 'rgba(165,170,217,1)',
+                data: [150, 100, 90],
+                pointPadding: 0.4,
+                pointPlacement: -0.2
+            }, {
+                name: '优化的员工',
+                color: 'rgba(126,86,134,.9)',
+                data: [140, 90, 40],
+                pointPadding: 0.4,
+                pointPlacement: -0.2
             }]
         };
         return (
