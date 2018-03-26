@@ -15,7 +15,7 @@
         left: 0%;
         top: 0%;
         .bioati{
-            width: 42%;
+            width: 50%;
             height: 16%;
             position: absolute;
             top: 2.3%;
@@ -31,18 +31,18 @@
         }
         .zhongtu{
             width: 100%;
-            height: 76%;
+            height: 74%;
             position: absolute;
             left: 0%;
             right: 0%;
-            bottom: 4%;
+            bottom: 7%;
             margin: auto;
                 .zhongkung{
-                    width: 61%;
+                    width: 80%;
                     height: 100%;
                     position: relative;
                     top: 0%;
-                    left: 20%;
+                    left: 4%;
                     .kuangtu{
                         width: 100%;
                         height: 100%;
@@ -50,11 +50,11 @@
                         background-size: 100% 100%;
                     }
                     .kuangtu1{
-                        width: 108%;
-                        height: 119%;
+                        width: 107%;
+                        height: 120%;
                         position: absolute;
-                        top: -14%;
-                        left: -2%;
+                        top: -14.4%;
+                        left: -1.8%;
                         .zhongdatu{
                             width: 100%;
                             height: 100%;
@@ -318,10 +318,10 @@
                 }
 
                 .rightquan1{
-                    width: 10rem;
-                    height: 10rem;
+                    width: 12rem;
+                    height: 12rem;
                     position: absolute;
-                    top: 41%;
+                    top: 37%;
                     left: 89%;
                         .rightquantu{
                             width: 100%;
@@ -338,9 +338,9 @@
                             overflow: hidden;
                             span:nth-child(1){
                                 color: #00d0ff;
-                                font-size: 1.2rem;
-                                margin-left: 27%;
-                                line-height: 8.3;
+                                font-size: 1.5rem;
+                                margin-left: 25%;
+                                line-height: 12rem;
                                 text-shadow: 0 0 1rem #00e1ff;
                             }
                         }

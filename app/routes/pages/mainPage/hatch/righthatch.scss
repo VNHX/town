@@ -7,11 +7,11 @@
     overflow: hidden;
     // 行业类型分析
     .rigfst{
-        width: 42%;
-        height: 42%;
+        width: 35%;
+        height: 40%;
         position: relative;
         top: 2.3%;
-        left: 3%;
+        left: 1%;
           .rigfstb{
             width: 100%;
             height: 100%;
@@ -75,17 +75,17 @@
                         left: 2%;
                      }
                      .rigtk{
-                        width: 44%;
-                        height: 80%;
+                        width: 47%;
+                        height: 93%;
                         position: absolute;
-                        top: 15%;
-                        left: 53%;
+                        top: 8%;
+                        left: 51%;
                         overflow: hidden;
                             .rigtu{
                                 width: 100%;
-                                height: 63%;
+                                height: 59%;
                                 position: absolute;
-                                top: -7%;
+                                top: -5%;
                                 left: 0%;
                                 .rightu{
                                    width: 100%;
@@ -96,9 +96,9 @@
                             }
                             .rigtu2{
                                 width: 89%;
-                                height: 50%;
+                                height: 46%;
                                 position: absolute;
-                                top: 0%;
+                                top: 2%;
                                 left: 5%;
                                 .rightu2{
                                    width: 100%;
@@ -109,10 +109,10 @@
                             }
                             .wenzi2{
                                 width: 100%;
-                                height: 60%;
+                                height: 41%;
                                 position: absolute;
-                                left: 2%;
-                                top: 59%;
+                                left: 0%;
+                                top: 57%;
                                 overflow: hidden;
                                  p{
                                     text-align: center;
@@ -122,14 +122,14 @@
                             }
                      }
           }
-}
+    }
 // 近俩年意向项目情况
      .rigtwo{
-        width: 42%;
-        height: 52%;
+        width: 35%;
+        height: 54%;
         position: relative;
         top: 3.3%;
-        left: 3%;
+        left: 1%;
           .rigfstb{
             width: 100%;
             height: 100%;
@@ -184,17 +184,95 @@
                 text-align: center;
                 font-size: 1.2rem;
                 color: #ffffff;
-                     }
-                    
+               }
+                .ll{
+                    width: 94%;
+                    height: 83%;
+                    margin: 10% 0 0 3%;
+                    background: rgba(25, 128, 216, 0.1);
+                    border: 1px solid rgba(108, 235, 252, 0.1);
+                    .ll_1{
+                        width: 100%;
+                        height: 17%;
+                        border: 1px solid rgba(108, 235, 252, 0.1);
+                        table{
+                            width: 100%;
+                            font-size: 1rem;
+                            font-weight: 100;
+                            color: #9b9b9b;
+                            tr{
+                                border: 1px solid #0f3d7b;
+                            }
+                            td{
+                                padding: 1.5rem;
+                            }
+                            .ll_2{
+                                position: absolute;
+                                display: inline-block;
+                                top: 21%;
+                                left: 4%;
+                                width: 25%;
+                                height: 13%;
+                                background: #ecd592;
+                                text-align: center;
+                                line-height: 3rem;
+                                font-weight: bolder;
+                                color: #000000;
+                            }
+                            .ll_3{
+                                height: 0%;
+                                width: 25%;
+                                border-top: 52px solid #6a9198;
+                                border-left: 19px solid transparent;
+                                border-right: 19px solid transparent;
+                                position: absolute;
+                                top: 34%;
+                                left: 4%;
+                            }
+                            .ll_4{
+                                height: 0%;
+                                width: 18%;
+                                border-top: 52px solid #b77c5c;
+                                border-left: 19px solid transparent;
+                                border-right: 19px solid transparent;
+                                position: absolute;
+                                top: 50%;
+                                left: 8%;
+                            }
+                          
+                        }
+                    }
+                    .ll_5{
+                        position: absolute;
+                        top: 36%;
+                        left: 12%;
+                        text-align: center;
+                        line-height: 3rem;
+                        font-size: 1rem;
+                        font-weight: bolder;
+                        color: #000000;
+                    }
+                    .ll_6{
+                        position: absolute;
+                        top: 52%;
+                        left: 12%;
+                        text-align: center;
+                        line-height: 3rem;
+                        font-size: 1rem;
+                        font-weight: bolder;
+                        color: #000000;
+                    }
+                }  
           }
-}
+    }
 // 意向来源分析
     .riglef{
-        width: 53%;
-        height: 48%;
+        width: 62.4%;
+        height: 47%;
         position: relative;
         top: -91.6%;
-        left: 45.6%;
+        left: 36.6%;
+        overflow: hidden;
           .riglefb{
             width: 100%;
             height: 100%;
@@ -254,20 +332,21 @@
                         width: 96%;
                         height: 77%;
                         position: absolute;
-                        top: 18%;
+                        top: 12%;
                         left: 2%;
+                        overflow: hidden;
                      }
                     
           }
 
-}
+    }
 // 重点项目
     .rigleftop{
-            width: 53%;
-            height: 46%;
-            position: relative;
-            top: -90.6%;
-            left: 45.6%;
+        width: 62.4%;
+        height: 47%;
+        position: relative;
+        top: -90.6%;
+        left: 36.6%;
       .rigleftopb{
         width: 100%;
         height: 100%;
@@ -343,5 +422,5 @@
                 }
                 
       }
- }
+    }
 }

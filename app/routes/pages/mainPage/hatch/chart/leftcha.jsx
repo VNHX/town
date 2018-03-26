@@ -8,19 +8,18 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {heightPie}=this.props;
         let configPie = {
             chart: {
-                type: 'column',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightPie,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 120,
-              
+                marginRight: 30,
+              	height:120
             },
             title: {
                 text: ''
@@ -28,28 +27,9 @@ let Component = React.createClass({
             subtitle: {
                 text: ''
             },
-            xAxis: {
-                categories: [
-                    '500万以下',
-                    '500-1000万',
-                    '100-5000万',
-                    '300-5000万',
-                    '5000以上',
-                ],
-                crosshair: true,
-                // lineWidth :0,//去掉x轴线
-                tickWidth:0,//去掉刻度
-            },
-            yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
-                },
-                //  tickWidth:0,//去掉刻度
-                 gridLineWidth: 0,//去掉y轴方向的横线
-            },
             tooltip: {
-                enabled: false,
+                headerFormat: '{series.name}<br>',
+            	pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
             },
             legend: {
                 enabled: false
@@ -58,14 +38,35 @@ let Component = React.createClass({
                 enabled: false //不显示highCharts版权信息
             },
             plotOptions: {
-                column: {
-                    borderWidth: 0
-                }
-            },
+	            pie: {
+	                allowPointSelect: true,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: true,
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+	                    style: {
+	                        color: '#fff',
+	                        fontWeight: 'normal',
+	                    }
+	                }
+	            }
+	        },
             series: [{
-               
-                data: [2,6,9,10,20],
-            }]
+	            type: 'pie',
+	            name: '行业分析',
+	            data: [
+	                ['I/信息传输和软件技术',10.0],
+	                ['M/科学研究和服务业', 11.8],
+	                {
+	                    name: 'B/计算机 通信和电子设备制造业',
+	                    y: 12.8,
+	                    sliced: true,
+	                    selected: true
+	                },
+                    ['L/租凭和商务服务业',8.7],
+                    ['私营',6.7]
+	            ]
+	        }]
         };
         return (
             <ReactHighcharts config={configPie}/>

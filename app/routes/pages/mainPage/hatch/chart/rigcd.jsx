@@ -1,95 +1,78 @@
-import React from 'react';
+import React from "react";
 import {connect} from 'react-redux';
 var actions = require('redux/actions');
-var ReactHighcharts = require('react-highcharts');
-
+var $ = require('jquery');
+import style from './rigcd.scss';
 let Component = React.createClass({
-    componentWillMount() {
-    },
-
-    render() {
-        let {height}=this.props;
-        let configPie = {
-            chart: {
-                backgroundColor: "rgba(46, 46, 65, 0)",
-                plotBackgroundColor: "rgba(46, 46, 65, 0)",
-                plotBorderWidth: 0,
-                borderWidth: 0,
-                height:height,
-                plotShadow: false,
-                reflow:true,
-            },
-            title: {
-                floating:true,
-                text: ''
-            },
-            subtitle: {
-                text: ''
-            },
-            tooltip : {
-               
-            },
-            xAxis: {
-                enabled:false
-            },
-            yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
-                },
-            },
-            legend: {
-                enabled: false
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                    },
-                }
-            },
-            series: [{
-                type: 'pie',
-                innerSize: '80%',
-                name: '市场份额',
-                data: [
-                    {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
-                    ['IE',       26.8],
-                    {
-                        name: 'Chrome',
-                        y: 12.8,
-                        sliced: true,
-                        selected: true,
-                        url: 'http://www.hcharts.cn'
-                    },
-                    ['Safari',    8.5],
-                    ['Opera',     6.2],
-                    ['其他',   0.7]
-                ]
-            }],
-            credits: {
-                enabled: false //不显示highCharts版权信息
-            },
-          
-        };
-        return (
-            <ReactHighcharts config={configPie}/>
-        );
-    }
+  componentDidMount() {
+    this.props.init();
+  },
+  render() {
+    let {}=this.props;
+    return (
+        <div className={style.ss}>
+  <table>
+              <thead>
+                <tr>
+                  <th colSpan="2">前期洽谈</th><th colSpan="2">项目建议书/项目申请</th>
+                  <th colSpan="2">项目立项</th><th colSpan="2">项目选址</th>
+                  <th colSpan="2">签订合同</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>年份</th><th>企业名称</th>
+                  <th>数量</th><th>同比</th>
+                  <th>数量</th><th>同比</th>
+                  <th>数量</th><th>同比</th>
+                  <th>数量</th><th>同比</th>
+                </tr>
+                <tr>
+                  <th>2016</th><th>珠海汽车工业(集团)有限公司</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                </tr>
+                <tr>
+                  <th>2017</th><th>珠海汽车工业(集团)有限公司</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                </tr>
+                <tr>
+                  <th>2018</th><th>珠海汽车工业(集团)有限公司</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                  <th>1</th><th>100.00%</th>
+                </tr>
+                <tr>
+                  <th>合计</th><th>身子罗灿科技有限公司</th>
+                  <th>0</th><th></th>
+                  <th>0</th><th></th>
+                  <th>0</th><th></th>
+                  <th>0</th><th></th>
+                </tr>
+              </tbody>
+            </table>
+        </div>            
+    )
+  }
 });
-
-
 const mapStateToProps = (state) => {
-    return {}
+    return {
+      
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        init: () => {
-        },
-    };
+  return {
+    init: ()=> {
+      
+    }
+  }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {heightChart3}=this.props;
         let configPie = {
             chart: {
                 type: 'line',
@@ -16,7 +16,7 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightChart3,
                 plotShadow: false,
                 reflow:true,
             },
@@ -27,19 +27,31 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['自主开发','企业介绍','主动上门','招商会','其他']
+                categories: ['自主开发','企业介绍','主动上门','招商会','其他'],
+                gridLineColor: "#fff",
+                gridLineWidth: 1,
+                lineColor: "#03a9f4",              
+                lineWidth: 2,
+                tickWidth:0,//去掉刻度
+                labels : {
+                    style : {
+                        // 'fontSize' : '10px',
+                        color: "#fff"
+                    }
+                }
             },
             yAxis: {
                 title: {
                     enabled: false
                 },
-                min: 0
+                min: 0,
+                gridLineDashStyle: 'longdash',
             },
-            tooltip: {
+            tooltip:{
                 layout: 'vertical',
                 align: 'center',
-                // verticalAlign: 'top',
-                y: 0,
+                verticalAlign: 'top',
+                // y: 0,
                 floating: true,
                 borderWidth: 0,
             },
@@ -47,26 +59,28 @@ let Component = React.createClass({
                 shared: true
             },
             plotOptions: {
-                // spline: {
-                //     marker: {
-                //         enabled: true
-                //     }
-                // }
+                series: {
+                    marker: {//线上数据点  
+                        radius: 5,  //曲线点半径，默认是4
+                        symbol: 'circle' //曲线点类型："circle", "square", "diamond", "triangle","triangle-down"，默认是"circle"
+                    }
+                }
             },
             series: [{
                 name: '前期洽谈',
                 data:[
-                   20,20,50,70,1
-                 ]
+                   2,0,5
+                 ],
+                 
             }, {
                 name: '项目选止',
                 data:[
-                   9,10,20,60,12
+                   5,7,8,
                 ]
             },{
                 name:'签订合同',
                 data:[
-                    2,6,9,10,20
+                    2,6,9
                 ]
             }],
             credits: {

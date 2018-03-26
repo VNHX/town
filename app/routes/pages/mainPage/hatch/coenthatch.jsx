@@ -16,7 +16,6 @@ let Component = React.createClass({
               <div className={style.bioati}>
                 <div className={style.biaotu}></div>
               </div>
-
               <div className={style.zhongtu}>
                   <div className={style.zhongkung}>
                       <div className={style.kuangtu}></div>
@@ -24,7 +23,7 @@ let Component = React.createClass({
                             <div className={style.zhongdatu}></div>
                         </div>
                   </div>
-                  <div className={style.leftkuang1}>
+                  {/* <div className={style.leftkuang1}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
                           <span>0</span>
@@ -55,7 +54,7 @@ let Component = React.createClass({
                           <span>21</span>
                           <span>本年签约</span>
                         </div>
-                  </div>  
+                  </div>   */}
                       <div className={style.rightkuang1}>
                           <div className={style.rightkuangtu}></div>
                             <div  className={style.kuangwenzi}>
@@ -76,24 +75,6 @@ let Component = React.createClass({
                               <span>项目总览</span>
                             </div>
                       </div> 
-                      {/* <div className={style.rightquan2}>
-                          <div className={style.rightquantu}></div>
-                            <div  className={style.quanwenzi}>
-                              <span>主板</span>
-                            </div>
-                      </div>  */}
-                      {/* <div className={style.rightquan3}>
-                          <div className={style.rightquantu}></div>
-                            <div  className={style.quanwenzi}>
-                              <span>第三版</span>
-                            </div>
-                      </div>  */}
-                      {/* <div className={style.rightquan4}>
-                          <div className={style.rightquantu}></div>
-                            <div  className={style.quanwenzi}>
-                              <span>其他</span>
-                            </div>
-                      </div>  */}
               </div>
             </div>
         </div>

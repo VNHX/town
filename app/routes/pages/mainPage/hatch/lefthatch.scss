@@ -2,8 +2,8 @@
     width: 33.4%;
     height: 100%;
     overflow: hidden;
-     .hxmit{
-        width: 33%;
+    .hxmit{
+        width: 18%;
         height: 100%;
         position: absolute;
         top: 0%;
@@ -14,13 +14,13 @@
             background: url(../img/lebj.png) no-repeat center;
             background-size: 100% 100%;
         }
-     }
-     .hxcomit{
-        width: 45%;
+    }
+    .hxcomit{
+        width: 42%;
         height: 95%;
         position: relative;
         top: 2.3%;
-        left: 33%;
+        left: 12%;
           .hxtu1{
             width: 100%;
             height: 100%;
@@ -85,5 +85,186 @@
                         left: 5%;
                      }
           }
-     }
+    }
+    .leftkuang1{
+        width: 6%;
+        height: 13%;
+        position: absolute;
+        top: 25%;
+        left: 24%;
+        .leftkuangtu{
+            width: 100%;
+            height: 100%;
+            background: url(../img/kuang1.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .kuangwenzi{
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            span:nth-child(1){
+                color: #62c3fa;
+                font-size: 3rem;
+                margin-left: 19%;
+                line-height: 7rem;
+                text-shadow: 0 0 2rem #00e1ff;
+            }
+            span:nth-child(2){
+                display: inline;
+                color: #fff;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 25%;
+                left: 36%;
+                text-shadow: 0 0 2em #04d2dc, 0 0 2em #008fa2;
+            }
+            span:nth-child(3){
+                color: #fff;
+                font-size: 1rem;
+                position: absolute;
+                top: 54%;
+                left: 37%;
+            }
+            span:nth-child(4){
+                width: 3%;
+                height: 20%;
+                position: absolute;
+                top: 49%;
+                left: 75%;
+                background: url(../img/jt.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+       
+    }
+
+    .leftkuang2{
+        width: 6%;
+        height: 13%;
+        position: absolute;
+        top: 44%;
+        left: 20%;
+        .leftkuangtu{
+            width: 100%;
+            height: 100%;
+            background: url(../img/kuang1.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .kuangwenzi{
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            span:nth-child(1){
+                color: #62c3fa;
+                font-size: 3rem;
+                margin-left: 19%;
+                line-height: 7rem;
+                text-shadow: 0 0 2rem #00e1ff;
+            }
+            span:nth-child(2){
+                display: inline;
+                color: #fff;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 25%;
+                left: 36%;
+                text-shadow: 0 0 2em #04d2dc, 0 0 2em #008fa2;
+            }
+            span:nth-child(3){
+                color: #fff;
+                font-size: 1rem;
+                position: absolute;
+                top: 54%;
+                left: 37%;
+            }
+            span:nth-child(4){
+                width: 3%;
+                height: 20%;
+                position: absolute;
+                top: 49%;
+                left: 75%;
+                background: url(../img/jt.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+       
+    }
+
+    .leftkuang3{
+        width: 6%;
+        height: 13%;
+        position: absolute;
+        top: 65%;
+        left: 23%;
+        .leftkuangtu{
+            width: 100%;
+            height: 100%;
+            background: url(../img/kuang2.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .kuangwenzi{
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            span:nth-child(1){
+                color: #00BCD4;
+                font-size: 2rem;
+                margin-left: 37%;
+                line-height: 5rem;
+                text-shadow: 0 0 1rem #00e1ff;
+            }
+            span:nth-child(2){
+                display: inline;
+                color: powderblue;
+                font-size: 1rem;
+                position: absolute;
+                top: 53%;
+                left: 35%;
+            }
+        }
+       
+    }
+
+    .leftkuang4{
+        width: 6%;
+        height: 13%;
+        position: absolute;
+        top: 86%;
+        left: 26%;
+        .leftkuangtu{
+            width: 100%;
+            height: 100%;
+            background: url(../img/kuang2.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .kuangwenzi{
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            span:nth-child(1){
+                color: powderblue;
+                font-size: 2rem;
+                margin-left: 41%;
+                line-height: 2.7;
+                text-shadow: 0 0 1rem #00e1ff;
+            }
+            span:nth-child(2){
+                display: inline;
+                color: powderblue;
+                font-size: 1rem;
+                position: absolute;
+                top: 53%;
+                left: 38%;
+            }
+        }
+       
+    }
 }

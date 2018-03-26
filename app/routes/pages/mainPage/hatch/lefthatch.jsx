@@ -8,10 +8,15 @@ import Leftchart from './chart/leftchart' //在园时间情况
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
+    window.addEventListener("resize", this.props.chartHeight);
+  },
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.props.chartHeight);
   },
 
   render() {
-    let {height}=this.props;
+    let {heightChart5}=this.props;
+    console.log(heightChart5)
     return (
         <div className={style.comit}>
             <div className={style.hxmit}>
@@ -27,10 +32,42 @@ let Component = React.createClass({
                     </div>
                     <p className={style.wenzi}>年度签约项目统计</p>
                         <div className={style.tubiao}>
-                             <Leftchart height={height}/>
+                             <Leftchart heightChart5={heightChart5}/>
                          </div>
                 </div>
               </div>
+              <div className={style.leftkuang1}>
+                      <div className={style.leftkuangtu}></div>
+                        <div  className={style.kuangwenzi}>
+                          <span>0</span>
+                          <span>本月意向</span>
+                          <span>同比下降100%</span>
+                          <span></span>
+                        </div>
+                  </div>
+                  <div className={style.leftkuang2}>
+                      <div className={style.leftkuangtu}></div>
+                        <div  className={style.kuangwenzi}>
+                          <span>1</span>
+                          <span>本年意向</span>
+                          <span>同比下降100%</span>
+                          <span></span>
+                        </div>
+                  </div>
+                  <div className={style.leftkuang3}>
+                      <div className={style.leftkuangtu}></div>
+                        <div  className={style.kuangwenzi}>
+                          <span>20</span>
+                          <span>本月签约</span>
+                        </div>
+                  </div>
+                  <div className={style.leftkuang4}>
+                      <div className={style.leftkuangtu}></div>
+                        <div  className={style.kuangwenzi}>
+                          <span>21</span>
+                          <span>本年签约</span>
+                        </div>
+                  </div>  
         </div>
                   
     )
@@ -38,23 +75,31 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      height:state.vars.height,
+      // height:state.vars.height,
+      heightChart5:state.vars.heightChart5
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
+    chartHeight:()=>{
       let height=$('#hxd').css('height');
       let num=height.length-2;
-      height=height.substr(0,num)*.8;
-      dispatch(actions.setVars('height',height));
-      window.addEventListener("resize", function(){
-          let height=$('#hxd').css('height');
-          let num=height.length-2;
-          height=height.substr(0,num)*.8;
-          dispatch(actions.setVars('height',height));
-      });     
+      height=height.substr(0,num)*.9;
+      dispatch(actions.setVars('heightChart5',height));
+    },
+    init: ()=> {
+      
+      // let height=$('#hxd').css('height');
+      // let num=height.length-2;
+      // height=height.substr(0,num)*.8;
+      // dispatch(actions.setVars('height',height));
+      // window.addEventListener("resize", function(){
+      //     let height=$('#hxd').css('height');
+      //     let num=height.length-2;
+      //     height=height.substr(0,num)*.8;
+      //     dispatch(actions.setVars('height',height));
+      // });     
     }
   }
 };
