@@ -37,19 +37,33 @@ let Component = React.createClass({
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
-                crosshair: true
+                crosshair: true,
+                labels: {
+                    y: 20, //x轴刻度往下移动20px
+                    style: {
+                        color: '#fff',//颜色
+                        fontSize:'10px'  //字体
+                    }
+                },
             },
             yAxis: {
                 min: 0,
                 title:{
                     enabled:false
                 },
+                labels: {
+                    format:'{value}',
+                    style: {
+                        color: '#fff',//颜色
+                        fontSize:'10px'  //字体
+                    }
+                },
                 //  tickWidth:0,//去掉刻度
-                 gridLineWidth: 0,//去掉y轴方向的横线
+                gridLineWidth: 0,//去掉y轴方向的横线
             },
             tooltip: {
                 // enabled: false,
-                backgroundColor:'#12203a',
+                //backgroundColor:'#12203a',
                 borderColor:'#486786',
                 borderRadius:6,
                

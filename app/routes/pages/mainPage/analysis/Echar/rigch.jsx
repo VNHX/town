@@ -55,7 +55,7 @@ let Component = React.createClass({
                     point: {
                         events: {
                             mouseOver: function (e) {
-                                console.log(e,"123");
+                                //console.log(e,"123");
                               
                             },
                         }
