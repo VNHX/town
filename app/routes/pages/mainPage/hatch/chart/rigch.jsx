@@ -69,18 +69,18 @@ let Component = React.createClass({
             series: [{
                 name: '前期洽谈',
                 data:[
-                   2,0,5
+                   2,0,5,3,4
                  ],
                  
             }, {
                 name: '项目选止',
                 data:[
-                   5,7,8,
+                   5,7,8,2,6
                 ]
             },{
                 name:'签订合同',
                 data:[
-                    2,6,9
+                    2,6,9,0,2
                 ]
             }],
             credits: {

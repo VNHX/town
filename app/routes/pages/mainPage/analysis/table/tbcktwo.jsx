@@ -19,7 +19,7 @@ let Component = React.createClass({
                 <div className={style.yi_2_4}></div>
                 <div className={style.yi_2_5}>I/信息传输和软件技术</div>
                 <div className={style.yi_2_6}>名称</div>
-                <div className={style.yi_2_7}>M/科学研究和服务业</div>
+                <div className={style.yi_2_7}>M/科学研究和技术服务业</div>
                 <div className={style.yi_2_8}>L/租凭和商务服务业</div>
            </div>
            <div className={style.dd}>

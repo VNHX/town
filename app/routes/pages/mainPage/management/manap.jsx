@@ -27,20 +27,26 @@ let Component = React.createClass({
                 <div className={style.bjwen}>
                 <div className={style.bjwenzi01}>
                  <p className={style.p1}>0</p>
-                 <p className={style.p2}>本月到期合同</p>
+                 <p className={style.p2}>今年入驻</p>
+                 <p className={style.p3}>0</p>
+                <p className={style.p4}>同比</p>
                 </div>
                 <div className={style.bjwenzi02}>
                 <p className={style.p1}>0</p>
-                <p className={style.p2}>上月到期合同</p>
+                <p className={style.p2}>今年产值/万元</p>
+                <p className={style.p3}>0</p>
+                <p className={style.p4}>同比</p>
                 </div>
                 <div className={style.bjwenzi03}>
                 <p className={style.p1}>0</p>
-                <p className={style.p2}>本月续租合同</p>
+                <p className={style.p2}>今年退圆</p>
+                <p className={style.p3}>0</p>
+                <p className={style.p4}>同比</p>
                 </div>
-                <div className={style.bjwenzi04}>
+                {/* <div className={style.bjwenzi04}>
                 <p className={style.p1}>0</p>
-                <p className={style.p2}>上月续租合同</p>
-                </div>
+                <p className={style.p2}>同比</p>
+                </div> */}
                 </div>
             </div>
       </div>

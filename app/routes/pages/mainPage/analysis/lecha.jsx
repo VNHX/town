@@ -25,7 +25,7 @@ let Component = React.createClass({
                                 <span></span>
                                 <span></span>
                             </div>
-                            <p className={style.wenzi}>小镇分布及产值情况</p>
+                            <p className={style.wenzi}>小镇企业分布及产值情况</p>
                                 <div className={style.tubiao}>
                                 <Leftchrt height={height}/>
                                 </div>
@@ -40,7 +40,7 @@ let Component = React.createClass({
                                 <span></span>
                                 <span></span>
                             </div>
-                            <p className={style.wenzi}>小镇收入情况</p>
+                            <p className={style.wenzi}>小镇税收入情况</p>
                                 <div className={style.tubiao}>
                                     <Lmicha height={height}/>
                                 </div>

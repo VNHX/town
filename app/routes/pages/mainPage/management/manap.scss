@@ -63,7 +63,7 @@
             background: rgba(10, 64, 130, 0.4);
             overflow: hidden;
             .bjwenzi01{
-                width: 23%;
+                width: 31%;
                 height: 94%;
                 float: left;
                 border-right: 2px solid rgba(191, 163, 163, 0.3);
@@ -72,20 +72,40 @@
                     font-size: 2rem;
                     font-weight: bold;
                     color: orange;
-                    line-height: 3;
+                    line-height: 6.6rem;
                     text-align: center;
+                    margin-left: -15rem;
                 }
                 .p2{
                     height: 5%;
                     font-size: 1.7rem;
                     font-weight: bold;
                     color: #d2cbcb;
-                    line-height: 4;
+                    line-height: 8rem;
                     text-align: center;
+                    margin-left: -15rem;
+                }
+                .p3{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    text-align: center;
+                    line-height: 0rem;
+                    margin-left: 13rem;
+                }
+                .p4{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 2rem;
+                    text-align: center;
+                    margin-left: 13rem;
                 }
             }
             .bjwenzi02{
-                width: 28%;
+                width: 37%;
                 height: 94%;
                 float: left;
                 border-right: 2px solid rgba(191, 163, 163, 0.3);
@@ -94,61 +114,117 @@
                     font-size: 2rem;
                     font-weight: bold;
                     color: orange;
-                    line-height: 3;
+                    line-height: 6.6rem;
                     text-align: center;
+                    margin-left: -15rem;
                 }
                 .p2{
                     height: 5%;
                     font-size: 1.7rem;
                     font-weight: bold;
                     color: #d2cbcb;
-                    line-height: 4;
+                    line-height: 8rem;
                     text-align: center;
+                    margin-left: -15rem;
+                }
+                .p3{
+                    height: 12%;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: orange;
+                    line-height: 0rem;
+                    text-align: center;
+                    margin-left: 13rem;
+                }
+                .p4{
+                    height: 5%;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: #d2cbcb;
+                    line-height: 1rem;
+                    text-align: center;
+                    margin-left: 13rem;
                 }
             }
             .bjwenzi03{
-                width: 29%;
+                width: 32%;
                 height: 94%;
                 float: left;
-                border-right: 2px solid rgba(191, 163, 163, 0.3);
+                // border-right: 2px solid rgba(191, 163, 163, 0.3);
                 .p1{
                     height: 12%;
                     font-size: 2rem;
                     font-weight: bold;
                     color: orange;
-                    line-height: 3;
+                    line-height: 6.6rem;
                     text-align: center;
+                    margin-left: -15rem;
                 }
                 .p2{
                     height: 5%;
                     font-size: 1.7rem;
                     font-weight: bold;
                     color: #d2cbcb;
-                    line-height: 4;
+                    line-height: 8rem;
                     text-align: center;
+                    margin-left: -15rem;
                 }
-            }
-            .bjwenzi04{
-                width: 20%;
-                height: 94%;
-                float: left;
-                .p1{
+                .p3{
                     height: 12%;
                     font-size: 2rem;
                     font-weight: bold;
                     color: orange;
-                    line-height: 3;
+                    line-height: 0rem;
                     text-align: center;
+                    margin-left: 13rem;
                 }
-                .p2{
+                .p4{
                     height: 5%;
                     font-size: 1.7rem;
                     font-weight: bold;
                     color: #d2cbcb;
-                    line-height: 4;
+                    line-height: 1rem;
                     text-align: center;
+                    margin-left: 13rem;
                 }
             }
+            // .bjwenzi04{
+            //     width: 20%;
+            //     height: 94%;
+            //     float: left;
+            //     .p1{
+            //         height: 12%;
+            //         font-size: 2rem;
+            //         font-weight: bold;
+            //         color: orange;
+            //         line-height: 3;
+            //         text-align: center;
+            //     }
+            //     .p1{
+            //         height: 5%;
+            //         font-size: 1.7rem;
+            //         font-weight: bold;
+            //         color: #d2cbcb;
+            //         line-height: 4;
+            //         text-align: center;
+            //     }
+            //     .p3{
+            //         height: 12%;
+            //         font-size: 2rem;
+            //         font-weight: bold;
+            //         color: orange;
+            //         line-height: 3;
+            //         text-align: center;
+            //     }
+            //     .p4{
+            //         height: 5%;
+            //         font-size: 1.7rem;
+            //         font-weight: bold;
+            //         color: #d2cbcb;
+            //         line-height: 4;
+            //         text-align: center;
+            //     }
+            // }
         }
     }
 }

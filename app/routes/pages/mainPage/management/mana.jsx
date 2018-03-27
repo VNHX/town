@@ -3,8 +3,14 @@ import React from "react";
 import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var $ = require('jquery');
-import style from './mana.scss'
-import Manapr from './char/manapr.jsx'
+import style from './mana.scss';
+import Manapr from './char/manapr.jsx' ;//人才资源结构
+// mapchar
+import Mapchar from './char/mapchar.jsx'; //企业数量统计
+import Mp from './char/mp_yuan1.jsx'; //知识产权_发明专利
+import Mpto from './char/mp_yuan2.jsx'; //知识产权_实用新型
+import Mpse from './char/mp_yuan3.jsx'; //知识产权_外观设计
+import Mpsp from './char/mp_yuan4.jsx'; //知识产权_计算机软件
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -22,17 +28,9 @@ let Component = React.createClass({
                     <span></span>
                     <span></span>
                 </div>
-                <p className={style.wenzi}>合同到期预警</p>
+                <p className={style.wenzi}>企业数量统计</p>
                     <div className={style.tubiao}>
-                    <table  border="1" cellPadding="0" cellSpacing="0" >  
-            <tbody>
-  <tr><td>客户名称</td><td>合同编号</td><td>到期时间</td><td>类型</td><td >倒计时</td><td>欠费</td></tr>  
-  <tr><td>吴友旺</td><td>0944456</td><td>20-06-18</td><td>制定</td><td>829</td><td>是</td></tr>  
-  <tr><td>吴友旺</td><td>0944456</td><td>20-06-18</td><td>制定</td><td>829</td><td>是</td></tr>  
-  <tr><td>吴友旺</td><td>0944456</td><td>20-06-18</td><td>制定</td><td>829</td><td>是</td></tr>  
-  <tr><td>吴友旺</td><td>0944456</td><td>20-06-18</td><td>制定</td><td>829</td><td>是</td></tr>  
-  </tbody>
-</table> 
+                    <Mapchar height={height}/>
                     </div>
             </div>
         </div>
@@ -44,27 +42,31 @@ let Component = React.createClass({
                     <span></span>
                     <span></span>
                 </div>
-                <p className={style.wenzi}>园区出租比例</p>
+                <p className={style.wenzi}>知识产权</p>
                     <div className={style.tubiao}>
                         <div className={style.lyuan}></div>
+                        <div className={style.tu_biao}><Mp height={height}/></div>
                         <div className={style.lwenzi}>
-                            <p className={style.p1}>以租房间</p>
-                            <p className={style.p2}>0间-出租率：0%</p>
+                            <p className={style.p1}>发明专利</p>
+                            <p className={style.p2}>20%</p>
                         </div>
                         <div className={style.lyuan02}></div>
+                        <div className={style.tu_biao02}><Mpto height={height}/></div>
                         <div className={style.lwenzi02}>
-                            <p className={style.p1}>以租房间</p>
-                            <p className={style.p2}>0间-出租率：0%</p>
+                            <p className={style.p1}>实用新型</p>
+                            <p className={style.p2}>84%</p>
                         </div>
                         <div className={style.lyuan03}></div>
+                        <div className={style.tu_biao03}><Mpse height={height}/> </div>
                         <div className={style.lwenzi03}>
-                            <p className={style.p1}>以租房间</p>
-                            <p className={style.p2}>0间-出租率：0%</p>
+                            <p className={style.p1}>外观设计</p>
+                            <p className={style.p2}>52%</p>
                         </div>
-                        <div className={style.lyuan04}></div>
+                        <div className={style.lyuan04}></div> 
+                        <div className={style.tu_biao04}><Mpsp height={height}/></div>
                         <div className={style.lwenzi04}>
-                            <p className={style.p1}>以租房间</p>
-                            <p className={style.p2}>0间-出租率：0%</p>
+                            <p className={style.p1}>计算机软件</p>
+                            <p className={style.p2}>90%</p>
                         </div>
                     </div>
             </div>
@@ -77,7 +79,7 @@ let Component = React.createClass({
                     <span></span>
                     <span></span>
                 </div>
-                <p className={style.wenzi}>物业收入情况</p>
+                <p className={style.wenzi}>人才资源结构</p>
                     <div className={style.tubiao}>
                       <Manapr height={height}/>
                     </div>

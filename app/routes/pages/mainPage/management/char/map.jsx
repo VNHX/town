@@ -61,13 +61,16 @@ let Component = React.createClass({
                 type: 'pie',
                 name: "",
                 data:[
-                    ['规下(4家)',8],
-                    ['规上(1家)',4],
-                    
+                    ['10年以上(8家)',8],
+                    ['1-2年以上(74家)',3],
+                    ['2-4年以上(43家)',4],
+                    ['6-5年以上(25家)',5],
+                    [2],
+                    ['6-10年以上(13家)',6],
                 ],
-                style: {     fontSize:"20px",  }
+                style: {fontSize:"20px",  }
             }],
-            colors:['#c96c65','#eda096',]
+            colors:['#61b2e9','#94dda6','#e2715f','#94eee2','#f0ae7a','#f3ce5b']
         };
         return (
             <ReactHighcharts config={configPie}/>

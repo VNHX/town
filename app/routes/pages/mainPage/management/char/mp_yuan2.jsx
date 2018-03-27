@@ -8,43 +8,42 @@ let Component = React.createClass({
     },
 
     render() {
-
-        let{}=this.props;
-
-
+        let {height,chart}=this.props;
         let configPie = {
             chart: {
+                type: 'pie',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
+                height:height,
                 plotShadow: false,
-                height:170
+                reflow:true,
+                height:100
             },
             title: {
-                text: ''
+                floating:true,
+                text: '',
+                // style: {
+                //     fontSize: "16px",
+                //     lineHeight: "45px"
+                // }
             },
-            legend:{
-                enabled: false
-            },
-
             tooltip: {
-                enabled: true,
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                //pointFormat: "<b>{point.percentage:.0f}%</b>"
-            },
-            credits: {
-                enabled: false //不显示highCharts版权信息
+                enabled: false
+            }, 
+            legend: {
+                enabled: false
             },
             plotOptions: {
                 pie: {
-                    allowPointSelect: true,
+                    allowPointSelect: false,
                     cursor: 'pointer',
                     borderWidth: 0,
                     size: '120%',
                     innerSize: '80%',
                     dataLabels: {
-                        enabled: true,
+                        enabled: false,
                         format: '{point.name}',
                         style: {
                             color: "#d1d2d3",
@@ -56,18 +55,17 @@ let Component = React.createClass({
                     },
 
                 }
+
             },
             series: [{
-                type: 'pie',
-                name: "",
-                data:[
-                    ['规下(4家)',8],
-                    ['规上(1家)',4],
-                    
-                ],
-                style: {     fontSize:"20px",  }
+                innerSize: '80%',
+                name: '实用新型',
+                data: [8,2],
             }],
-            colors:['#c96c65','#eda096',]
+            credits: {
+                enabled: false //不显示highCharts版权信息
+            },
+            colors: ['#f4d547','#edd57b',]
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -83,6 +81,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         init: () => {
+           
         },
     };
 };

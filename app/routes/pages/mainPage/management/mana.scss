@@ -6,7 +6,7 @@
     right: 0%;
     top: 0%;
     overflow: hidden;
-    //合同到期预警
+    //企业数量统计
     .hcomit{
         width: 53%;
         height: 46%;
@@ -59,13 +59,13 @@
                 border-width: 0  0 1px 1px;
             }
             .wenzi{
-                    background: #48a6cc;
-                    height: 8%;
-                    position: absolute;
-                    left: 2%;
-                    top: 5%;
-                    font-size: 1.4rem;
-                    color: #ffffff;
+                background: #48a6cc;
+                height: 6%;
+                position: absolute;
+                left: 2%;
+                top: 5%;
+                font-size: 1rem;
+                color: #ffffff;
                      }
                      .tubiao{
                         width: 100%;
@@ -91,13 +91,14 @@
                      }
           }
      }
-//园区出租比例
+//知识产权
      .hcomit02{
         width: 45%;
         height: 46%;
         position: relative;
         top: -44.5%;
         left: 55%;
+        overflow: hidden;
           .htu1{
             width: 100%;
             height: 100%;
@@ -144,13 +145,13 @@
                 border-width: 0  0 1px 1px;
             }
             .wenzi{
-                    background: #48a6cc;
-                    height: 8%;
-                    position: absolute;
-                    left: 2%;
-                    top: 5%;
-                    font-size: 1.4rem;
-                    color: #ffffff;
+                background: #48a6cc;
+                height: 6%;
+                position: absolute;
+                left: 2%;
+                top: 5%;
+                font-size: 1rem;
+                color: #ffffff;
                      }
                      .tubiao{
                         width: 100%;
@@ -158,10 +159,30 @@
                         position: absolute;
                         top: 15%;
                         left: 0%;
+                        .tu_biao{
+                            position: relative;
+                            left: -33%;
+                            top: 10%;
+                        }
+                        .tu_biao02{
+                            position: absolute;
+                            left: -9%;
+                            top: 9%;
+                        }
+                        .tu_biao03{
+                            position: absolute;
+                            left: 13%;
+                            top: 10%;
+                        }
+                        .tu_biao04{
+                            position: absolute;
+                            left: 33%;
+                            top: 10%;
+                        }
                         .lyuan{
                             width: 7rem;
                             height: 7rem;
-                            border: 2px solid lawngreen;
+                            border: 2px solid #84db8d;
                             border-radius: 50%;
                             position: absolute;
                             left: 10%;
@@ -169,101 +190,105 @@
                         }
                         .lwenzi{
                             width: 30%;
-                            position: relative;
-                            top: 17%;
-                            left: 28%;
+                            position: absolute;
+                            top: 53%;
+                            left: 11%;
                             .p1{
-                                color: khaki;
+                                color:#67d745;
                                 font-size: 1.5rem;
                                 display: inline-block;
                             }
                             .p2{
-                                color: #c1c0b0;
+                                color: #69dc41;
                                 font-size: 1.4rem;
-                                display: inline-block;
+                                margin-top: -9.6rem;
+                                margin-left: 1.8rem;
                             }
                         }
                         .lyuan02{
                             width: 7rem;
                             height: 7rem;
-                            border: 2px solid lawngreen;
+                            border: 2px solid #e6cb48;
                             border-radius: 50%;
                             position: absolute;
-                            left: 56%;
+                            left: 33%;
                             top: 12%;
                         }
                         .lwenzi02{
                             width: 30%;
-                            position: relative;
-                            top: -9%;
-                            left: 73%;
+                            position: absolute;
+                            top: 53%;
+                            left: 33%;
                             .p1{
-                                color: khaki;
+                                color: #f6d54a;
                                 font-size: 1.5rem;
                                 display: inline-block;
                             }
                             .p2{
-                                color: #c1c0b0;
+                                color: #ecce4c;
                                 font-size: 1.4rem;
-                                display: inline-block;
+                                margin-top: -9.6rem;
+                                margin-left: 2.4rem;
                             }
                         }
                         .lyuan03{
                             width: 7rem;
                             height: 7rem;
-                            border: 2px solid lawngreen;
+                            border: 2px solid #9a4952;
                             border-radius: 50%;
                             position: absolute;
-                            left: 10%;
-                            top:59%;
+                            left: 55%;
+                            top: 12%;
                         }
                         .lwenzi03{
                             width: 30%;
-                            position: relative;
-                            top: 5%;
-                            left: 28%;
+                            position: absolute;
+                            top: 53%;
+                            left: 55%;
                             .p1{
-                                color: khaki;
+                                color: #e93325;
                                 font-size: 1.5rem;
                                 display: inline-block;
                             }
                             .p2{
-                                color: #c1c0b0;
+                                color: #ea3426;
                                 font-size: 1.4rem;
-                                display: inline-block;
+                                margin-top: -9.6rem;
+                                margin-left: 2.4rem;
                             }
                         }
                         .lyuan04{
                             width: 7rem;
                             height: 7rem;
-                            border: 2px solid lawngreen;
+                            border: 2px solid #949599;
                             border-radius: 50%;
                             position: absolute;
-                            left: 56%;
-                            top: 59%;
+                            left: 75%;
+                            top: 12%;
                         }
                         .lwenzi04{
                             width: 30%;
-                            position: relative;
-                            top: -24%;
-                            left: 73%;
+                            position: absolute;
+                            top: 53%;
+                            left: 75%;
                             .p1{
-                                color: khaki;
+                                color: #959796;
                                 font-size: 1.5rem;
                                 display: inline-block;
                             }
                             .p2{
-                                color: #c1c0b0;
+                                color: #93979a;
                                 font-size: 1.4rem;
-                                display: inline-block;
+                                margin-top: -9.6rem;
+                                margin-left: 2.4rem;
                             }
                         }
                      }
           }
      }
-//物业收入情况
+//人才资源结构
      .hcomit03{
-        width: 100%;
+        width: 99%;
         height: 49%;
         position: relative;
         top: -43.5%;
@@ -281,7 +306,7 @@
                 position: absolute;
                 left: 0%;
                 top: 0%;
-                padding: 1%;
+                padding: 0.5%;
                 border-style: solid;
                 border-color: #6cebfc;
                 border-width: 1px 0 0 1px;
@@ -290,7 +315,7 @@
                 position: absolute;
                 right:0%;
                 top: 0%;
-                padding: 1%;
+                padding: 0.5%;
                 border-style: solid;
                 border-color: #6cebfc;
                 border-width: 1px 1px 0 0;
@@ -299,7 +324,7 @@
                 position: absolute;
                 right: 0%;
                 bottom: 0%;
-                padding: 1%;
+                padding: 0.5%;
                 border-style: solid;
                 border-color: #6cebfc;
                 border-width:0 1px 1px 0;
@@ -308,19 +333,19 @@
                 position: absolute;
                 left: 0%;
                 bottom: 0%;
-                padding: 1%;
+                padding: 0.5%;
                 border-style: solid;
                 border-color: #6cebfc;
                 border-width: 0  0 1px 1px;
             }
             .wenzi{
-                    background: #48a6cc;
-                    height: 8%;
-                    position: absolute;
-                    left: 2%;
-                    top: 5%;
-                    font-size: 1.4rem;
-                    color: #ffffff;
+                background: #48a6cc;
+                height: 6%;
+                position: absolute;
+                left: 2%;
+                top: 5%;
+                font-size: 1rem;
+                color: #ffffff;
                      }
                      .tubiao{
                         width: 100%;
