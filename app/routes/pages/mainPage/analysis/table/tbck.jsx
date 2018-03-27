@@ -42,13 +42,27 @@ let Component = React.createClass({
                   '十一月',
                   '十二月'
               ],
-              crosshair: true
+              crosshair: true,
+              labels: {
+                  y: 20, //x轴刻度往下移动20px
+                  style: {
+                      color: '#fff',//颜色
+                      fontSize:'10px'  //字体
+                  }
+              },
           },
           yAxis: {
               min: 0,
               title: {
                 enabled: false
-              }
+              },
+              labels: {
+                  format:'{value}',
+                  style: {
+                      color: '#fff',//颜色
+                      fontSize:'10px'  //字体
+                  }
+              },
           },
           tooltip: {
               headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
@@ -65,6 +79,14 @@ let Component = React.createClass({
               },
              
           },
+          legend: {
+              enabled: true,
+              itemStyle: {
+                  color: '#fff',//颜色
+                  fontSize:'12px',  //字体
+                  fontWeight:'normal'
+              }
+          },
           series: [{
               name: 'A区',
               data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
@@ -79,7 +101,7 @@ let Component = React.createClass({
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
-            colors: ['#193867','#ecd592','#6a9198','#b77c5c','#975654','#7e8c69']
+            colors: ['#48a6cc','#ecd592','#6a9198','#b77c5c','#975654','#7e8c69']
         };
         return (
             <ReactHighcharts config={configPie}/>

@@ -31,12 +31,27 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['企业所得税', '增值税', '消费税', '营业税', '个人所得税',]
+                categories: ['企业所得税', '增值税', '消费税', '营业税', '个人所得税',],
+                tickWidth:0,
+                labels: {
+                    y: 20, //x轴刻度往下移动20px
+                    style: {
+                        color: '#fff',//颜色
+                        fontSize:'10px'  //字体
+                    }
+                },
             },
             yAxis: {
                 title: {
                     text: ''
-                }
+                },
+                labels: {
+                    format:'{value}',
+                    style: {
+                        color: '#fff',//颜色
+                        fontSize:'10px'  //字体
+                    }
+              },
             },
             legend: {
                 enabled: false
