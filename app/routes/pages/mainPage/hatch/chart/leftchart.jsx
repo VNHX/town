@@ -36,6 +36,12 @@ let Component = React.createClass({
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
+                labels : {
+                    style : {
+                        // 'fontSize' : '10px',
+                        color: "#fff"
+                    }
+                }
             },
             yAxis: {
                 min: 0,
@@ -44,6 +50,14 @@ let Component = React.createClass({
                 },
                 //  tickWidth:0,//去掉刻度
                  gridLineWidth: 0,//去掉y轴方向的横线
+                 lineColor: "#fff",               //X轴的颜色  
+                 lineWidth: 1,
+                 labels : {
+                    style : {
+                        // 'fontSize' : '10px',
+                        color: "#fff"
+                    }
+                }
             },
             tooltip: {
                 shared: true
@@ -62,15 +76,15 @@ let Component = React.createClass({
                 }
             },
             series: [{
-                name: '雇员',
+                name: '',
                 color: 'rgba(165,170,217,1)',
-                data: [150, 100, 90],
+                data: [150, 100, 90,34],
                 pointPadding: 0.4,
                 pointPlacement: -0.2
             }, {
-                name: '优化的员工',
+                name: '',
                 color: 'rgba(126,86,134,.9)',
-                data: [140, 90, 40],
+                data: [140, 90, 40,44],
                 pointPadding: 0.4,
                 pointPlacement: -0.2
             }]
