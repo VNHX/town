@@ -8,7 +8,7 @@ import Chart from "./chart.jsx";
 import LineChart from "./lineChart.jsx";
 import PieChart from "./pieChart.jsx";
 let Component = React.createClass({
-  componentDidMount() {
+  componentWillMount() {
     this.props.init();
     window.addEventListener("resize", this.props.chartHeight);
   },

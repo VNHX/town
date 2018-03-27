@@ -22,8 +22,8 @@
 * redux
 
 ##打包
-# npm run build
-# node lib/create-index-html.js
+* npm run build
+* node lib/create-index-html.js
 
 ### 项目结构
 
