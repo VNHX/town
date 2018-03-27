@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height,chart}=this.props;
+        let {heightPie,chart}=this.props;
         let configPie = {
             chart: {
                 type: 'pie',
@@ -16,7 +16,7 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightPie,
                 plotShadow: false,
                 reflow:true,
                 height:100

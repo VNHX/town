@@ -3,8 +3,7 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './lefthatch.scss'
-import Leftchart from './chart/leftchart' //在园时间情况
-// import Leftcha from './chart/leftcha' //注册资金情况
+import Leftchart from './chart/leftchart' //年度签约项目统计
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -75,7 +74,6 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      // height:state.vars.height,
       heightChart5:state.vars.heightChart5
     }
 };
@@ -89,17 +87,6 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actions.setVars('heightChart5',height));
     },
     init: ()=> {
-      
-      // let height=$('#hxd').css('height');
-      // let num=height.length-2;
-      // height=height.substr(0,num)*.8;
-      // dispatch(actions.setVars('height',height));
-      // window.addEventListener("resize", function(){
-      //     let height=$('#hxd').css('height');
-      //     let num=height.length-2;
-      //     height=height.substr(0,num)*.8;
-      //     dispatch(actions.setVars('height',height));
-      // });     
     }
   }
 };

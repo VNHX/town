@@ -19,6 +19,7 @@ let Component = React.createClass({
                 height:heightChart1,
                 plotShadow: false,
                 reflow:true,
+                height:560,
             },
             title: {
                 text: ''
@@ -76,18 +77,18 @@ let Component = React.createClass({
                 }
             },
             series: [{
-                name: '',
-                color: 'rgba(165,170,217,1)',
-                data: [150, 100, 90,34],
+                name: '签约统计',
+                color: 'rgba(60,83,91,1)',
+                data: [180, 160, 140,120],
                 pointPadding: 0.4,
                 pointPlacement: -0.2
             }, {
-                name: '',
-                color: 'rgba(126,86,134,.9)',
-                data: [140, 90, 40,44],
+                name: '签约统计',
+                color: 'rgba(100,194,204,.9)',
+                data: [170, 160, 130,100],
                 pointPadding: 0.4,
                 pointPlacement: -0.2
-            }]
+            },]
         };
         return (
             <ReactHighcharts config={configPie}/>

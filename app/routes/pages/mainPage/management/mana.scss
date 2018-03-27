@@ -69,10 +69,11 @@
                      }
                      .tubiao{
                         width: 100%;
-                        height: 79%;
+                        height: 92%;
                         position: absolute;
-                        top: 15%;
+                        top: 11%;
                         left: 0%;
+                        overflow: hidden;
                         table {  
                             // border: 1px solid #B1CDE3;  
                             padding:0;   
@@ -349,9 +350,10 @@
                      }
                      .tubiao{
                         width: 100%;
-                        height: 79%;
+                        height: 86%;
                         position: absolute;
-                        top: 15%;
+                        top: 9%;
+                        overflow: hidden;
                      }
           }
      }

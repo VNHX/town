@@ -10,7 +10,7 @@ import Main from './main/Main.jsx';//总览
 import Hatch from './hatch/hatch.jsx';//项目孵化 
 import Analysis from './analysis/analysis.jsx';//产业分析
 import Manage from './manage/manage.jsx';//工程管理面板
-import Management from './management/management.jsx' //物业管理
+import Management from './management/management.jsx'; //企业360°
 let Component = React.createClass({
   componentDidMount() {
     this.props.init(this.props.params);

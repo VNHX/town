@@ -18,8 +18,8 @@ let Component = React.createClass({
                 height:heightPie,
                 plotShadow: false,
                 reflow:true,
-                marginRight: 30,
-              	height:120
+                // marginRight: 30,
+                height:250,
             },
             title: {
                 text: ''
@@ -28,8 +28,8 @@ let Component = React.createClass({
                 text: ''
             },
             tooltip: {
-                headerFormat: '{series.name}<br>',
-            	pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+                enabled: true,
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
             },
             legend: {
                 enabled: false
@@ -40,33 +40,37 @@ let Component = React.createClass({
             plotOptions: {
 	            pie: {
 	                allowPointSelect: true,
-	                cursor: 'pointer',
-	                dataLabels: {
-	                    enabled: true,
-	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-	                    style: {
-	                        color: '#fff',
-	                        fontWeight: 'normal',
-	                    }
-	                }
-	            }
+                    cursor: 'pointer',
+                    borderWidth: 0,
+                    size: '120%',
+                    innerSize: '80%',
+                    dataLabels: {
+                        enabled: false,
+                        format: '{point.name}',
+                        style: {
+                            color: "#d1d2d3",
+                            fontSize: '14px',
+                            fontFamily:"微软雅黑"
+                        },
+
+                    },
+
+                }
 	        },
-            series: [{
-	            type: 'pie',
-	            name: '行业分析',
-	            data: [
-	                ['I/信息传输和软件技术',10.0],
-	                ['M/科学研究和服务业', 11.8],
-	                {
-	                    name: 'B/计算机 通信和电子设备制造业',
-	                    y: 12.8,
-	                    sliced: true,
-	                    selected: true
-	                },
-                    ['L/租凭和商务服务业',8.7],
-                    ['私营',6.7]
-	            ]
-	        }]
+            series: [
+                {
+                    type: 'pie',
+                    name: "行业分析",
+                    data:[
+                        ['I/信息传输和软件技术',8],
+                        ['M/科学研究和服务业',3],
+                        ['B/计算机 通信和电子设备制造业',4],
+                        ['L/租凭和商务服务业',5],
+                        [2],
+                        ['私营',6],
+                    ],
+                    style: {fontSize:"20px",  }
+                }]
         };
         return (
             <ReactHighcharts config={configPie}/>

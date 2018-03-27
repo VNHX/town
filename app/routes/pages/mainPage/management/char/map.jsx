@@ -9,9 +9,7 @@ let Component = React.createClass({
 
     render() {
 
-        let{}=this.props;
-
-
+        let{heightPie}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -19,7 +17,8 @@ let Component = React.createClass({
                 plotBorderWidth: 0,
                 borderWidth: 0,
                 plotShadow: false,
-                height:170
+                height:100,
+                height:heightPie,
             },
             title: {
                 text: ''
@@ -41,8 +40,8 @@ let Component = React.createClass({
                     allowPointSelect: true,
                     cursor: 'pointer',
                     borderWidth: 0,
-                    size: '120%',
-                    innerSize: '80%',
+                    size: '60%',
+                    innerSize: '60%',
                     dataLabels: {
                         enabled: true,
                         format: '{point.name}',

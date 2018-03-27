@@ -7,15 +7,20 @@ import style from './manal.scss'
 import Manapl from './char/manapl.jsx' //上规上限分类统计
 import Map from './char/map.jsx' //入驻年限
 let Component = React.createClass({
-  componentDidMount() {
-    this.props.init();
-  },
+    componentWillMount() {
+        this.props.init();
+        window.addEventListener("resize", this.props.chartHeight);
+      },
+      componentWillUnmount() {
+        window.removeEventListener("resize", this.props.chartHeight);
+      },
 
   render() {
-    let {height}=this.props;
+    let {heightPie,heightChart1}=this.props;
+  
     return (
       <div className={style.cmt}>
-            <div className={style.hcomit} id='min'>
+            <div className={style.hcomit}>
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -40,7 +45,7 @@ let Component = React.createClass({
                     </div>
             </div>
         </div>
-        <div className={style.hcomit03} id='min'>
+        <div className={style.hcomit03} id='mi'>
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -56,12 +61,14 @@ let Component = React.createClass({
                        <div className={style.wen_zi}>
                        <p>1-10月份，全市新登记民营市场主体19。38万户,咱全市新登记市场主体的98.7%,其中民营企业7.78万户。1-10月份,全市民间投资8993.92亿元,增长2.23%,咱全市投资的64.7%。其中,制造业和房地产投资占民间投资的比重分别为34.1%和17.9%。民营企业外贸出口591.63亿元,下降5.3%。</p>
                        </div>
-                       <div className={style.tu_biao}><Manapl height={height} /></div>
+                       <div className={style.tu_biao}>
+                       <div className={style.tu_biao2}> <Manapl heightChart1={heightChart1} /></div>
+                       </div>
                     </div>
 
             </div>
         </div>
-        <div className={style.hcomit02}>
+        <div className={style.hcomit02}  id='min'>
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -71,7 +78,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>入驻年限</p>
                     <div className={style.tubiao}>
-                        <div className={style.tu_biao}><Map  height={height} /></div>
+                        <div className={style.tu_biao}><Map  heightPie={heightPie} /></div>
                         <div className={style.wen_kuang}>
                         <span>企业数量:</span> 
                         <span>14家</span>
@@ -96,23 +103,37 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-        height:state.vars.height,
+        heightPie:state.vars.heightPie,
+        heightChart1:state.vars.heightChart1,
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
-        let height=$('#min').css('height');
+    chartHeight:()=>{
+        let height=$('#mi').css('height');
         let num=height.length-2;
-        height=height.substr(0,num)*.8;
-        dispatch(actions.setVars('height',height));
-        window.addEventListener("resize", function(){
-            let height=$('#min').css('height');
-            let num=height.length-2;
-            height=height.substr(0,num)*.8;
-            dispatch(actions.setVars('height',height));
-        });
+        height=height.substr(0,num)*.9;
+       
+        dispatch(actions.setVars('heightChart1',height));
+  
+        let heightPie=$('#min').css('height');
+        let numPie=heightPie.length-2;
+        heightPie=heightPie.substr(0,numPie)*.9;
+     
+        dispatch(actions.setVars('heightPie',heightPie));
+      },
+    init: ()=> {
+        // let height=$('#min').css('height');
+        // let num=height.length-2;
+        // height=height.substr(0,num)*.8;
+        // dispatch(actions.setVars('height',height));
+        // window.addEventListener("resize", function(){
+        //     let height=$('#min').css('height');
+        //     let num=height.length-2;
+        //     height=height.substr(0,num)*.8;
+        //     dispatch(actions.setVars('height',height));
+        // });
     }
   }
 };

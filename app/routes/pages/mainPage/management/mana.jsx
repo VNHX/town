@@ -12,12 +12,18 @@ import Mpto from './char/mp_yuan2.jsx'; //知识产权_实用新型
 import Mpse from './char/mp_yuan3.jsx'; //知识产权_外观设计
 import Mpsp from './char/mp_yuan4.jsx'; //知识产权_计算机软件
 let Component = React.createClass({
-  componentDidMount() {
-    this.props.init();
-  },
+    componentWillMount() {
+        this.props.init();
+        window.addEventListener("resize", this.props.chartHeight);
+      },
+      componentWillUnmount() {
+        window.removeEventListener("resize", this.props.chartHeight);
+      },
 
   render() {
-    let {height}=this.props;
+    let {heightChart1,heightPie}=this.props;
+    console.log(heightChart1,'hx79')
+    console.log(heightPie,'hx789')
     return (
       <div className={style.cmt}>
         <div className={style.hcomit}>
@@ -30,11 +36,11 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>企业数量统计</p>
                     <div className={style.tubiao}>
-                    <Mapchar height={height}/>
+                    <Mapchar heightChart1={heightChart1}/>
                     </div>
             </div>
         </div>
-        <div className={style.hcomit02}>
+        <div className={style.hcomit02} id='bck2'>
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -45,25 +51,25 @@ let Component = React.createClass({
                 <p className={style.wenzi}>知识产权</p>
                     <div className={style.tubiao}>
                         <div className={style.lyuan}></div>
-                        <div className={style.tu_biao}><Mp height={height}/></div>
+                        <div className={style.tu_biao}><Mp heightPie={heightPie}/></div>
                         <div className={style.lwenzi}>
                             <p className={style.p1}>发明专利</p>
                             <p className={style.p2}>20%</p>
                         </div>
                         <div className={style.lyuan02}></div>
-                        <div className={style.tu_biao02}><Mpto height={height}/></div>
+                        <div className={style.tu_biao02}><Mpto heightPie={heightPie}/></div>
                         <div className={style.lwenzi02}>
                             <p className={style.p1}>实用新型</p>
                             <p className={style.p2}>84%</p>
                         </div>
                         <div className={style.lyuan03}></div>
-                        <div className={style.tu_biao03}><Mpse height={height}/> </div>
+                        <div className={style.tu_biao03}><Mpse heightPie={heightPie}/> </div>
                         <div className={style.lwenzi03}>
                             <p className={style.p1}>外观设计</p>
                             <p className={style.p2}>52%</p>
                         </div>
                         <div className={style.lyuan04}></div> 
-                        <div className={style.tu_biao04}><Mpsp height={height}/></div>
+                        <div className={style.tu_biao04}><Mpsp heightPie={heightPie}/></div>
                         <div className={style.lwenzi04}>
                             <p className={style.p1}>计算机软件</p>
                             <p className={style.p2}>90%</p>
@@ -81,7 +87,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>人才资源结构</p>
                     <div className={style.tubiao}>
-                      <Manapr height={height}/>
+                      <Manapr heightChart1={heightChart1}/>
                     </div>
             </div>
         </div>
@@ -94,23 +100,37 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-        height:state.vars.height,
+        heightChart1:state.vars.heightChart1,
+        heightPie:state.vars.heightPie,
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
+    chartHeight:()=>{
         let height=$('#bck').css('height');
         let num=height.length-2;
-        height=height.substr(0,num)*.8;
-        dispatch(actions.setVars('height',height));
-        window.addEventListener("resize", function(){
-            let height=$('#bck').css('height');
-            let num=height.length-2;
-            height=height.substr(0,num)*.8;
-            dispatch(actions.setVars('height',height));
-        });
+        height=height.substr(0,num)*.9;
+        console.log(height,'height')
+        dispatch(actions.setVars('heightChart1',height));
+  
+        let heightPie=$('#bck2').css('height');
+        let numPie=heightPie.length-2;
+    console.log(heightPie,'hx78910')
+        heightPie=heightPie.substr(0,numPie)*.9;
+        dispatch(actions.setVars('heightPie',heightPie));
+      },
+    init: ()=> {
+        // let height=$('#bck').css('height');
+        // let num=height.length-2;
+        // height=height.substr(0,num)*.8;
+        // dispatch(actions.setVars('height',height));
+        // window.addEventListener("resize", function(){
+        //     let height=$('#bck').css('height');
+        //     let num=height.length-2;
+        //     height=height.substr(0,num)*.8;
+        //     dispatch(actions.setVars('height',height));
+        // });
     }
   }
 };

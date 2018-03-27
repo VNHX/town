@@ -46,17 +46,25 @@ let Component = React.createClass({
                 },
                 min: 0,
                 gridLineDashStyle: 'longdash',
+                labels : {
+                    style : {
+                        // 'fontSize' : '10px',
+                        color: "#fff"
+                    }
+                }
             },
             tooltip:{
-                layout: 'vertical',
-                align: 'center',
-                verticalAlign: 'top',
-                // y: 0,
-                floating: true,
-                borderWidth: 0,
+                // floating: true,
+                // verticalAlign: 'top',
+                // x: 0,
+                // y: 100,
+                // align: 'center',
+                // borderWidth: 0,
+                enabled:true
             },
             legend: {
-                shared: true
+                // shared: true
+                enabled:true
             },
             plotOptions: {
                 series: {
