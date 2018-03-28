@@ -16,7 +16,7 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:heightPie,
+                // height:,
                 plotShadow: false,
                 reflow:true,
                 height:100

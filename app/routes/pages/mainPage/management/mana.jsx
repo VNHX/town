@@ -12,8 +12,9 @@ import Mpto from './char/mp_yuan2.jsx'; //知识产权_实用新型
 import Mpse from './char/mp_yuan3.jsx'; //知识产权_外观设计
 import Mpsp from './char/mp_yuan4.jsx'; //知识产权_计算机软件
 let Component = React.createClass({
-    componentWillMount() {
+    componentDidMount() {
         this.props.init();
+        this.props.chartHeight();
         window.addEventListener("resize", this.props.chartHeight);
       },
       componentWillUnmount() {
@@ -26,7 +27,7 @@ let Component = React.createClass({
     console.log(heightPie,'hx789')
     return (
       <div className={style.cmt}>
-        <div className={style.hcomit}>
+        <div className={style.hcomit} id='bck'>
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -40,7 +41,7 @@ let Component = React.createClass({
                     </div>
             </div>
         </div>
-        <div className={style.hcomit02} id='bck2'>
+        <div className={style.hcomit02} >
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -56,7 +57,7 @@ let Component = React.createClass({
                             <p className={style.p1}>发明专利</p>
                             <p className={style.p2}>20%</p>
                         </div>
-                        <div className={style.lyuan02}></div>
+                        <div className={style.lyuan02} id='bck2'></div>
                         <div className={style.tu_biao02}><Mpto heightPie={heightPie}/></div>
                         <div className={style.lwenzi02}>
                             <p className={style.p1}>实用新型</p>
@@ -77,7 +78,7 @@ let Component = React.createClass({
                     </div>
             </div>
         </div>
-        <div className={style.hcomit03} id='bck'>
+        <div className={style.hcomit03} >
             <div className={style.htu1}>
                  <div className={style.hbk}>
                     <span></span>
@@ -121,16 +122,7 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(actions.setVars('heightPie',heightPie));
       },
     init: ()=> {
-        // let height=$('#bck').css('height');
-        // let num=height.length-2;
-        // height=height.substr(0,num)*.8;
-        // dispatch(actions.setVars('height',height));
-        // window.addEventListener("resize", function(){
-        //     let height=$('#bck').css('height');
-        //     let num=height.length-2;
-        //     height=height.substr(0,num)*.8;
-        //     dispatch(actions.setVars('height',height));
-        // });
+       
     }
   }
 };

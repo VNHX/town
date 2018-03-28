@@ -4,6 +4,7 @@
     position: absolute;
         right: 0;
         top: 0;
+//项目同比累计        
         .hxEchar{
             width: 42%;
             height: 47%;
@@ -14,15 +15,15 @@
             background: rgba(0, 0, 0, 0.1);
             border: 1px solid #4a7cc1;
             overflow: hidden;
-                     p{
+              p{
                 background: #48a6cc;
-                width: 22%;
-                height: 9%;
+                width: 14%;
+                height: 7%;
                 margin-left: 2%;
                 margin-top: 2%;
                 text-align: center;
-                font-size: 1.3rem;
-                line-height: 2rem;
+                font-size: 1rem;
+                line-height: 1.6rem;
                 color: #ffffff;
             }
              .xaila{
@@ -40,7 +41,7 @@
              }
         }
        
-        .hxEchad span:nth-child(1){
+.hxEchad span:nth-child(1){
             position: absolute;
             right:0%;
             top: 0%;
@@ -76,7 +77,7 @@
             border-color: #6cebfc;
             border-width: 0  0 2px 2px;
         }
-       
+//签约项目产业分布       
         .hxEchar01{
             width: 56%;
             height: 51%;
@@ -90,13 +91,13 @@
             overflow: hidden;
                p{
                 background: #48a6cc;
-                width: 22%;
-                height: 9%;
+                width: 14%;
+                height: 7%;
                 margin-left: 2%;
                 margin-top: 2%;
                 text-align: center;
-                font-size: 1.3rem;
-                line-height: 2rem;
+                font-size: 1rem;
+                line-height: 1.7rem;
                 color: #ffffff;
             }
             .xaila{
@@ -136,6 +137,7 @@
              }
               
         }
+//项目同比排名        
         .hxEchar02{
             width: 42%;
             height: 47%;
@@ -148,13 +150,13 @@
             overflow: hidden;
                 p{
                 background: #48a6cc;
-                width: 22%;
-                height: 9%;
+                width: 14%;
+                height: 7%;
                 margin-left: 2%;
                 margin-top: 2%;
                 text-align: center;
-                font-size: 1.3rem;
-                line-height: 2rem;
+                font-size: 1rem;
+                line-height: 1.6rem;
                 color: #ffffff;
              }
              .xaila{
@@ -171,6 +173,7 @@
                     }  
              }
         }
+//各部门签约情况        
         .hxEchar03{
             width: 56%;
             height: 43%;
@@ -183,15 +186,15 @@
             float: right;
             overflow: hidden;
                  p{
-                background: #48a6cc;
-                width: 22%;
-                height: 9%;
-                margin-left: 2%;
-                margin-top: 2%;
-                text-align: center;
-                font-size: 1.3rem;
-                line-height: 2rem;
-                color: #ffffff;
+                    background: #48a6cc;
+                    width: 14%;
+                    height: 7%;
+                    margin-left: 2%;
+                    margin-top: 2%;
+                    text-align: center;
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                    color: #ffffff;
             }
             .xaila{
                 width: 5%;

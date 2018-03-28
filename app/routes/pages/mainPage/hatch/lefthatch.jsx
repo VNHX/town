@@ -7,6 +7,7 @@ import Leftchart from './chart/leftchart' //年度签约项目统计
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
+    this.props.chartHeight();
     window.addEventListener("resize", this.props.chartHeight);
   },
   componentWillUnmount() {

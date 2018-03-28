@@ -19,7 +19,7 @@ let Component = React.createClass({
                 height:heightChart1,
                 plotShadow: false,
                 reflow:true,
-                height:560,
+                // height:560,
             },
             title: {
                 text: ''

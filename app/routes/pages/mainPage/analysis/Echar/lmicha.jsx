@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {heightChart3}=this.props;
         let configPie = {
             chart: {
                 type: 'line',
@@ -16,10 +16,11 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightChart3,
                 plotShadow: false,
                 reflow:true,
                 borderRadius:5,
+                // height:260,
             },
             title: {
                 text: ''
@@ -32,7 +33,11 @@ let Component = React.createClass({
             },
             xAxis: {
                 categories: ['企业所得税', '增值税', '消费税', '营业税', '个人所得税',],
-                tickWidth:0,
+                gridLineColor: "#fff",
+                gridLineWidth: 1,
+                lineColor: "#fff",              
+                lineWidth: 2,
+                tickWidth:0,//去掉刻度
                 labels: {
                     y: 20, //x轴刻度往下移动20px
                     style: {
@@ -45,6 +50,10 @@ let Component = React.createClass({
                 title: {
                     text: ''
                 },
+                   //  tickWidth:0,//去掉刻度
+                // gridLineWidth: 0,//去掉y轴方向的横线
+                lineColor: "#fff",               //X轴的颜色  
+                lineWidth: 1, 
                 labels: {
                     format:'{value}',
                     style: {
@@ -52,6 +61,7 @@ let Component = React.createClass({
                         fontSize:'10px'  //字体
                     }
               },
+              gridLineDashStyle: 'longdash',
             },
             legend: {
                 enabled: false
@@ -68,13 +78,18 @@ let Component = React.createClass({
                     dataLabels: {
                         enabled: true          // 开启数据标签
                     },
-                    enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+                    enableMouseTracking: false, // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+                    marker: {//线上数据点  
+                        radius: 0,  //曲线点半径，默认是4
+                        // symbol: 'circle' //曲线点类型："circle", "square", "diamond", "triangle","triangle-down"，默认是"circle"
+                    }
                 }
             },
             series: [{
                 // name: '东京',
                 data: [7.0, 6.9, 9.5, 14.5, 18.4,]
-            }]
+            }],
+            colors:['#e07b71']
         };
         return (
             <ReactHighcharts config={configPie}/>
