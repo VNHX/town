@@ -214,72 +214,90 @@
                    .wen_kuang{
                     background: rgba(18, 42, 86, 0.4);
                     border: 1px solid #4c7299;
-                    width: 21%;
-                    height: 43%;
+                    width: 30%;
+                    height: 56%;
                     position: relative;
-                    top: -58%;
-                    left: 60%;
-                    span:nth-child(1){
+                    top: -66%;
+                    left: 59%;
+                    // span:nth-child(1){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 3rem;
+                    // }
+                    // span:nth-child(2){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 1rem;
+                    // }
+                    // span:nth-child(3){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 3rem;
+                    // }
+                    // span:nth-child(4){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 1rem;
+                    // }
+                    // span:nth-child(5){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 3rem;
+                    //     display: inline-block;
+                    // }
+                    // span:nth-child(6){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 3rem;
+                    // }
+                    // span:nth-child(7){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 2rem;
+                    //     margin-left: 3rem;
+                    //     display: inline-block;
+                    // }
+                    // span:nth-child(8){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 1rem;
+                    // }
+                    // span:nth-child(9){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 3rem;
+                    // }
+                    // span:nth-child(10){
+                    //     font-size: 1rem;
+                    //     color: #ffffff;
+                    //     line-height: 4rem;
+                    //     margin-left: 1rem;
+                    // }
+                    table{
+                        width: 100%;
                         font-size: 1rem;
                         color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 3rem;
-                    }
-                    span:nth-child(2){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 1rem;
-                    }
-                    span:nth-child(3){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 3rem;
-                    }
-                    span:nth-child(4){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 1rem;
-                    }
-                    span:nth-child(5){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 3rem;
-                        display: inline-block;
-                    }
-                    span:nth-child(6){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 3rem;
-                    }
-                    span:nth-child(7){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 2rem;
-                        margin-left: 3rem;
-                        display: inline-block;
-                    }
-                    span:nth-child(8){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 1rem;
-                    }
-                    span:nth-child(9){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 3rem;
-                    }
-                    span:nth-child(10){
-                        font-size: 1rem;
-                        color: #ffffff;
-                        line-height: 4rem;
-                        margin-left: 1rem;
+                        text-align: center;
+                        height: 100%;	
+                        th{
+                            border: 1px solid #2f507d;
+                            text-align: center;
+                        }
+                        thead{
+                            tr{
+                                height: 3rem;
+                                line-height: 3rem;					
+                            }
+                        }
+                        
                     }
                    }
                  }

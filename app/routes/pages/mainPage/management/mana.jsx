@@ -51,29 +51,33 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>知识产权</p>
                     <div className={style.tubiao}>
-                        <div className={style.lyuan}></div>
+                        <div className={style.lyuan}> 
+                        <p className={style.p2}>20%</p>
+                        </div>
                         <div className={style.tu_biao}><Mp heightPie={heightPie}/></div>
                         <div className={style.lwenzi}>
                             <p className={style.p1}>发明专利</p>
-                            <p className={style.p2}>20%</p>
                         </div>
-                        <div className={style.lyuan02} id='bck2'></div>
+                        <div className={style.lyuan02} id='bck2'>
+                        <p className={style.p2}>84%</p>
+                        </div>
                         <div className={style.tu_biao02}><Mpto heightPie={heightPie}/></div>
                         <div className={style.lwenzi02}>
                             <p className={style.p1}>实用新型</p>
-                            <p className={style.p2}>84%</p>
                         </div>
-                        <div className={style.lyuan03}></div>
+                        <div className={style.lyuan03}>
+                        <p className={style.p2}>52%</p>
+                        </div>
                         <div className={style.tu_biao03}><Mpse heightPie={heightPie}/> </div>
                         <div className={style.lwenzi03}>
                             <p className={style.p1}>外观设计</p>
-                            <p className={style.p2}>52%</p>
                         </div>
-                        <div className={style.lyuan04}></div> 
+                        <div className={style.lyuan04}>  
+                        <p className={style.p2}>90%</p>
+                        </div> 
                         <div className={style.tu_biao04}><Mpsp heightPie={heightPie}/></div>
                         <div className={style.lwenzi04}>
                             <p className={style.p1}>计算机软件</p>
-                            <p className={style.p2}>90%</p>
                         </div>
                     </div>
             </div>

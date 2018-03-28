@@ -35,7 +35,7 @@ let Component = React.createClass({
                 labels : {
                     style : {
                         // 'fontSize' : '10px',
-                        color: "#685e5eeb"
+                        color: "#fff"
                     }
                 }
             },
@@ -47,12 +47,12 @@ let Component = React.createClass({
                 gridLineWidth: 0,//去掉y轴方向的横线
                 lineColor: "#fff",               //X轴的颜色  
                 lineWidth: 1, 
-                labels : {
+                labels:{
                     style : {
                         // 'fontSize' : '10px',
-                        color: "#685e5eeb"
+                        color: "#fff"
                     }
-                }
+                },
             },
         legend: {
             enabled: false

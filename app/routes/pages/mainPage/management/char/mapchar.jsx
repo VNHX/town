@@ -51,7 +51,7 @@ let Component = React.createClass({
                 labels : {
                     style : {
                         // 'fontSize' : '10px',
-                        color: "#685e5eeb"
+                        color: "#fff"
                     }
                 },
                 gridLineDashStyle: 'longdash',

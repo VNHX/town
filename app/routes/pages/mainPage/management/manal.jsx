@@ -81,16 +81,24 @@ let Component = React.createClass({
                     <div className={style.tubiao}>
                         <div className={style.tu_biao}><Map  heightPie={heightPie} /></div>
                         <div className={style.wen_kuang}>
-                        <span>企业数量:</span> 
-                        <span>14家</span>
-                        <span>企业数量:</span> 
-                        <span>14家</span>
-                        <span>I/信息传输和软件</span>
-                        <span>I/信息传输和软件</span>
-                        <span>技术产值:</span>
-                        <span>0万元</span>
-                        <span>技术产值:</span>
-                        <span>0万元</span>
+                        <table>
+                <thead>
+                  <tr>
+                    <th>企业数量</th><th>14家</th>
+                    <th>企业数量</th><th>14家</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <td colSpan='2'>I/信息传输和软件</td><td colSpan='2'>I/信息传输和软件</td>
+                  </tr>
+                  <tr>
+                  <td>技术产值</td><td>0万元</td>
+                    <td>技术产值</td><td>0万元</td>
+                  </tr>
+                
+                </tbody>
+              </table>
                         </div>
                     </div>
             </div>
