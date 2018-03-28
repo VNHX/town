@@ -9,6 +9,7 @@ import Leftcha from  './chart/leftcha'//行业类型分析
 let Component = React.createClass({
     componentDidMount() {
         this.props.init();
+        this.props.chartHeight();
         window.addEventListener("resize", this.props.chartHeight);
       },
       componentWillUnmount() {

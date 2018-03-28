@@ -3,17 +3,22 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './rightfist.scss';
-import Rightchar from './Echares/rightchar'
-import RightCha from './Echares/rightcha'
-import LTable from './table.jsx'  //表格01
-import Lablege from './tablege.jsx'
+import Rightchar from './Echares/rightchar'  //签约项目产业分布
+import RightCha from './Echares/rightcha' ///项目同比排名
+import LTable from './table.jsx'  //表格01 项目同比累计
+import Lablege from './tablege.jsx'  //各部门签约情况
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
+    this.props.chartHeight();
+    window.addEventListener("resize", this.props.chartHeight);
+  },
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.props.chartHeight);
   },
 
   render() {
-    let {height,}=this.props;
+    let {heightChart7,}=this.props;
     return (
       <div className={style.hxconfist}>
           <div className={style.hxEchar}>
@@ -43,7 +48,7 @@ let Component = React.createClass({
                       <span></span>
                     </div>
                         <p>签约项目产业分布</p>
-                           <Rightchar height={height}/>
+                           <Rightchar heightChart7={heightChart7}/>
                            <div className={style.xaila}>
                               <div className={style.latu}></div>
                           </div>
@@ -56,7 +61,7 @@ let Component = React.createClass({
                                 <span></span>
                             </div>
                                 <p>项目同比排名</p>
-                                  <RightCha height={height}/>
+                                  <RightCha heightChart7={heightChart7}/>
                                   <div className={style.xaila}>
                                       <div className={style.latu}></div>
                                   </div>
@@ -81,23 +86,20 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      height:state.vars.height,
+      heightChart7:state.vars.heightChart7,
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
+    chartHeight:()=>{
       let height=$('#chart').css('height');
-        let num=height.length-2;
-        height=height.substr(0,num)*.8;
-        dispatch(actions.setVars('height',height));
-        window.addEventListener("resize", function(){
-            let height=$('#chart').css('height');
-            let num=height.length-2;
-            height=height.substr(0,num)*.8;
-            dispatch(actions.setVars('height',height));
-        });    
+      let num=height.length-2;
+      height=height.substr(0,num)*.9;
+      dispatch(actions.setVars('heightChart7',height));
+    },
+    init: ()=> {
+     
     }
   }
 };

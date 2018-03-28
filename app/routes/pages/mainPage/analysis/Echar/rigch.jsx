@@ -8,16 +8,17 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height,bb,setTitle}=this.props;
+        let {heightPie,bb,setTitle}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightPie,
                 plotShadow: false,
                 reflow:true,
+                // height:260,
             },
             title: {
                 floating:true,

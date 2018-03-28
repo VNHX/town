@@ -9,12 +9,18 @@ import Lcot from './Echar/lcot.jsx'//企业纳税前10
 // import Jidu from './Echar/jindu.jsx' //累计项目总数
 import Ttranfrom from './tranfrom.jsx' //o产业总览
 let Component = React.createClass({
-  componentDidMount() {
-    this.props.init();
-  },
+    componentDidMount() {
+        this.props.init();
+        this.props.chartHeight();
+        window.addEventListener("resize", this.props.chartHeight);
+      },
+      componentWillUnmount() {
+        window.removeEventListener("resize", this.props.chartHeight);
+      },
+
 
   render() {
-    let {height}=this.props;
+    let {heightChart3}=this.props;
     return (
         <div className={style.comit}>
                  <div className={style.hcomit} id='meini'>
@@ -27,7 +33,7 @@ let Component = React.createClass({
                             </div>
                             <p className={style.wenzi}>小镇企业分布及产值情况</p>
                                 <div className={style.tubiao}>
-                                <Leftchrt height={height}/>
+                                <Leftchrt heightChart3={heightChart3}/>
                                 </div>
                         </div>
               </div>
@@ -42,7 +48,7 @@ let Component = React.createClass({
                             </div>
                             <p className={style.wenzi}>小镇税收入情况</p>
                                 <div className={style.tubiao}>
-                                    <Lmicha height={height}/>
+                                    <Lmicha heightChart3={heightChart3}/>
                                 </div>
                         </div>
               </div>
@@ -98,23 +104,36 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-        height:state.vars.height,
+        heightChart3:state.vars.heightChart3,
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
+    chartHeight:()=>{
         let height=$('#meini').css('height');
         let num=height.length-2;
-        height=height.substr(0,num)*.8;
-        dispatch(actions.setVars('height',height));
-        window.addEventListener("resize", function(){
-            let height=$('#meini').css('height');
-            let num=height.length-2;
-            height=height.substr(0,num)*.8;
-            dispatch(actions.setVars('height',height));
-        });
+        console.log(num,'123')
+        console.log(height,'456')
+        height=height.substr(0,num)*.9;
+        dispatch(actions.setVars('heightChart3',height));
+
+        // let heightPie=$('#ko1').css('height');
+        // let numPie=heightPie.length-2;
+        // heightPie=heightPie.substr(0,numPie)*.9;
+        // dispatch(actions.setVars('heightPie',heightPie));
+      },
+    init: ()=> {
+        // let height=$('#meini').css('height');
+        // let num=height.length-2;
+        // height=height.substr(0,num)*.8;
+        // dispatch(actions.setVars('height',height));
+        // window.addEventListener("resize", function(){
+        //     let height=$('#meini').css('height');
+        //     let num=height.length-2;
+        //     height=height.substr(0,num)*.8;
+        //     dispatch(actions.setVars('height',height));
+        // });
     }
   }
 };

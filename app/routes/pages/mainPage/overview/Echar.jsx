@@ -4,14 +4,19 @@ var actions = require('redux/actions');
 var $ = require('jquery');
 import Leftechar from './Echares/leftechar.jsx';  //签约项目来源分布  图表
 import style from './Echar.scss';
-import Leftchar from './Echares/leftchar.jsx'   //洽谈中项目分布情况  图表--磁极图
+// import Leftchar from './Echares/leftchar.jsx'   //洽谈中项目分布情况  图表--磁极图
 import Leftar from './Echares/leftar.jsx'  //洽谈中项目分布情况  图表--柱状图
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
+    this.props.chartHeight();
+    window.addEventListener("resize", this.props.chartHeight);
+  },
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.props.chartHeight);
   },
   render() {
-let {height}=this.props;
+let {heightChart6}=this.props;
     return (
     <div className={style.hxEchar}>
         <div className={style.hxEcha} id="char">
@@ -23,7 +28,7 @@ let {height}=this.props;
                     <span></span>
                 </div>
                     <div className={style.xo}>
-                        <Leftechar height={height} />
+                        <Leftechar heightChart6={heightChart6} />
                     </div>
                   
         </div>
@@ -39,7 +44,7 @@ let {height}=this.props;
                                  <div className={style.src}></div>
                               </div>
                                   <div className={style.xmn}>
-                                         <Leftar height={height}/>
+                                         <Leftar heightChart6={heightChart6}/>
                                   </div>
                           
             </div>
@@ -51,23 +56,20 @@ let {height}=this.props;
 });
 const mapStateToProps = (state) => {
     return {
-      height:state.vars.height,
+        heightChart6:state.vars.heightChart6,
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    chartHeight:()=>{
+        let height=$('#char').css('height');
+        let num=height.length-2;
+        height=height.substr(0,num)*.9;
+        dispatch(actions.setVars('heightChart6',height));
+      },
     init: ()=> {
-      let height=$('#char').css('height');
-      let num=height.length-2;
-      height=height.substr(0,num)*.8;
-      dispatch(actions.setVars('height',height));
-      window.addEventListener("resize", function(){
-          let height=$('#char').css('height');
-          let num=height.length-2;
-          height=height.substr(0,num)*.8;
-          dispatch(actions.setVars('height',height));
-      });    
+   
     }
   }
 };

@@ -19,7 +19,7 @@ let Component = React.createClass({
                 plotBorderWidth: 0,
                 borderWidth: 0,
                 plotShadow: false,
-                height:100,
+                // height:100,
                 height:heightChart1,
             },
             title: {

@@ -19,7 +19,7 @@ let Component = React.createClass({
                 plotShadow: false,
                 reflow:true,
                 // marginRight: 30,
-                height:250,
+                // height:250,
             },
             title: {
                 text: ''

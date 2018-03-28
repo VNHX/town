@@ -11,84 +11,46 @@ let Component = React.createClass({
     let {}=this.props;
     return (
         <div className={style.ss}>
-        {/* <div className={style.sd}>
-        <p>部门名称</p>
-        <p>累计项目</p>
-        <p>累计签约</p>
-        <p>签约比例</p>
-        <p>本年项目</p>
-        <p>本年签约</p>
-        <p>本年签约比例</p>
-        </div>
-        <div className={style.sd}>
-        <p>入住申请</p>
-        <span>4</span>
-        <span>4</span>
-        <span>0</span>
-        <span>0.00%</span>
-        </div>
-        <div className={style.sd}>
-        <p>资格审核</p>
-        <span>4</span>
-        <span>4</span>
-        <span>0</span>
-        <span>0.00%</span>
-        </div>
-        <div className={style.sd}>
-        <p>安排看房</p>
-        <span>4</span>
-        <span>4</span>
-        <span>0</span>
-        <span>0.00%</span>
-        </div>
-        <div className={style.sd}>
-        <p>入住审批</p>
-        <span>4</span>
-        <span>4</span>
-        <span>0</span>
-        <span>0.00%</span>
-        </div>
-        <div className={style.sd}>
-        <p>签合同</p>
-        <span>4</span>
-        <span>4</span>
-        <span>0</span>
-        <span>0.00%</span>
-        </div> */}
-<table >
-<tbody>
-<tr>
-  <th>Company</th>
-  <th>Contact</th>
-  <th>Country</th>
-</tr>
-<tr>
-<td>Alfreds Futterkiste</td>
-<td>Maria Anders</td>
-<td>Germany</td>
-</tr>
-<tr >
-<td>Ernst Handel</td>
-<td>Roland Mendel</td>
-<td>Austria</td>
-</tr>
-<tr>
-<td>Island Trading</td>
-<td>Helen Bennett</td>
-<td>UK</td>
-</tr>
-<tr>
-<td>Island Trading</td>
-<td>Helen Bennett</td>
-<td>UK</td>
-</tr>
-<tr>
-<td>Island Trading</td>
-<td>Helen Bennett</td>
-<td>UK</td>
-</tr>
-</tbody>
-</table>
+          <table >
+          <tbody>
+          <tr>
+              <th>部门名称</th><th>累计项目</th>
+              <th>累计签约</th><th>签约比例</th>
+              <th>本年项目</th><th>本年签约</th>
+              <th>本年签约比例</th>
+          </tr>
+          <tr>
+              <td>办公室</td><td>4</td>
+              <td>2</td><td>40.00%</td>
+              <td>1</td><td>1</td>
+              <td>0.0%</td>
+          </tr>
+          <tr >
+              <td>产业管理服务中心</td><td>4</td>
+              <td>2</td><td>40.00%</td>
+              <td>1</td><td>1</td>
+              <td>0.0%</td>
+          </tr>
+          <tr>
+              <td>创新服务中心</td><td>4</td>
+              <td>2</td><td>40.00%</td>
+              <td>1</td><td>1</td>
+              <td>0.0%</td>
+          </tr>
+          <tr>
+              <td>项目招商服务中心</td><td>4</td>
+              <td>2</td><td>40.00%</td>
+              <td>1</td><td>1</td>
+              <td>0.0%</td>
+          </tr>
+          <tr>
+              <td>智慧圆运营管理平台</td><td>4</td>
+              <td>2</td><td>40.00%</td>
+              <td>1</td><td>1</td>
+              <td>0.0%</td>
+          </tr>
+          </tbody>
+          </table>
         </div>            
     )
   }

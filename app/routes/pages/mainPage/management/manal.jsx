@@ -7,8 +7,9 @@ import style from './manal.scss'
 import Manapl from './char/manapl.jsx' //上规上限分类统计
 import Map from './char/map.jsx' //入驻年限
 let Component = React.createClass({
-    componentWillMount() {
+    componentDidMount() {
         this.props.init();
+        this.props.chartHeight();
         window.addEventListener("resize", this.props.chartHeight);
       },
       componentWillUnmount() {

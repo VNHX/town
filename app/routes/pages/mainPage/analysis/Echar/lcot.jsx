@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {heightChart3}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -16,9 +16,10 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightChart3,
                 plotShadow: false,
                 reflow:true,
+                // height:260,
                 borderRadius:5,
             },
             title: {
@@ -51,6 +52,10 @@ let Component = React.createClass({
                 title:{
                     enabled:false
                 },
+                 //  tickWidth:0,//去掉刻度
+                 gridLineWidth: 0,//去掉y轴方向的横线
+                 lineColor: "#fff",               //X轴的颜色  
+                 lineWidth: 1,
                 labels: {
                     format:'{value}',
                     style: {
@@ -58,12 +63,10 @@ let Component = React.createClass({
                         fontSize:'10px'  //字体
                     }
                 },
-                //  tickWidth:0,//去掉刻度
-                gridLineWidth: 0,//去掉y轴方向的横线
+               
             },
             tooltip: {
-                // enabled: false,
-                //backgroundColor:'#12203a',
+           
                 borderColor:'#486786',
                 borderRadius:6,
                
@@ -76,13 +79,14 @@ let Component = React.createClass({
             },
             plotOptions: {
                 column: {
-                    borderWidth: 0
+                    borderWidth: 0,
+                    borderRadius:5,
                 }
             },
             series: [{
                 data: [20,50,60,100,],
             }],
-            colors: ['#46bb22','#46bb22','#46bb22','#46bb22','#46bb22','#46bb22']
+            colors: ['#b3d78f','#b3d78f','#b3d78f','#b3d78f','#b3d78f','#b3d78f']
         };
         return (
             <ReactHighcharts config={configPie}/>

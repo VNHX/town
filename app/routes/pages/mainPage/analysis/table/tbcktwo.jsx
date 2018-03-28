@@ -8,10 +8,10 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {closeAlert,}=this.props;
         return (
             <div>
-                 <div className={style.ss}>
+                 <div className={style.ss} onClick={()=>closeAlert(markset)} >
                 <div className={style.yi_1}>B/计算机 通信和电子设备制造业</div>
                 <div className={style.yi_2}>B/计算机 通信和电子设备制造业</div>
                 <div className={style.yi_2_2}></div>
@@ -61,6 +61,9 @@ const mapDispatchToProps = (dispatch) => {
         init: () => {
           
         },
+        closeAlert: (markset)=>{
+            dispatch(actions.setVars('markset', false));
+          }
     };
 };
 

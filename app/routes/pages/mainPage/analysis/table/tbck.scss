@@ -5,23 +5,23 @@
     overflow: hidden;
     margin: -2% 0 0 5%;
     .yi_1{
-        width: 13%;
-        height: 19%;
+        width: 17%;
+        height: 14%;
         position: absolute;
-        top: 90%;
-        left: 22%;
+        top: 95%;
+        left: 19%;
         background: #7e8c69;
         color: #ffff;
-        font-size: 1rem;
-        line-height: 20px;
+        font-size: 0.1rem;
+        line-height: 14px;
         text-align: center;
     }
     .yi_2{
-        width: 13%;
+        width: 17%;
         height: 14%;
         position: absolute;
-        top: 76%;
-        left: 22%;
+        top: 81%;
+        left: 19%;
         background: #975755;
         color: #ffff;
         font-size: 1rem;
@@ -29,41 +29,41 @@
         z-index: 9;
     }
     .yi_2_2{
-        height: 0%;
-        width: 20%;
-        border-top: 33px solid #975755;
-        border-left: 45px solid transparent;
-        border-right: 45px solid transparent;
+        width: 19%;
+        border-top: 28px solid #975755;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
         position: absolute;
-        top: 76%;
-        left: 18.5%;
+        top: 73%;
+        left: 18%;
     }
     .yi_2_3{
         height: 0%;
-        width: 34%;
-        border-top: 34px solid #b77c5c;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
+        width: 35%;
+        border-top: 52px solid #6a9198;
+        border-left: 42px solid transparent;
+        border-right: 42px solid transparent;
         position: absolute;
-        top: 62%;
-        left: 11.6%;
+        top: 33%;
+        left: 10%;
+        z-index: 9;
     }
     .yi_2_4{
-        height: 0%;
-        width: 51%;
-        border-top: 54px solid #6a9198;
-        border-left: 60px solid transparent;
-        border-right: 60px solid transparent;
+        width: 25%;
+        border-top: 58px solid #b77c5c;
+        border-left: 23px solid transparent;
+        border-right: 23px solid transparent;
         position: absolute;
-        top: 40%;
-        left: 3%;
+        top: 50%;
+        left: 15%;
+        overflow: hidden;
     }
     .yi_2_5{
-        width: 51%;
+        width: 35%;
         height: 20%;
         position: absolute;
-        top: 20%;
-        left: 3%;
+        top: 13%;
+        left: 10%;
         background: #ecd592;
         color: #000;
         font-size: 1rem;
@@ -71,12 +71,12 @@
         text-align: center;
     }
     .yi_2_6{
-        width: 51%;
+        width: 35%;
         height: 20%;
         position: absolute;
-        top: 0%;
-        left: 3%;
-        background: rgba(17, 40, 82, 0.2);
+        top: -8%;
+        left: 10%;
+        background: rgba(17, 40, 82, 2);
         color: #ffff;
         font-size: 1rem;
         line-height: 3.4rem;
@@ -84,16 +84,17 @@
     }
     .yi_2_7{
         position: absolute;
-        top: 44%;
-        left: 19%;
+        top: 34%;
+        left: 17%;
         color: #ffff;
         font-size: 1rem;
         line-height: 3.4rem;
         text-align: center;
+        z-index: 10;
     }
     .yi_2_8{
         position: absolute;
-        top: 61%;
+        top: 56%;
         left: 20%;
         color: #000;
         font-size: 1rem;

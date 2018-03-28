@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {height}=this.props;
+        let {heightChart3}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -16,10 +16,11 @@ let Component = React.createClass({
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:height,
+                height:heightChart3,
                 plotShadow: false,
                 reflow:true,
                 borderRadius:5,
+                // height:260,
             },
             title: {
                 text: ''
@@ -36,8 +37,8 @@ let Component = React.createClass({
                 //     '八/九号楼',
                 // ],
                 crosshair: true,
-                // lineWidth :0,//去掉x轴线
-                tickWidth:0,//去掉刻度
+                 // lineWidth :0,//去掉x轴线
+                 tickWidth:0,//去掉刻度
                 labels: {
                     y: 20, //x轴刻度往下移动20px
                     style: {
@@ -53,6 +54,8 @@ let Component = React.createClass({
                 },
                 //  tickWidth:0,//去掉刻度
                 gridLineWidth: 0,//去掉y轴方向的横线
+                lineColor: "#fff",               //X轴的颜色  
+                lineWidth: 1,
                 labels: {
                     format:'{value}',
                     style: {
@@ -62,7 +65,6 @@ let Component = React.createClass({
                 },
             },
             tooltip: {
-                // enabled: false,
                 backgroundColor:'#12203a',
                 borderColor:'#486786',
                 borderRadius:6,
