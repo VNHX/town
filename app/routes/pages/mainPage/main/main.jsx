@@ -212,20 +212,7 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(actions.setVars('dateNow',dateNow));
         dispatch(actions.setVars('weekday',weekday[day]));
       }      
-      setInterval(setTime, 1000);
-      
-      $.ajax({
-        url: "http://116.62.33.209:9090/rest/parkUsers/getUserss",
-        dataType: 'jsonp',
-        async:false,
-        timeout: 10000, 
-        jsonp: "callbackparam",
-        jsonpCallback: 'callbackparam',
-        success: function(data){
-          //console.log('aa',data)
-        }
-      })
-      
+      setInterval(setTime, 1000);      
     },    
   }
 };

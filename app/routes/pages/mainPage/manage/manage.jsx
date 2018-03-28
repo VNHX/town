@@ -7,6 +7,8 @@ import Nav from '../functionCom/nav.jsx';//导航
 import Chart from "./chart.jsx";
 import LineChart from "./lineChart.jsx";
 import PieChart from "./pieChart.jsx";
+import Ajax from "../functionCom/myAjax.js";
+let myAjax=Ajax.myAjax;
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -296,9 +298,25 @@ const mapDispatchToProps = (dispatch) => {
       heightPie=heightPie.substr(0,numPie)*.9;
       dispatch(actions.setVars('heightPie',heightPie));
     },
-    init: ()=> {      
-      
-          
+    init: ()=> {    
+      let param_json={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectBuildBlobal",
+            "year":"2018"
+        }
+      };
+      let data1={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json),
+        requireType: 'get',
+        async: true,
+      };
+
+      myAjax(data1,success);       
+      function success(data){
+          console.log('aa',data)
+      }    
     },
   }
 };
