@@ -17,7 +17,6 @@ let Component = React.createClass({
   },
   render() {
     let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage,toManagement}=this.props;
-    console.log('params2',nowPage)
     return (
     	<div className={css.menu} onMouseLeave={()=>this.hideNav()}>
           	<div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>

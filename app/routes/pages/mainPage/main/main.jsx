@@ -14,14 +14,8 @@ let Component = React.createClass({
   componentDidMount() {
     this.props.init();
   },
-  showNav: ()=> {
-    $("#nav").show('slow')
-  },
-  hideNav: ()=> {
-    $("#nav").hide('slow')
-  },
   render() {
-    let {toOverview,weekday,timeNow,dateNow}=this.props;
+    let {weekday,timeNow,dateNow}=this.props;
     return (
       <div className={css.main}>
         <div className={`${css.circle} ${css.circle1}`}>
@@ -232,11 +226,7 @@ const mapDispatchToProps = (dispatch) => {
         }
       })
       
-    },
-    toOverview: ()=>{
-      browserHistory.push('/app/all/project/town/overview')
-    }
-    
+    },    
   }
 };
 
