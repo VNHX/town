@@ -8,72 +8,84 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart6}=this.props;
+
+        let{heightPie}=this.props;
         let configPie = {
             chart: {
-                type: 'column',
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:heightChart6,
                 plotShadow: false,
-                reflow:true,
-                marginRight: 120,
-              
+                // height:100,
+                height:heightPie,
+                // marginLeft:200,
+                marginRight:160,
+                // marginTop:120,
             },
             title: {
                 text: ''
             },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                categories: [0, 0.1, 0.2,  0.3, 1.0, 1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2],
-                crosshair: true,
-               // lineWidth :0,//去掉x轴线
-               tickWidth:0,//去掉刻度
-               labels : {
-                   style : {
-                       // 'fontSize' : '10px',
-                       color: "#fff"
-                   }
-               }
-            },
-            yAxis: {
-                min: 0,
-                title:{
-                    enabled:false
-                },
-                  //  tickWidth:0,//去掉刻度
-             gridLineWidth: 0,//去掉y轴方向的横线
-             lineColor: "#fff",               //X轴的颜色  
-             lineWidth: 1,
-             labels : {
-                style : {
-                    // 'fontSize' : '10px',
-                    color: "#fff"
-                }
-            },
-            },
-            tooltip: {
-                enabled: false,
-            },
-            legend: {
+            legend:{
                 enabled: false
+            },
+
+            tooltip: {
+                enabled: true,
+                valueDecimals : 2, // 保留小数位数
+                backgroundColor : '#0c1733', // 提示框背景色
+                borderColor: '#152e4d',         // 边框颜色
+                borderWidth:3,
+                borderRadius: 10,
+                shadow: true,                 // 是否显示阴影
+                animation: true,               // 是否启用动画效果
+                style: {                      // 文字内容相关样式
+                    color: "#d8c1a2",
+                    fontSize: "12px",
+                    fontWeight: "blod",
+                    lineHeight:30,
+                },  
+                pointFormat: '<br/>{series.name}: <b>{point.percentage:.1f}%</b>',
+                positioner: function () { // 固定提示框
+                    return { x: 480, y: 120 };
+                },
+                //pointFormat: "<b>{point.percentage:.0f}%</b>"
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
             plotOptions: {
-                column: {
-                    borderWidth: 0
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    borderWidth: 0,
+                    size: '100%',
+                    innerSize: '60%',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}',
+                        style: {
+                            color: "#d1d2d3",
+                            fontSize: '20px',
+                            fontFamily:"微软雅黑"
+
+                        },
+
+                    },
+
                 }
             },
             series: [{
-               
-                data: [80,160,240,320,400],
-            }]
+                type: 'pie',
+                name: "",
+                data:[
+                    ['农产品',9],
+                    ['电子信息',8],
+                    ['制造业',9],
+                ],
+                style: {fontSize:"20px", color:'#fff', }
+            }],
+            colors:['#edd87b','#becf88','#eea584','#94eee2','#f0ae7a','#f3ce5b']
         };
         return (
             <ReactHighcharts config={configPie}/>

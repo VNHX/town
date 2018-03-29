@@ -30,8 +30,8 @@ let Component = React.createClass({
                 categories:['I/信息传输和软件技术','M/科学研究和技术服务业','B/计算机 通信和电子设备制造业','L/租凭和商业服务'],
                 gridLineColor: "#fff",
                 gridLineWidth: 1,
-                lineColor: "#03a9f4",              
-                lineWidth: 2,
+                lineColor: "#fff",              
+                lineWidth: 1,
                 tickWidth:0,//去掉刻度
                 labels : {
                     style : {

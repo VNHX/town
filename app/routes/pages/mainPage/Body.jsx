@@ -5,7 +5,7 @@ var actions = require('redux/actions');
 var $ = require('jquery');
 import css from './Body.scss';
 import NotFoundPage from "../../../components/common/NotFoundPage";
-import Overview from './overview/Overview.jsx';//招商引资
+import Overview from './overview/Overview.jsx';//招商服务
 import Main from './main/Main.jsx';//总览
 import Hatch from './hatch/hatch.jsx';//项目孵化 
 import Analysis from './analysis/analysis.jsx';//产业分析

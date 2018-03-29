@@ -4,8 +4,8 @@ var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './rightfist.scss';
 import Rightchar from './Echares/rightchar'  //签约项目产业分布
-import RightCha from './Echares/rightcha' ///项目同比排名
-import LTable from './table.jsx'  //表格01 项目同比累计
+import RightCha from './Echares/rightcha' ///项目同比累计
+import LTable from './table.jsx'  //行业分析
 import Lablege from './tablege.jsx'  //各部门签约情况
 let Component = React.createClass({
   componentDidMount() {
@@ -18,19 +18,19 @@ let Component = React.createClass({
   },
 
   render() {
-    let {heightChart7,}=this.props;
+    let {heightChart7,heightPie}=this.props;
     return (
-      <div className={style.hxconfist}>
-          <div className={style.hxEchar}>
+      <div className={style.hxconfist} >
+          <div className={style.hxEchar} id='chart2'>
                <div className={style.hxEchad}>
                   <span></span> 
                   <span></span> 
                   <span></span> 
                   <span></span>
                 </div>
-                <p>项目同比累计</p>
-            <LTable/>
-                    <div className={style.xaila}>
+                <p>行业分析</p>
+            <LTable heightPie={heightPie}/>
+                    {/* <div className={style.xaila}>
                            <div className={style.latu} ></div>
                               <ul>
                                 <li>1</li>
@@ -38,7 +38,7 @@ let Component = React.createClass({
                                 <li>3</li>
                                 <li>4</li>
                               </ul>
-                   </div>
+                   </div> */}
           </div>
                 <div className={style.hxEchar01}>
                     <div className={style.hxEchad}>
@@ -49,9 +49,9 @@ let Component = React.createClass({
                     </div>
                         <p>签约项目产业分布</p>
                            <Rightchar heightChart7={heightChart7}/>
-                           <div className={style.xaila}>
+                           {/* <div className={style.xaila}>
                               <div className={style.latu}></div>
-                          </div>
+                          </div> */}
                 </div>
                     <div className={style.hxEchar02} id='chart'>
                             <div className={style.hxEchad}>
@@ -60,11 +60,11 @@ let Component = React.createClass({
                                 <span></span> 
                                 <span></span>
                             </div>
-                                <p>项目同比排名</p>
+                                <p>项目同比累计</p>
                                   <RightCha heightChart7={heightChart7}/>
-                                  <div className={style.xaila}>
+                                  {/* <div className={style.xaila}>
                                       <div className={style.latu}></div>
-                                  </div>
+                                  </div> */}
                     </div>
                         <div className={style.hxEchar03}>
                                 <div className={style.hxEchad}>
@@ -75,9 +75,9 @@ let Component = React.createClass({
                                 </div>
                                     <p>各部门签约情况</p>
                                         <Lablege/>
-                                        <div className={style.xaila}>
+                                        {/* <div className={style.xaila}>
                                             <div className={style.latu}></div>
-                                        </div>
+                                        </div> */}
                         </div>
     </div>
                   
@@ -87,6 +87,7 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
       heightChart7:state.vars.heightChart7,
+      heightPie:state.vars.heightPie,
     }
 };
 
@@ -97,6 +98,11 @@ const mapDispatchToProps = (dispatch) => {
       let num=height.length-2;
       height=height.substr(0,num)*.9;
       dispatch(actions.setVars('heightChart7',height));
+
+      let heightPie=$('#chart2').css('height');
+      let numPie=heightPie.length-2;
+      heightPie=heightPie.substr(0,numPie)*.9;
+      dispatch(actions.setVars('heightPie',heightPie));
     },
     init: ()=> {
      

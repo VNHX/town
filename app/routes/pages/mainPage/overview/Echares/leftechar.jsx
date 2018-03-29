@@ -78,6 +78,7 @@ let Component = React.createClass({
         },
             plotOptions: {
                 series: {
+                    borderColor: "",//去边框
                     pointPadding:0.2, //图行间距
                 }
             },
@@ -88,11 +89,11 @@ let Component = React.createClass({
             series: [{
                 name: '本年签约项目',
                 data: [5, 3, 7, 9,],
-                color:'#0865e6',
+                color:'#59acf8',
             },{
                 name: '累计签约项目',
                 data: [3, 4, 4, 9,],
-                color:'#fb0101',
+                color:'#b1444a',
             }]
         };
         return (
