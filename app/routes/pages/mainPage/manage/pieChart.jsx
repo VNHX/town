@@ -19,7 +19,7 @@ let Component = React.createClass({
                 plotShadow: false,
                 reflow:true,
                 marginRight: 30,
-              	height:120
+              	height:heightPie
             },
             title: {
                 text: ''
@@ -29,7 +29,7 @@ let Component = React.createClass({
             },
             tooltip: {
                 headerFormat: '{series.name}<br>',
-            	pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+            	pointFormat: '{point.name}: <b>{point.y}</b>万元,占比<b>{point.percentage:.1f}%</b>'
             },
             legend: {
                 enabled: false
@@ -39,6 +39,7 @@ let Component = React.createClass({
             },
             plotOptions: {
 	            pie: {
+                    borderWidth:0,
 	                allowPointSelect: true,
 	                cursor: 'pointer',
 	                dataLabels: {
@@ -46,7 +47,7 @@ let Component = React.createClass({
 	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
 	                    style: {
 	                        color: '#fff',
-	                        fontWeight: 'normal',
+	                        fontWeight: 'normal',                            
 	                    }
 	                }
 	            }
@@ -55,15 +56,10 @@ let Component = React.createClass({
 	            type: 'pie',
 	            name: '投资情况占比',
 	            data: [
-	                ['厂房',   45.0],
-	                ['道路',       26.8],
-	                {
-	                    name: '绿化',
-	                    y: 12.8,
-	                    sliced: true,
-	                    selected: true
-	                },
-	                ['其他',   8.7]
+	                ['厂房', 45.0],
+	                ['道路', 26.8],
+	                ['绿化', 12.8],
+	                ['其他', 8.7]
 	            ]
 	        }]
         };

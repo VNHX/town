@@ -281,7 +281,7 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
         heightChart1:state.vars.heightChart1,
-        heightPie:state.vars.heightPie
+        heightPie:state.vars.heightPie,        
     }
 };
 
@@ -295,7 +295,7 @@ const mapDispatchToProps = (dispatch) => {
 
       let heightPie=$('#chart3').css('height');
       let numPie=heightPie.length-2;
-      heightPie=heightPie.substr(0,numPie)*.9;
+      heightPie=heightPie.substr(0,numPie)*.8;
       dispatch(actions.setVars('heightPie',heightPie));
     },
     init: ()=> {    
@@ -316,6 +316,7 @@ const mapDispatchToProps = (dispatch) => {
       myAjax(data1,success);       
       function success(data){
           console.log('aa',data)
+          dispatch(actions.setVars('chart1Data',data.query.detail));
       }    
     },
   }

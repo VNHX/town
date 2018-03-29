@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart1}=this.props;
+        let {heightChart1,chart1Data}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -28,13 +28,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [
-                    '500万以下',
-                    '500-1000万',
-                    '100-5000万',
-                    '300-5000万',
-                    '5000以上',
-                ],
+                categories: chart1Data&&chart1Data.xaxis,
                 crosshair: true,
                 //lineWidth : 0,//去掉x轴线
                 tickWidth:0,//去掉刻度
@@ -62,20 +56,38 @@ let Component = React.createClass({
                 enabled: false,
             },
             legend: {
-                enabled: false
+                enabled: true,
+                itemStyle:{
+                    color: '#fff',  
+                }
+                
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
             plotOptions: {
                 column: {
-                    borderWidth: 0
+                    borderWidth: 0,
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                    }
                 }
             },
-            series: [{
-               
-                data: [2,6,9,10,20],
-            }]
+            series: [
+
+                {
+                    name: chart1Data&&chart1Data.legends[0],
+                    data: chart1Data&&chart1Data.series[0].value,
+                }, {
+                    name: chart1Data&&chart1Data.legends[1],
+                    data: chart1Data&&chart1Data.series[1].value
+                }, {
+                    name: chart1Data&&chart1Data.legends[2],
+                    data: chart1Data&&chart1Data.series[2].value
+                }
+            ],
+            colors:['#f19d63','#9e9ff9','#559cf8'],
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -85,7 +97,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        chart1Data: state.vars.chart1Data
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
