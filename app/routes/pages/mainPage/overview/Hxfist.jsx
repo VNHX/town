@@ -25,7 +25,7 @@ let Component = React.createClass({
                                     <div className={style.tubiao}>
                                       <div className={style.tubiao2}></div>
                                     </div>
-                                    <p>招商引资看板</p>
+                                    <p>招商引资</p>
                                 </div>
                                     <div className={style.wenzi2}>
                                      <div className={style.tubiao3}>

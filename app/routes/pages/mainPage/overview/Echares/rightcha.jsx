@@ -64,7 +64,7 @@ let Component = React.createClass({
                 align: 'right',
                 verticalAlign: 'top',
                 x: 0,///间隔x轴的间隔
-                y: 0,///间隔y轴的间隔
+                y: -20,///间隔y轴的间隔
                 itemStyle: {
                     color: ' #ffffff', //开始颜色
             },
@@ -74,30 +74,34 @@ let Component = React.createClass({
             itemHiddenStyle: {
                 color: 'green'  //点击后颜色
             },
-            itemMarginTop: 5,  //上下间距
-            itemMarginBottom: 5,  //上下间距
-            symbolPadding: 15,  //标志间距
+            itemMarginTop: 4,  //上下间距
+            itemMarginBottom: 4,  //上下间距
+            symbolPadding: 10,  //标志间距
             // symbolWidth:10,//标志间距
+            symbolRadius:10, // 图标圆角
+            symbolWidth:10, // 图标宽度
         },
             plotOptions: {
                 series: {
-                    stacking: 'normal',
+                    // stacking: 'normal',
                     borderRadius:5,
-                    borderWidth: 0
+                    borderWidth: 0,
+                    borderColor: "",//去边框
+                    pointPadding:0.2, //图行间距
                 },
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
             series: [{
-                name: '损耗量',
-                data: [1,40,60,120],
+                name: '销售',
+                data: [10,40,60,120,12],
             },{
-                name: '完成量',
-                data: [1,20,30,100],
+                name: '租凭',
+                data: [19,20,30,100,20],
             }
         ],
-            colors:['#7cb5ec','#0b4e6f']
+            colors:['#b77a5d','#ccb778']
         };
         return (
             <ReactHighcharts config={configPie}/>

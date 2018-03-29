@@ -22,7 +22,7 @@ let Component = React.createClass({
           	<div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>
           	<ul className={css.nav} id="nav">
               	<li className={nowPage=='main' ? css.active:''} onClick={()=>toMain()}>园区总览</li>
-              	<li className={nowPage=='overview' ? css.active:''} onClick={()=>toOverview()}>招商引资看板</li>
+              	<li className={nowPage=='overview' ? css.active:''} onClick={()=>toOverview()}>招商服务</li>
               	<li className={nowPage=='hatch' ? css.active:''} onClick={()=>toHatch()}>项目孵化概览</li>
               	<li className={nowPage=='analysis' ? css.active:''} onClick={()=>toAnalysis()}>小镇产业分析</li>
               	<li className={nowPage=='manage' ? css.active:''} onClick={()=>toManage()}>工程管理看板</li>

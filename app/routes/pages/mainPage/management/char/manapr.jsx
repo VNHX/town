@@ -30,8 +30,10 @@ let Component = React.createClass({
                 categories:['园区从业人员数量','国千人才计划','省前人才计划','580人才计划','留学人才计划'],
                 tickWidth:0,//去掉刻度
                  // lineWidth :0,//去掉x轴线
+                //  gridLineColor: "#fff",
+                // gridLineWidth: 1,
                 lineColor: "#fff",              
-                lineWidth: 2,
+                lineWidth: 1,
                 labels : {
                     style : {
                         // 'fontSize' : '10px',

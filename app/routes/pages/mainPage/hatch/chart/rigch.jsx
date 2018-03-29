@@ -30,8 +30,8 @@ let Component = React.createClass({
                 categories: ['自主开发','企业介绍','主动上门','招商会','其他'],
                 gridLineColor: "#fff",
                 gridLineWidth: 1,
-                lineColor: "#03a9f4",              
-                lineWidth: 2,
+                lineColor: "#fff",              
+                lineWidth: 1,
                 tickWidth:0,//去掉刻度
                 labels : {
                     style : {
@@ -54,17 +54,17 @@ let Component = React.createClass({
                 }
             },
             tooltip:{
-                // floating: true,
-                // verticalAlign: 'top',
-                // x: 0,
-                // y: 100,
-                // align: 'center',
-                // borderWidth: 0,
                 enabled:true
             },
             legend: {
-                // shared: true
-                enabled:true
+                enabled: true,
+              itemStyle: {
+                  color: '#fff',//颜色
+                  fontSize:'12px',  //字体
+                  fontWeight:'normal'
+              },
+              symbolRadius:10, // 图标圆角
+              symbolWidth:10, // 图标宽度
             },
             plotOptions: {
                 series: {
