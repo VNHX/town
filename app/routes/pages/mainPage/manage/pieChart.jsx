@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightPie}=this.props;
+        let {heightPie,pieData}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -55,13 +55,9 @@ let Component = React.createClass({
             series: [{
 	            type: 'pie',
 	            name: '投资情况占比',
-	            data: [
-	                ['厂房', 45.0],
-	                ['道路', 26.8],
-	                ['绿化', 12.8],
-	                ['其他', 8.7]
-	            ]
-	        }]
+	            data: pieData&&pieData,
+	        }],
+            colors:['#f19d63','#86afc1','#559cf8','#edd87d'],
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -71,7 +67,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        pieData:state.vars.pieData, 
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {

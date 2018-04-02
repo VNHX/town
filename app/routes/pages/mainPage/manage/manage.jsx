@@ -4,9 +4,11 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 import css from './manage.scss';
 import Nav from '../functionCom/nav.jsx';//导航
-import Chart from "./chart.jsx";
-import LineChart from "./lineChart.jsx";
-import PieChart from "./pieChart.jsx";
+import Chart from "./chart.jsx";//柱图
+import LineChart from "./lineChart.jsx";//线图
+import PieChart from "./pieChart.jsx";//饼图
+import RightCom from "./rightBox.jsx";//右屏
+import MiddleBox from "./middleTable.jsx";//中屏下部
 import Ajax from "../functionCom/myAjax.js";
 let myAjax=Ajax.myAjax;
 let Component = React.createClass({
@@ -18,18 +20,22 @@ let Component = React.createClass({
   componentWillUnmount() {
     window.removeEventListener("resize", this.props.chartHeight);
   },
+  change(value) {
+    this.props.chart2Year(value)
+  },
   render() {
-    let {params,heightChart1,heightPie}=this.props;
+    let {params,heightChart1,heightPie,chart1Year,chart2Year,pieYear,table1Data}=this.props;
+    
     return (
       <div className={css.manageBox}>
         <div className={`${css.leftBox} ${css.contentBox}`}>
           <div className={css.chartBox1} id="chart1">
             <div className={css.title}>
               <div className={css.name}>项目整体建设情况</div>
-              <select>
-                <option>2016</option>
-                <option>2017</option>
+              <select onChange={()=>chart1Year()} id='select1'>
                 <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
               </select>
             </div>            
             <span className={css.leftTop}></span>
@@ -41,9 +47,16 @@ let Component = React.createClass({
           <div className={css.chartBox2} id="chart2">
             <div className={css.title}>
               <div className={css.name}>工程项目投资额（万元）</div>
-              <span className={css.btn}>竣工</span>
-              <span className={css.btn}>在建</span>
-              <span className={css.btn}>筹建</span>
+              <span className={css.btn} onClick={()=>this.change('2')}>竣工</span>
+              <span className={css.btn} onClick={()=>this.change('1')}>在建</span>
+              <span className={css.btn} onClick={()=>this.change('0')}>筹建</span>
+            </div>
+            <div className={css.year}>
+              <select onChange={()=>chart2Year()} id='select2'>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+              </select>
             </div>
             <span className={css.leftTop}></span>
             <span className={css.leftBottom}></span>
@@ -59,10 +72,10 @@ let Component = React.createClass({
               <span className={css.rightBottom}></span>
               <div className={css.title}>
                 <div className={css.nameBox}>项目投资情况</div>
-                <select>
-                  <option>2016</option>
-                  <option>2017</option>
+                <select onChange={()=>pieYear()} id='select3'>
                   <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
                 </select>
               </div>              
               <PieChart heightPie={heightPie}/>
@@ -76,20 +89,23 @@ let Component = React.createClass({
               <table>
                 <thead>
                   <tr>
-                    <th>项目名称</th><th>预警次数</th>
-                    <th>预警项</th><th>日期</th>
+                    <th>项目名称</th><th>项目计划</th>
+                    <th>负责人员</th><th>日期</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>工作计划</td><td>3</td><td>1季度</td><td>180312</td>
-                  </tr>
-                  <tr>
-                    <td>工作计划</td><td>4</td><td>2季度</td><td>180313</td>
-                  </tr>
-                  <tr>
-                    <td>工作计划</td><td>43</td><td>3季度</td><td>180314</td>
-                  </tr>
+                {
+                  table1Data&&table1Data.map((value,key)=>{
+                    return(
+                      <tr key={key}>
+                        <td>{value.plan_name}</td>
+                        <td>{value.projdect_name}</td>
+                        <td>{value.start_date}</td>
+                        <td>{value.u_name}</td>
+                      </tr>
+                    )
+                  })
+                }
                 </tbody>
               </table>
             </div>
@@ -99,179 +115,11 @@ let Component = React.createClass({
           <div className={css.header}>
             <div className={css.logo}></div>
           </div>
-          <div className={css.bg}></div>
-          <div className={css.table}>
-            <span className={css.leftTop}></span>
-            <span className={css.leftBottom}></span>
-            <span className={css.rightTop}></span>
-            <span className={css.rightBottom}></span>
-            <div className={`${css.textBox1} ${css.textBox1}`} style={{width:'25%'}}>
-              <div className={css.totalBox}>
-                <span className={css.total}>工程项目总数</span>
-                <div className={css.num}>14</div>
-              </div>
-              <div className={css.chartBox}>
-                <div className={`${css.oneFloor} ${css.oneFloorFirst}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
-                <div className={`${css.oneFloor} ${css.oneFloorSecond}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
-                <div className={`${css.oneFloor} ${css.oneFloorThird}`}><div className={css.twoFloor}><div className={css.threeFloor}></div></div></div>
-              </div>              
-            </div>
-            <div className={`${css.textBox} ${css.textBox2}`}>
-              <span><span className={css.logo}></span>本年动工项目</span>
-              <div><span className={css.num}>0</span> <span className={css.percent}>0%</span></div>
-            </div>
-            <div className={`${css.textBox} ${css.textBox3}`}>
-              <span><span className={css.logo}></span>本年竣工项目</span>
-              <div><span className={css.num}>0</span> <span className={css.percent}>0%</span></div>
-            </div>
-            <div className={`${css.textBox} ${css.textBox4}`}>
-              <span><span className={css.logo}></span>本年投资总额（万元）</span>
-              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
-            </div>
-            <div className={`${css.textBox} ${css.textBox5}`}>
-              <span><span className={css.logo}></span>本年动工占地（亩）</span>
-              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
-            </div>
-            <div className={`${css.textBox} ${css.textBox6}`}>
-              <span><span className={css.logo}></span>本年建筑面积（平方米）</span>
-              <div><span className={css.num}>0.00</span> <span className={css.percent}>0%</span></div>
-            </div>
-          </div>
+          <div className={css.bg}></div> 
+          <MiddleBox/>         
         </div>
         <div className={`${css.rightBox} ${css.contentBox}`}>
-          <div className={css.textBox}>
-            <div className={css.header}>
-              <span className={css.nameBox}>重点项目看板</span>
-              <span className={css.and}></span>
-            </div>
-            <span className={css.leftTop}></span>
-            <span className={css.leftBottom}></span>
-            <span className={css.rightTop}></span>
-            <span className={css.rightBottom}></span>
-            <table>
-              <thead>
-                <tr>
-                  <th>项目名称</th><th>负责人</th>
-                  <th>可研编制</th><th>发改委批复（备案、核准）文件</th>
-                  <th>节能</th><th>选址</th>
-                  <th>环评</th><th>土地预审</th>
-                  <th>用地规划许可证</th><th>用地批准书</th>
-                  <th>设计</th><th>工程规划许可证</th>
-                  <th>施工监理招标</th><th>质量监督手续</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th>施理招标</th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th></th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th></th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th>施理招标</th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th></th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th></th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th>施理招标</th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th></th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th></th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th>施理招标</th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试</th><th>王艳玲</th>
-                  <th>√</th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th>批准书</th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-                <tr>
-                  <th>测试流水号</th><th>王艳玲</th>
-                  <th></th><th>发改委</th>
-                  <th></th><th></th>
-                  <th></th><th>土地预审</th>
-                  <th>许可证</th><th></th>
-                  <th>设计</th><th>划许可证</th>
-                  <th></th><th>监督手续</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>          
+            <RightCom/>           
         </div>
         <Nav/>
       </div>    
@@ -281,13 +129,14 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
         heightChart1:state.vars.heightChart1,
-        heightPie:state.vars.heightPie,        
+        heightPie:state.vars.heightPie,
+        table1Data:state.vars.table1Data,      
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    chartHeight:()=>{
+    chartHeight:()=>{//charts表格高度调整
       let height=$('#chart1').css('height');
       let num=height.length-2;
       height=height.substr(0,num)*.9;
@@ -298,8 +147,9 @@ const mapDispatchToProps = (dispatch) => {
       heightPie=heightPie.substr(0,numPie)*.8;
       dispatch(actions.setVars('heightPie',heightPie));
     },
-    init: ()=> {    
-      let param_json={
+    init: ()=> {
+      //项目整体建设情况    
+      let param_json1={
         "query":{
             "target":"clientProjectInf",
             "function":"getProjectBuildBlobal",
@@ -308,16 +158,164 @@ const mapDispatchToProps = (dispatch) => {
       };
       let data1={
         url: 'ClientGetJsonDatas',
-        requireData: "param_json="+JSON.stringify(param_json),
+        requireData: "param_json="+JSON.stringify(param_json1),
         requireType: 'get',
         async: true,
       };
-
-      myAjax(data1,success);       
-      function success(data){
-          console.log('aa',data)
+      myAjax(data1,success1);       
+      function success1(data){
+          console.log('chart1',data)
           dispatch(actions.setVars('chart1Data',data.query.detail));
-      }    
+      };
+      //项目投资情况
+      let param_json2={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectInvestBlobal",
+            "year":"2018"
+        }
+      };
+      let data2={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json2),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data2,success2);       
+      function success2(data){
+          console.log('pie',data);
+          let pieData=[];
+          for(let i=0;i<data.query.detail.series[0].length;i++){
+            pieData[i]=[data.query.detail.series[0][i]];
+            pieData[i].push(data.query.detail.series[1][i])
+          }
+          dispatch(actions.setVars('pieData',pieData));
+      }; 
+      //工程项目投资额
+      let param_json3={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectInvestment",
+            "year":"2018",
+            "status":"0"
+        }
+      };
+      let data3={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json3),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data3,success3);       
+      function success3(data){
+          console.log('chart2',data);
+          dispatch(actions.setVars('chart2Data',data.query.detail));
+      }
+      //重点项目推进情况
+      let param_json4={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getIndexProjectSchedule",
+        }
+      };
+      let data4={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json4),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data4,success4);       
+      function success4(data){
+          console.log('table1',data);
+          dispatch(actions.setVars('table1Data',data.query.detail.list));
+      }   
+      //项目总览
+      let param_json5={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectTotal",
+        }
+      };
+      let data5={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json5),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data5,success5);       
+      function success5(data){
+          console.log('middle',data);
+          dispatch(actions.setVars('middleDate',data.query.detail));
+      }          
+    },
+    chart1Year:()=>{//项目整体建设情况，年份数据
+      let year=$('#select1').val();
+      let param_json1={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectBuildBlobal",
+            "year": year,
+        }
+      };
+      let data1={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json1),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data1,success1);       
+      function success1(data){
+          console.log('chart1',data)
+          dispatch(actions.setVars('chart1Data',data.query.detail));
+      };
+    },
+    chart2Year:(value)=>{//工程项目投资额，年份数据
+      let year=$('#select2').val();
+      let param_json3={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectInvestment",
+            "year":year,
+            "status":value? value:'0'
+        }
+      };
+      let data3={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json3),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data3,success3);       
+      function success3(data){
+          console.log('chart2',data);
+          dispatch(actions.setVars('chart2Data',data.query.detail));
+      }
+    },
+    pieYear:()=>{//项目投资情况，年份数据
+      let year=$('#select3').val();
+      let param_json2={
+        "query":{
+            "target":"clientProjectInf",
+            "function":"getProjectInvestBlobal",
+            "year":year
+        }
+      };
+      let data2={
+        url: 'ClientGetJsonDatas',
+        requireData: "param_json="+JSON.stringify(param_json2),
+        requireType: 'get',
+        async: true,
+      };
+      myAjax(data2,success2);       
+      function success2(data){
+          console.log('pie',data);
+          let pieData=[];
+          for(let i=0;i<data.query.detail.series[0].length;i++){
+            pieData[i]=[data.query.detail.series[0][i]];
+            pieData[i].push(data.query.detail.series[1][i])
+          }
+          dispatch(actions.setVars('pieData',pieData));
+      }   
     },
   }
 };

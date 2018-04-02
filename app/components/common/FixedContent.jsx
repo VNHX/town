@@ -21,12 +21,10 @@ let FixedContent = React.createClass({
 
   componentDidMount() {
     window.addEventListener("resize", this.adjustWidth);
-    console.log('resize','111')
   },
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.adjustWidth);
-    console.log('resize','000')
   },
 
   adjustWidth() {

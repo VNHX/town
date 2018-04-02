@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart1}=this.props;
+        let {heightChart1,chart2Data}=this.props;
         let configPie = {
             chart: {
                 type: 'spline',
@@ -28,15 +28,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [
-                    '纺织园区',
-                    '生活供水',
-                    '含特标准',
-                    '供水工程',
-                    '新市科技',
-                    '二号园区',
-                    '7条道路'
-                ],
+                categories: chart2Data&&chart2Data.xaxis,
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
@@ -61,7 +53,8 @@ let Component = React.createClass({
                 }
             },
             tooltip: {
-                enabled: false,
+                //headerFormat: '{series.name}<br>',
+                pointFormat: '<b>{point.y}</b>万元'
             },
             legend: {
                 enabled: false
@@ -70,13 +63,10 @@ let Component = React.createClass({
                 enabled: false //不显示highCharts版权信息
             },
             plotOptions: {
-                column: {
-                    borderWidth: 0
-                }
+
             },
-            series: [{
-               
-                data: [2,6,9,10,20,23,7],
+            series: [{               
+                data: chart2Data&&chart2Data.yaxis,
             }]
         };
         return (
@@ -88,7 +78,7 @@ let Component = React.createClass({
 
 const mapStateToProps = (state) => {
     return {
-
+        chart2Data:state.vars.chart2Data
     }
 };
 

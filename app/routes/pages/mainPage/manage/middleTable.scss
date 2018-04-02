@@ -1,0 +1,188 @@
+.middleTable{
+	height: 15%;	
+	.table{
+		height: 100%;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		position: relative;
+		padding: 1.5rem;
+		.leftTop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			height: 0.5rem;
+			width: 0.5rem;
+			border-top: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.leftBottom{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+			height: 0.5rem;
+			width: 0.5rem;
+			border-bottom: 2px solid #6cebfc;
+			border-left: 2px solid #6cebfc;
+		}
+		.rightTop{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			height: 0.5rem;
+			width: 0.5rem;
+			border-top: 2px solid #6cebfc;
+			border-right: 2px solid #6cebfc;
+		}
+		.rightBottom{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			height: 0.5rem;
+			width: 0.5rem;
+			border-right: 2px solid #6cebfc;
+			border-bottom: 2px solid #6cebfc;
+		}
+		.textBox1{
+			float: left;
+			height: 100%;
+			.totalBox{
+				float: left;
+				width: 50%;
+				text-align: center;
+				.total{
+					font-size: 1.5rem;
+				}
+				.num{
+					font-size: 1.4rem;
+					color: green;
+				}
+			}
+			.chartBox{
+				float: left;
+				width: 50%;
+				height: 100%;
+				padding-left: 2rem;
+				position: relative;
+				.oneFloorFirst{
+					position: absolute;
+					left: 10px;
+					bottom: 0;
+					float: left;
+					margin-left: 1rem;
+					width: .5rem;					
+					background:#c26e63;
+					height: 100%;
+					.twoFloor{
+						background: #64c2cc;
+						height: 60%;
+						.threeFloor{
+							background: #3c535b;
+							height: 30%;
+						}
+					}
+				}
+				.oneFloorSecond{
+					position: absolute;
+					left: 35px;
+					bottom: 0;
+					float: left;
+					margin-left: 1rem;
+					margin-top: .9rem;
+					width: .5rem;					
+					background:#c26e63;
+					height: 80%;
+					.twoFloor{
+						background: #64c2cc;
+						height: 60%;
+						.threeFloor{
+							background: #3c535b;
+							height: 30%;
+						}
+					}
+				}
+				.oneFloorThird{
+					position: absolute;
+					left: 60px;
+					bottom: 0;
+					float: left;
+					margin-left: 1rem;
+					margin-top: 1.8rem;
+					width: .5rem;					
+					background:#c26e63;
+					height: 60%;
+					.twoFloor{
+						background: #64c2cc;
+						height: 60%;
+						.threeFloor{
+							background: #3c535b;
+							height: 30%;
+						}
+					}
+				}
+			}
+		}
+		.textBox{
+			float: left;
+			width: 15%;
+			text-align: center;
+			padding-top: 0.5rem;
+			border-left: 1px solid #234867;
+			.num{
+				font-size: 1.4rem;
+				color: #b5b507;
+			}
+			.percent{
+				font-size: 1rem;
+				color: green;
+			}
+		}
+		.textBox2{
+			.logo{
+				display: inline-block;
+				height: 1.2rem;
+				width: 1.2rem;
+				background: url(../img/manageIcon4.png);
+				background-size: 100% 100%;
+			}
+		}
+		.textBox3{
+			.logo{
+				display: inline-block;
+				height: 1.2rem;
+				width: 1.2rem;
+				background: url(../img/manageIcon5.png);
+				background-size: 100% 100%;
+			}
+		}
+		.textBox4{
+			.logo{
+				display: inline-block;
+				height: 1.2rem;
+				width: 1.2rem;
+				background: url(../img/manageIcon1.png);
+				background-size: 100% 100%;
+			}
+		}
+		.textBox5{
+			.logo{
+				display: inline-block;
+				height: 1.2rem;
+				width: 1.2rem;
+				background: url(../img/manageIcon2.png);
+				background-size: 100% 100%;
+			}
+		}
+		.textBox6{
+			.logo{
+				display: inline-block;
+				height: 1.2rem;
+				width: 1.2rem;
+				background: url(../img/manageIcon3.png);
+				background-size: 100% 100%;
+			}
+		}
+	}
+}
