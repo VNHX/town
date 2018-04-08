@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart1}=this.props;
+        let {heightChart1,columnData}=this.props;
         let configPie = {
             chart: {
                 type: 'bar',
@@ -27,7 +27,7 @@ let Component = React.createClass({
                
             },
             xAxis:{
-                categories:['园区从业人员数量','国千人才计划','省前人才计划','580人才计划','留学人才计划'],
+                categories:columnData&&columnData.name,
                 tickWidth:0,//去掉刻度
                  // lineWidth :0,//去掉x轴线
                 //  gridLineColor: "#fff",
@@ -69,7 +69,7 @@ let Component = React.createClass({
         },
         series: [{
             name: '同比下降',
-            data: [5, 7, 8, 4, 6],
+            data: columnData&&columnData.value,
             color:"#03a9f4"
         }],
             credits: {

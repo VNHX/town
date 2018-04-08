@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart3}=this.props;
+        let {heightChart3,analysisChart1Data}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -30,12 +30,7 @@ let Component = React.createClass({
             },
             xAxis: {
                 type: 'category',
-                // categories: [
-                //     '楼',
-                //     '三号楼',
-                //     '四号楼',
-                //     '八/九号楼',
-                // ],
+                categories: analysisChart1Data&&analysisChart1Data.name,
                 crosshair: true,
                  // lineWidth :0,//去掉x轴线
                  tickWidth:0,//去掉刻度
@@ -86,12 +81,7 @@ let Component = React.createClass({
             },
             series: [{
                 name:'企业家数量',
-                data:[
-                    ['裙楼', 24],
-                    ['三号楼',15],
-                    ['四号楼', 12],
-                    ['八/九号楼', 10],
-                ],
+                data:analysisChart1Data&&analysisChart1Data.qys,
                 dataLabels: {
                     enabled: true,
                     // rotation: -90,
@@ -120,7 +110,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        analysisChart1Data:state.vars.analysisChart1Data
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {

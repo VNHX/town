@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightPie,bb,setTitle}=this.props;
+        let {heightPie,bb,setTitle,rightPie}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -32,7 +32,8 @@ let Component = React.createClass({
                 text: ''
             },
             tooltip : {
-               
+                enabled: true,
+                pointFormat: '{series.name}: <b>{point.y}家{point.percentage:.1f}%</b>'
             },
             xAxis: {
                 enabled:false
@@ -67,20 +68,12 @@ let Component = React.createClass({
                 type: 'pie',
                 innerSize: '60%',
                 name: '市场份额',
-                data: [
-                    {name:'私人',   y: 22.0, color:'#f5f274',},
-                   
-                    {name:'外企',   y: 15.0, color:'#7EC0EE',},
-                    {name:'国企',   y: 22.0, color:'#EE8262',},
-                  
-                   
-                   
-                ]
+                data: rightPie&&rightPie.value
             }],
             credits: {
                 enabled: false //不显示highCharts版权信息
             },
-          
+            colors:['#f5f274','#7EC0EE','#EE8262']
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -91,7 +84,7 @@ let Component = React.createClass({
 
 const mapStateToProps = (state) => {
     return {
-        
+        rightPie:state.vars.rightPie
     }
 };
 

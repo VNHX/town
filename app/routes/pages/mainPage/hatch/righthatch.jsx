@@ -6,6 +6,8 @@ import style from './righthatch.scss'
 import Rigch from  './chart/rigch'  //意向来源分析
 import Rigcd from  './chart/rigcd'//重点项目
 import Leftcha from  './chart/leftcha'//行业类型分析
+import Ajax from "../functionCom/myAjax.js";
+let myAjax=Ajax.myAjax;
 let Component = React.createClass({
     componentDidMount() {
         this.props.init();
@@ -17,8 +19,7 @@ let Component = React.createClass({
       },
 
   render() {
-    let {heightChart3,heightPie}=this.props;
-    console.log(heightPie,'123')
+    let {heightChart3,heightPie,pieData,total,rightLine}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.rigfst} >
@@ -31,7 +32,8 @@ let Component = React.createClass({
                     </div>
                     <p className={style.wenzi}>行业类型分析</p>
                         <div className={style.tubiao}>
-                          <Leftcha heightPie={heightPie}/>
+                            <div className={style.total}>共{total&&total}家</div>
+                            <Leftcha pieData={pieData} heightPie={heightPie}/>
                         </div>
                         <div className={style.rigtk}>
                             <div className={style.rigtu}>
@@ -55,7 +57,7 @@ let Component = React.createClass({
                         <span></span>
                         <span></span>
                     </div>
-                    <p className={style.wenzi}>近俩年意向项目情况</p>
+                    <p className={style.wenzi}>近两年意向项目情况</p>
                     <div className={style.ll}>
                     <div className={style.ll_1}> <table>
                 <thead>
@@ -102,7 +104,7 @@ let Component = React.createClass({
                         </div>
                     <p className={style.wenzi}>意向来源分析</p>
                         <div className={style.tubioa02}  >
-                        <Rigch heightChart3={heightChart3}/>
+                        <Rigch rightLine={rightLine} heightChart3={heightChart3}/>
                         </div>
                 </div>
             </div>
@@ -128,6 +130,9 @@ const mapStateToProps = (state) => {
     return {
         heightChart3:state.vars.heightChart3,
         heightPie:state.vars.heightPie,
+        pieData:state.vars.pieData,
+        total:state.vars.total,
+        rightLine:state.vars.rightLine
     }
 };
 
@@ -136,8 +141,6 @@ const mapDispatchToProps = (dispatch) => {
     chartHeight:()=>{
         let height=$('#ko').css('height');
         let num=height.length-2;
-        console.log(num,'123')
-        console.log(height,'456')
         height=height.substr(0,num)*.9;
         dispatch(actions.setVars('heightChart3',height));
 
@@ -147,7 +150,90 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(actions.setVars('heightPie',heightPie));
       },
     init: ()=> {
-     
+        //行业类型分析  
+        let param_json1={
+            "query":{
+                "target":"clientImportantProjectInf",
+                "function":"getHylxData",
+            }
+        };
+        let data1={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json1),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data1,success1);       
+        function success1(data){
+            console.log('行业类型分析',data);
+            let pieData=[];
+            for(let i=0;i<data.query.detail.name.length;i++){
+                console.log(i)
+                pieData[i]=[];
+                pieData[i].push(data.query.detail.name[i]);
+                pieData[i].push(data.query.detail.value[i]);
+            }
+            dispatch(actions.setVars('pieData',pieData));
+            dispatch(actions.setVars('total',data.query.detail.total));
+        };
+        //近两年意向项目情况  
+        let param_json2={
+            "query":{
+                "target":"clientImportantProjectInf",
+                "function":"getNear2YearIntentionProjects",
+                "type":"1",
+            }
+        };
+        let data2={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json2),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data2,success2);       
+        function success2(data){
+            console.log('近两年意向项目情况',data);
+            
+            //dispatch(actions.setVars('total',data.query.detail.total));
+        };
+        //意向来源分析  
+        let param_json3={
+            "query":{
+                "target":"clientImportantProjectInf",
+                "function":"getYxlyData",
+                "type":"1",
+            }
+        };
+        let data3={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json3),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data3,success3);       
+        function success3(data){
+            console.log('意向来源分析',data);
+            dispatch(actions.setVars('rightLine',data.query.detail));
+        };
+        //重点项目  
+        let param_json4={
+            "query":{
+                "target":"clientImportantProjectInf",
+                "function":"getProjectProcess",
+            }
+        };
+        let data4={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json4),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data4,success4);       
+        function success4(data){
+            console.log('重点项目',data);
+            
+            //dispatch(actions.setVars('total',data.query.detail.total));
+        };
     },
    
   }

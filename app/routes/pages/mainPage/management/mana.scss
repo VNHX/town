@@ -22,7 +22,7 @@
             top: 0%;
             left: 0%;
             box-shadow: 0px 1px hsla(0, 5%, 39%, 0.5);
-              .hbk span:nth-child(1){
+            .hbk span:nth-child(1){
                 position: absolute;
                 left: 0%;
                 top: 0%;
@@ -66,32 +66,32 @@
                 top: 5%;
                 font-size: 1rem;
                 color: #ffffff;
-                     }
-                     .tubiao{
-                        width: 100%;
-                        height: 92%;
-                        position: absolute;
-                        top: 11%;
-                        left: 0%;
-                        overflow: hidden;
-                        table {  
-                            // border: 1px solid #B1CDE3;  
-                            padding:0;   
-                            margin:0 auto;  
-                            border-collapse: collapse;  
-                        }  
-                          tr{
-                            border: 1px solid #0889ef;
-                          }
-                        td {  
-                            // border: 1px solid #B1CDE3;
-                            font-size: 1rem;
-                            padding: 8px 39px 6px 35px;
-                            color: #e6e6e6;
-                        } 
-                     }
-          }
-     }
+            }
+            .tubiao{
+                width: 100%;
+                height: 92%;
+                position: absolute;
+                top: 11%;
+                left: 0%;
+                overflow: hidden;
+                table {  
+                    // border: 1px solid #B1CDE3;  
+                    padding:0;   
+                    margin:0 auto;  
+                    border-collapse: collapse;  
+                }  
+                tr{
+                    border: 1px solid #0889ef;
+                }
+                td {  
+                    // border: 1px solid #B1CDE3;
+                    font-size: 1rem;
+                    padding: 8px 39px 6px 35px;
+                    color: #e6e6e6;
+                } 
+            }
+        }
+    }
 //知识产权
      .hcomit02{
         width: 45%;
@@ -109,7 +109,7 @@
             top: 0%;
             left: 0%;
             box-shadow: 0px 1px hsla(0, 5%, 39%, 0.5);
-              .hbk span:nth-child(1){
+            .hbk span:nth-child(1){
                 position: absolute;
                 left: 0%;
                 top: 0%;
@@ -153,144 +153,132 @@
                 top: 5%;
                 font-size: 1rem;
                 color: #ffffff;
-                     }
-                     .tubiao{
-                        width: 100%;
-                        height: 79%;
+            }
+            .tubiao{
+                width: 100%;
+                height: 79%;
+                position: absolute;
+                top: 15%;
+                left: 0%;
+                .lyuan{
+                    width: 7rem;
+                    height: 7rem;
+                    border: 2px solid #84db8d;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 10%;
+                    top: 12%;
+                    .p2{
                         position: absolute;
-                        top: 15%;
-                        left: 0%;
-                        .tu_biao{
-                            position: relative;
-                            left: -33%;
-                            top: 10%;
-                        }
-                        .tu_biao02{
-                            position: absolute;
-                            left: -9%;
-                            top: 9%;
-                        }
-                        .tu_biao03{
-                            position: absolute;
-                            left: 13%;
-                            top: 10%;
-                        }
-                        .tu_biao04{
-                            position: absolute;
-                            left: 33%;
-                            top: 10%;
-                        }
-                        .lyuan{
-                            width: 7rem;
-                            height: 7rem;
-                            border: 2px solid #84db8d;
-                            border-radius: 50%;
-                            position: absolute;
-                            left: 10%;
-                            top: 12%;
-                            .p2{
-                                color: #69dc41;
-                                font-size: 1.4rem;
-                                margin-top: 2.4rem;
-                                margin-left: 2.3rem;
-                            }
-                        }
-                        .lwenzi{
-                            width: 30%;
-                            position: absolute;
-                            top: 53%;
-                            left: 11%;
-                            .p1{
-                                color:#67d745;
-                                font-size: 1.5rem;
-                                display: inline-block;
-                            }
-                            
-                        }
-                        .lyuan02{
-                            width: 7rem;
-                            height: 7rem;
-                            border: 2px solid #e6cb48;
-                            border-radius: 50%;
-                            position: absolute;
-                            left: 33%;
-                            top: 12%;
-                            .p2{
-                                color: #ecce4c;
-                                font-size: 1.4rem;
-                                margin-top: 2.4rem;
-                                margin-left: 2.4rem;
-                            }
-                        }
-                        .lwenzi02{
-                            width: 30%;
-                            position: absolute;
-                            top: 53%;
-                            left: 33%;
-                            .p1{
-                                color: #f6d54a;
-                                font-size: 1.5rem;
-                                display: inline-block;
-                            }
-                           
-                        }
-                        .lyuan03{
-                            width: 7rem;
-                            height: 7rem;
-                            border: 2px solid #9a4952;
-                            border-radius: 50%;
-                            position: absolute;
-                            left: 55%;
-                            top: 12%;
-                            .p2{
-                                color: #ea3426;
-                                font-size: 1.4rem;
-                                margin-top: 2.4rem;
-                                margin-left: 2.4rem;
-                            }
-                        }
-                        .lwenzi03{
-                            width: 30%;
-                            position: absolute;
-                            top: 53%;
-                            left: 55%;
-                            .p1{
-                                color: #e93325;
-                                font-size: 1.5rem;
-                                display: inline-block;
-                            }
-                            
-                        }
-                        .lyuan04{
-                            width: 7rem;
-                            height: 7rem;
-                            border: 2px solid #949599;
-                            border-radius: 50%;
-                            position: absolute;
-                            left: 75%;
-                            top: 12%;
-                            .p2{
-                                color: #93979a;
-                                font-size: 1.4rem;
-                                margin-top: 2.4rem;
-                                margin-left: 2.4rem;
-                            }
-                        }
-                        .lwenzi04{
-                            width: 30%;
-                            position: absolute;
-                            top: 53%;
-                            left: 75%;
-                            .p1{
-                                color: #959796;
-                                font-size: 1.5rem;
-                                display: inline-block;
-                            }
-                            
-                        }
-                     }
-          }
-     }
+                        color: #69dc41;
+                        font-size: 1.4rem;
+                        top: 2.4rem;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .lwenzi{
+                    width: 30%;
+                    position: absolute;
+                    top: 53%;
+                    left: 11%;
+                    .p1{
+                        color:#67d745;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                    }                            
+                }
+                .lyuan02{
+                    width: 7rem;
+                    height: 7rem;
+                    border: 2px solid #e6cb48;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 33%;
+                    top: 12%;
+                    .p2{
+                        position: absolute;
+                        color: #ecce4c;
+                        font-size: 1.4rem;
+                        top: 2.4rem;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .lwenzi02{
+                    width: 30%;
+                    position: absolute;
+                    top: 53%;
+                    left: 33%;
+                    .p1{
+                        color: #f6d54a;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                    }                           
+                }
+                .lyuan03{
+                    width: 7rem;
+                    height: 7rem;
+                    border: 2px solid #9a4952;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 55%;
+                    top: 12%;
+                    .p2{
+                        position: absolute;
+                        color: #ea3426;
+                        font-size: 1.4rem;
+                        top: 2.4rem;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .lwenzi03{
+                    width: 30%;
+                    position: absolute;
+                    top: 53%;
+                    left: 55%;
+                    .p1{
+                        color: #e93325;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                    }                            
+                }
+                .lyuan04{
+                    width: 7rem;
+                    height: 7rem;
+                    border: 2px solid #949599;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 75%;
+                    top: 12%;
+                    .p2{
+                        position: absolute;
+                        color: #93979a;
+                        font-size: 1.4rem;
+                        top: 2.4rem;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .lwenzi04{
+                    width: 30%;
+                    position: absolute;
+                    top: 53%;
+                    left: 75%;
+                    .p1{
+                        color: #959796;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                    }                            
+                }
+            }
+        }
+    }
 //人才资源结构
      .hcomit03{
         width: 99%;

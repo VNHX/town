@@ -9,7 +9,7 @@ let Component = React.createClass({
 
     render() {
 
-        let{heightPie}=this.props;
+        let{heightPie,MpieData}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -29,8 +29,7 @@ let Component = React.createClass({
 
             tooltip: {
                 enabled: true,
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                //pointFormat: "<b>{point.percentage:.0f}%</b>"
+                pointFormat: '{point.y}家<b>{point.percentage:.1f}%</b>'
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
@@ -58,15 +57,8 @@ let Component = React.createClass({
             },
             series: [{
                 type: 'pie',
-                name: "",
-                data:[
-                    ['10年以上(8家)',8],
-                    ['1-2年以上(74家)',3],
-                    ['2-4年以上(43家)',4],
-                    ['6-5年以上(25家)',5],
-                    [2],
-                    ['6-10年以上(13家)',6],
-                ],
+                name: '',
+                data: MpieData&&MpieData,
                 style: {fontSize:"20px",  }
             }],
             colors:['#61b2e9','#94dda6','#e2715f','#94eee2','#f0ae7a','#f3ce5b']

@@ -8,18 +8,17 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightPie,pieData}=this.props;
+        let {}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
                 plotBackgroundColor: "rgba(46, 46, 65, 0)",
                 plotBorderWidth: 0,
                 borderWidth: 0,
-                height:heightPie,
                 plotShadow: false,
                 reflow:true,
-                // marginRight: 30,
-                // height:250,
+                marginRight: 30,
+              	height:280
             },
             title: {
                 text: ''
@@ -28,8 +27,8 @@ let Component = React.createClass({
                 text: ''
             },
             tooltip: {
-                enabled: true,
-                pointFormat: '<b>{point.y}家{point.percentage:.1f}%</b>'
+                headerFormat: '{series.name}<br>',
+            	pointFormat: '{point.name}: <b>{point.y}</b>万元,占比<b>{point.percentage:.1f}%</b>'
             },
             legend: {
                 enabled: false
@@ -39,31 +38,26 @@ let Component = React.createClass({
             },
             plotOptions: {
 	            pie: {
+                    borderWidth:0,
 	                allowPointSelect: true,
-                    cursor: 'pointer',
-                    borderWidth: 0,
-                    size: '120%',
-                    innerSize: '80%',
-                    dataLabels: {
-                        enabled: false,
-                        format: '{point.name}',
-                        style: {
-                            color: "#d1d2d3",
-                            fontSize: '14px',
-                            fontFamily:"微软雅黑"
-                        },
-
-                    },
-
-                }
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: true,
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+	                    style: {
+	                        color: '#fff',
+	                        fontWeight: 'normal',                            
+	                    }
+	                }
+	            }
 	        },
-            series: [
-                {
-                    type: 'pie',
-                    name: "行业分析",
-                    data:pieData&&pieData,
-                    style: {fontSize:"20px",  }
-                }]
+            series: [{
+	            type: 'pie',
+	            innerSize: '40%',
+	            name: '投资情况占比',
+	            data: [['金融',4],['制造',5],['家电',3],['电子',6]],
+	        }],
+            colors:['#f19d63','#86afc1','#559cf8','#edd87d'],
         };
         return (
             <ReactHighcharts config={configPie}/>
@@ -73,7 +67,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+         
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {

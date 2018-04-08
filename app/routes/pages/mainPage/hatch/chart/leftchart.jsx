@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart5}=this.props;
+        let {heightChart5,columnData}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -28,12 +28,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [
-                    'I/信息传输和软件技术',
-                    'M/科学研究和服务业',
-                    'B/计算机 通信和电子设备制造业',
-                    'L/租凭和商务服务业',
-                ],
+                categories: columnData&&columnData.name,
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
@@ -79,16 +74,10 @@ let Component = React.createClass({
             series: [{
                 name: '签约统计',
                 color: 'rgba(60,83,91,1)',
-                data: [180, 160, 140,120],
+                data: columnData&&columnData.value,
                 pointPadding: 0.4,
                 pointPlacement: -0.2
-            }, {
-                name: '签约统计',
-                color: 'rgba(100,194,204,.9)',
-                data: [170, 160, 130,100],
-                pointPadding: 0.4,
-                pointPlacement: -0.2
-            },]
+            }]
         };
         return (
             <ReactHighcharts config={configPie}/>

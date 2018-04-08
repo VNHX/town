@@ -11,6 +11,8 @@ import Mp from './char/mp_yuan1.jsx'; //知识产权_发明专利
 import Mpto from './char/mp_yuan2.jsx'; //知识产权_实用新型
 import Mpse from './char/mp_yuan3.jsx'; //知识产权_外观设计
 import Mpsp from './char/mp_yuan4.jsx'; //知识产权_计算机软件
+import Ajax from "../functionCom/myAjax.js";
+let myAjax=Ajax.myAjax;
 let Component = React.createClass({
     componentDidMount() {
         this.props.init();
@@ -22,9 +24,7 @@ let Component = React.createClass({
       },
 
   render() {
-    let {heightChart1,heightPie}=this.props;
-    console.log(heightChart1,'hx79')
-    console.log(heightPie,'hx789')
+    let {heightChart1,heightPie,lineData,columnData,pieData}=this.props;
     return (
       <div className={style.cmt}>
         <div className={style.hcomit} id='bck'>
@@ -37,7 +37,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>企业数量统计</p>
                     <div className={style.tubiao}>
-                    <Mapchar heightChart1={heightChart1}/>
+                    <Mapchar heightChart1={heightChart1} lineData={lineData}/>
                     </div>
             </div>
         </div>
@@ -52,32 +52,35 @@ let Component = React.createClass({
                 <p className={style.wenzi}>知识产权</p>
                     <div className={style.tubiao}>
                         <div className={style.lyuan}> 
-                        <p className={style.p2}>20%</p>
+                            <p className={style.p2}>{pieData&&pieData.value[0]}</p>
+                            <Mp heightPie={heightPie}/>
                         </div>
-                        <div className={style.tu_biao}><Mp heightPie={heightPie}/></div>
                         <div className={style.lwenzi}>
-                            <p className={style.p1}>发明专利</p>
+                            <p className={style.p1}>{pieData&&pieData.name[0]}</p>
                         </div>
+
                         <div className={style.lyuan02} id='bck2'>
-                        <p className={style.p2}>84%</p>
+                            <p className={style.p2}>{pieData&&pieData.value[1]}</p>
+                            <Mpto heightPie={heightPie}/>
                         </div>
-                        <div className={style.tu_biao02}><Mpto heightPie={heightPie}/></div>
                         <div className={style.lwenzi02}>
-                            <p className={style.p1}>实用新型</p>
+                            <p className={style.p1}>{pieData&&pieData.name[1]}</p>
                         </div>
+
                         <div className={style.lyuan03}>
-                        <p className={style.p2}>52%</p>
+                            <p className={style.p2}>{pieData&&pieData.value[2]}</p>
+                            <Mpse heightPie={heightPie}/>
                         </div>
-                        <div className={style.tu_biao03}><Mpse heightPie={heightPie}/> </div>
                         <div className={style.lwenzi03}>
-                            <p className={style.p1}>外观设计</p>
+                            <p className={style.p1}>{pieData&&pieData.name[2]}</p>
                         </div>
+
                         <div className={style.lyuan04}>  
-                        <p className={style.p2}>90%</p>
-                        </div> 
-                        <div className={style.tu_biao04}><Mpsp heightPie={heightPie}/></div>
+                            <p className={style.p2}>{pieData&&pieData.value[3]}</p>
+                            <Mpsp heightPie={heightPie}/>
+                        </div>
                         <div className={style.lwenzi04}>
-                            <p className={style.p1}>计算机软件</p>
+                            <p className={style.p1}>{pieData&&pieData.name[3]}</p>
                         </div>
                     </div>
             </div>
@@ -92,7 +95,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>人才资源结构</p>
                     <div className={style.tubiao}>
-                      <Manapr heightChart1={heightChart1}/>
+                      <Manapr heightChart1={heightChart1} columnData={columnData}/>
                     </div>
             </div>
         </div>
@@ -107,6 +110,9 @@ const mapStateToProps = (state) => {
     return {
         heightChart1:state.vars.heightChart1,
         heightPie:state.vars.heightPie,
+        lineData:state.vars.lineData,
+        columnData:state.vars.columnData,
+        pieData:state.vars.pieData
     }
 };
 
@@ -116,17 +122,68 @@ const mapDispatchToProps = (dispatch) => {
         let height=$('#bck').css('height');
         let num=height.length-2;
         height=height.substr(0,num)*.9;
-        console.log(height,'height')
         dispatch(actions.setVars('heightChart1',height));
   
         let heightPie=$('#bck2').css('height');
         let numPie=heightPie.length-2;
-    console.log(heightPie,'hx78910')
         heightPie=heightPie.substr(0,numPie)*.9;
         dispatch(actions.setVars('heightPie',heightPie));
       },
     init: ()=> {
-       
+        //企业数量  
+        let param_json1={
+            "query":{
+                "target":"clientQy360Inf",
+                "function":"getCyfbczqkData",
+            }
+        };
+        let data1={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json1),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data1,success1);       
+        function success1(data){
+            console.log('line1',data)
+            dispatch(actions.setVars('lineData',data.query.detail));
+        };
+        //人才资源结构  
+        let param_json2={
+            "query":{
+                "target":"clientQy360Inf",
+                "function":"getRczyData",
+            }
+        };
+        let data2={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json2),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data2,success2);       
+        function success2(data){
+            console.log('column1',data)
+            dispatch(actions.setVars('columnData',data.query.detail));
+        };
+        //知识产权  
+        let param_json3={
+            "query":{
+                "target":"clientQy360Inf",
+                "function":"getZscqData",
+            }
+        };
+        let data3={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json3),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data3,success3);       
+        function success3(data){
+            console.log('pie1',data)
+            dispatch(actions.setVars('pieData',data.query.detail));
+        };
     }
   }
 };

@@ -11,6 +11,7 @@ import Hatch from './hatch/hatch.jsx';//项目孵化
 import Analysis from './analysis/analysis.jsx';//产业分析
 import Manage from './manage/manage.jsx';//工程管理面板
 import Management from './management/management.jsx'; //企业360°
+import Floor from './floor/floor.jsx';//楼层信息
 let Component = React.createClass({
   componentDidMount() {
     this.props.init(this.props.params);
@@ -37,8 +38,11 @@ let Component = React.createClass({
       case 'manage':
         childPage = <Manage/>
         break;
-        case 'management':
+      case 'management':
         childPage = <Management/>
+        break;
+      case 'floor':
+        childPage = <Floor/>
         break;
       default:
         childPage = <NotFoundPage/>

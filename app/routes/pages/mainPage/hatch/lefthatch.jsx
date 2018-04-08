@@ -4,6 +4,8 @@ var actions = require('redux/actions');
 var $ = require('jquery');
 import style from './lefthatch.scss'
 import Leftchart from './chart/leftchart' //年度签约项目统计
+import Ajax from "../functionCom/myAjax.js";
+let myAjax=Ajax.myAjax;
 let Component = React.createClass({
   componentDidMount() {
     this.props.init();
@@ -15,8 +17,7 @@ let Component = React.createClass({
   },
 
   render() {
-    let {heightChart5}=this.props;
-    console.log(heightChart5)
+    let {heightChart5,columnData,totalData}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.hxmit}>
@@ -32,39 +33,39 @@ let Component = React.createClass({
                     </div>
                     <p className={style.wenzi}>年度签约项目统计</p>
                         <div className={style.tubiao}>
-                             <Leftchart heightChart5={heightChart5}/>
+                             <Leftchart columnData={columnData} heightChart5={heightChart5}/>
                          </div>
                 </div>
               </div>
               <div className={style.leftkuang1}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>0</span>
+                          <span>{totalData&&totalData.monthIntention}</span>
                           <span>本月意向</span>
-                          <span>同比下降100%</span>
+                          <span>同比下降0%</span>
                           <span></span>
                         </div>
                   </div>
                   <div className={style.leftkuang2}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>1</span>
+                          <span>{totalData&&totalData.yearIntention}</span>
                           <span>本年意向</span>
-                          <span>同比下降100%</span>
+                          <span>同比下降0%</span>
                           <span></span>
                         </div>
                   </div>
                   <div className={style.leftkuang3}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>20</span>
+                          <span>{totalData&&totalData.monthSign}</span>
                           <span>本月签约</span>
                         </div>
                   </div>
                   <div className={style.leftkuang4}>
                       <div className={style.leftkuangtu}></div>
                         <div  className={style.kuangwenzi}>
-                          <span>21</span>
+                          <span>{totalData&&totalData.yearSign}</span>
                           <span>本年签约</span>
                         </div>
                   </div>  
@@ -75,7 +76,8 @@ let Component = React.createClass({
 });
 const mapStateToProps = (state) => {
     return {
-      heightChart5:state.vars.heightChart5
+      heightChart5:state.vars.heightChart5,
+      columnData:state.vars.columnData
     }
 };
 
@@ -88,6 +90,24 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actions.setVars('heightChart5',height));
     },
     init: ()=> {
+        //年度签约项目  
+        let param_json1={
+            "query":{
+                "target":"clientImportantProjectInf",
+                "function":"getCyfbczqkData",
+            }
+        };
+        let data1={
+            url: 'ClientGetJsonDatas',
+            requireData: "param_json="+JSON.stringify(param_json1),
+            requireType: 'get',
+            async: true,
+        };
+        myAjax(data1,success1);       
+        function success1(data){
+            console.log('年度签约项目',data)
+            dispatch(actions.setVars('columnData',data.query.detail));
+        };
     }
   }
 };

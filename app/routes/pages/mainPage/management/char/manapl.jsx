@@ -8,10 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-
-        let{heightChart1}=this.props;
-
-
+        let{heightChart1,pie360}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -31,7 +28,7 @@ let Component = React.createClass({
 
             tooltip: {
                 enabled: true,
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                pointFormat: '{series.name}: <b>{point.y}家{point.percentage:.1f}%</b>'
                 //pointFormat: "<b>{point.percentage:.0f}%</b>"
             },
             credits: {
@@ -60,12 +57,8 @@ let Component = React.createClass({
             },
             series: [{
                 type: 'pie',
-                name: "",
-                data:[
-                    ['规下(4家)',8],
-                    ['规上(1家)',4],
-                    
-                ],
+                name: "统计",
+                data:pie360&&pie360,
                 style: {     fontSize:"20px",  }
             }],
             colors:['#c96c65','#eda096',]

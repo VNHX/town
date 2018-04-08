@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart3}=this.props;
+        let {heightChart3,analysisRightChart1}=this.props;
         let configPie = {
             chart: {
                 type: 'column',
@@ -29,12 +29,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: [
-                    'I/信息传输和软件技术',
-                    'M/科学研究和服务业',
-                    'L/租凭和商务服务业',
-                    'B/计算机 通信和电子设备制造业',
-                ],
+                categories: analysisRightChart1&&analysisRightChart1.name,
                 crosshair: true,
                 // lineWidth :0,//去掉x轴线
                 tickWidth:0,//去掉刻度
@@ -84,7 +79,7 @@ let Component = React.createClass({
                 }
             },
             series: [{
-                data: [20,50,60,100,],
+                data: analysisRightChart1&&analysisRightChart1.qys,
             }],
             colors: ['#b3d78f','#b3d78f','#b3d78f','#b3d78f','#b3d78f','#b3d78f']
         };
@@ -96,7 +91,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        analysisRightChart1:state.vars.analysisRightChart1
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {

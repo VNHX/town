@@ -71,16 +71,27 @@
                         border-width: 0  0 1px 1px;
                     }
                     .wenzi{
-                        background: #48a6cc;
                         height: 5%;
+                        width: 95%;
                         position: absolute;
                         left: 2%;
                         top: 5%;
-                        text-align: center;
-                        font-size: 1.2rem;
-                        line-height: 1;
                         color: #ffffff;
-                            }
+                        span.name{
+                            background: #48a6cc;
+                            height: 100%;
+                            font-size: 1rem;
+                        }
+                        span.year{
+                            float: right;
+                            background: #31708f;
+                            height: 100%;
+                            width: 60px;
+                            margin-right: 5px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
                             .rigkbj{
                                 width: 100%;
                                 height: 74%;
@@ -327,21 +338,22 @@
                             color: #ffff;
                             font-size: 1.5rem;
                             position: absolute;
-                            left: 43%;
+                            text-align: center;
+                            width: 100%;
                             top: 52%;
                         }
                         .ssmi{
                             color: #f5f274;
                             font-size: 1.5rem;
                             position: absolute;
-                            left: 62.4%;
+                            left: 64%;
                             top: 12%;
                         }
                         .ssmil{
                             color: #EE8262;
                             font-size: 1.5rem;
                             position: absolute;
-                            left: 30%;
+                            left: 28%;
                             top: 17%;
                         }
                         .ssmil02{
@@ -349,7 +361,7 @@
                             font-size: 1.5rem;
                             position: absolute;
                             left: 48%;
-                            top: 110%;
+                            top: 114%;
                         }
                       }
                         .weizi{

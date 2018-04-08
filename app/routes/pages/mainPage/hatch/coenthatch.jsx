@@ -10,6 +10,7 @@ let Component = React.createClass({
   },
 
   render() {
+    let {totalData}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.cao}>
@@ -58,14 +59,14 @@ let Component = React.createClass({
                       <div className={style.rightkuang1}>
                           <div className={style.rightkuangtu}></div>
                             <div  className={style.kuangwenzi}>
-                              <span>1</span>
+                              <span>{totalData&&totalData.flow}</span>
                               <span>正在跟进</span>
                             </div>
                       </div> 
                       <div className={style.rightkuang2}>
                           <div className={style.rightkuangtu}></div>
                             <div  className={style.kuangwenzi}>
-                              <span>0</span>
+                              <span>{totalData&&totalData.close}</span>
                               <span>关闭项目</span>
                             </div>
                       </div> 

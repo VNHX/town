@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart1}=this.props;
+        let {heightChart1,lineData}=this.props;
         let configPie = {
             chart: {
                 type: 'line',
@@ -27,7 +27,7 @@ let Component = React.createClass({
                
             },
             xAxis:{
-                categories:['I/信息传输和软件技术','M/科学研究和技术服务业','B/计算机 通信和电子设备制造业','L/租凭和商业服务'],
+                categories:lineData&&lineData.name,
                 gridLineColor: "#fff",
                 gridLineWidth: 1,
                 lineColor: "#fff",              
@@ -74,7 +74,7 @@ let Component = React.createClass({
         },
         series: [{
             name: '同比下降',
-            data: [5, 7, 9, 4],
+            data: lineData&&lineData.value,
             lineWidth: 3,   //线条宽度
             color:"#03a9f4"
         }],

@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart3}=this.props;
+        let {heightChart3,rightLine}=this.props;
         let configPie = {
             chart: {
                 type: 'line',
@@ -27,7 +27,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['自主开发','企业介绍','主动上门','招商会','其他'],
+                categories: rightLine&&rightLine.xAxis,
                 gridLineColor: "#fff",
                 gridLineWidth: 1,
                 lineColor: "#fff",              
@@ -75,21 +75,15 @@ let Component = React.createClass({
                 }
             },
             series: [{
-                name: '前期洽谈',
-                data:[
-                   2,0,5,3,4
-                 ],
+                name: rightLine&&rightLine.legend[0],
+                data: rightLine&&rightLine.series[0].data,
                  
             }, {
-                name: '项目选止',
-                data:[
-                   5,7,8,2,6
-                ]
+                name: rightLine&&rightLine.legend[1],
+                data:rightLine&&rightLine.series[1].data
             },{
-                name:'签订合同',
-                data:[
-                    2,6,9,0,2
-                ]
+                name:rightLine&&rightLine.legend[2],
+                data:rightLine&&rightLine.series[2].data
             }],
             credits: {
                 enabled: false //不显示highCharts版权信息
