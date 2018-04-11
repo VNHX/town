@@ -15,7 +15,7 @@ let Component = React.createClass({
     this.props.init();
   },
   render() {
-    let {weekday,timeNow,dateNow,rczyData,TotalOutput,ProjectTotal,Cyzl,Xzzl,InvService,Cyzl2,IndexProjectTypes,ZscqData,lineData}=this.props;
+    let {weekday,timeNow,dateNow,rczyData,TotalOutput,ProjectTotal,Cyzl,Xzzl,InvService,Cyzl2,IndexProjectTypes,ZscqData,lineDataA}=this.props;
     return (
       <div className={css.main}>
         <div className={`${css.circle} ${css.circle1}`}>
@@ -210,7 +210,7 @@ const mapStateToProps = (state) => {
         Cyzl2:state.vars.Cyzl2,
         IndexProjectTypes:state.vars.IndexProjectTypes,
         ZscqData:state.vars.ZscqData,
-        lineData:state.vars.lineData,
+        lineDataA:state.vars.lineDataA,
     }
 };
 
@@ -261,7 +261,7 @@ const mapDispatchToProps = (dispatch) => {
               lineData.num.push(Number(number.toFixed(1)));
             };
             console.log(888,lineData)
-            dispatch(actions.setVars('lineData',lineData));
+            dispatch(actions.setVars('lineDataA',lineData));
         };
 
         //工程项目看板
@@ -390,13 +390,13 @@ const mapDispatchToProps = (dispatch) => {
             console.log('知识产权',data)
             dispatch(actions.setVars('ZscqData',data.query.detail));
         };
-      var myData = new Date();//Id 
-      var times = myData.getTime().toString();
-      var str= times.substr(times.length-5);
-      webSocket.getConnect('getmodel/#',str,success,true);
-      function success(res){
-        console.log(999,res)
-      }
+      // var myData = new Date();//Id 
+      // var times = myData.getTime().toString();
+      // var str= times.substr(times.length-5);
+      // webSocket.getConnect('getmodel/#',str,success,true);
+      // function success(res){
+      //   console.log(999,res)
+      // }
       function setTime(){
         let myDate = new Date();
         let timeNow=myDate.getHours()+':'+myDate.getMinutes()+":"+myDate.getSeconds();
