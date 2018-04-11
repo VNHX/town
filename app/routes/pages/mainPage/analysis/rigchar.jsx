@@ -24,7 +24,7 @@ let Component = React.createClass({
   },
 
   render() {
-    let {heightChart3,heightPie,changeYear,rightPie}=this.props;
+    let {heightChart3,heightPie,changeYear,rightPieAna}=this.props;
     return (
         <div className={style.comit}>
           <div className={style.rigmit} >
@@ -90,10 +90,10 @@ let Component = React.createClass({
                   <p className={style.wenzi}>企业性质统计</p>
                   <div className={style.rigtable}>
                       <Rigch heightPie={heightPie}/>
-                      <div className={style.ss}>共有{rightPie&&rightPie.total}家</div>
-                      <div className={style.ssmi}>{rightPie&&rightPie.name[0]}</div>
-                      <div className={style.ssmil}>{rightPie&&rightPie.name[2]}</div>
-                      <div className={style.ssmil02}>{rightPie&&rightPie.name[1]}</div>
+                      <div className={style.ss}>共有{rightPieAna&&rightPieAna.total}家</div>
+                      <div className={style.ssmi}>{rightPieAna&&rightPieAna.name[0]}</div>
+                      <div className={style.ssmil}>{rightPieAna&&rightPieAna.name[2]}</div>
+                      <div className={style.ssmil02}>{rightPieAna&&rightPieAna.name[1]}</div>
                   </div>
                   <p className={style.weizi}>1-10月份，全市新登记民营市场主体19。38万户,咱全市新登记市场主体的98.7%,其中民营企业7.78万户。1-10月份,全市民间投资8993.92亿元,增长2.23%,咱全市投资的64.7%。其中,制造业和房地产投资占民间投资的比重分别为34.1%和17.9%。民营企业外贸出口591.63亿元,下降5.3%。</p>
               </div>
@@ -106,7 +106,7 @@ const mapStateToProps = (state) => {
     return {
       heightChart3:state.vars.heightChart3,
       heightPie:state.vars.heightPie,
-      rightPie:state.vars.rightPie
+      rightPieAna:state.vars.rightPieAna
     }
 };
 
@@ -158,8 +158,8 @@ const mapDispatchToProps = (dispatch) => {
         };
         myAjax(data2,success2);       
         function success2(data){
-            console.log('rightPie',data)
-            dispatch(actions.setVars('rightPie',data.query.detail));
+            console.log('rightPieAna',data)
+            dispatch(actions.setVars('rightPieAna',data.query.detail));
         };
         //企业入住统计    
         let param_json3={
@@ -177,7 +177,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data3,success3);       
         function success3(data){
             console.log('column',data)
-            dispatch(actions.setVars('columnData',data.query.list));
+            dispatch(actions.setVars('columnDataAna',data.query.list));
         };
     },
     changeYear: (year)=> {//企业分布及产值情况年份数据

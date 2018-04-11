@@ -24,7 +24,7 @@ let Component = React.createClass({
       },
 
   render() {
-    let {heightChart1,heightPie,lineData,columnData,pieData}=this.props;
+    let {heightChart1,heightPie,lineData360,columnData360,pieData360}=this.props;
     return (
       <div className={style.cmt}>
         <div className={style.hcomit} id='bck'>
@@ -37,7 +37,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>企业数量统计</p>
                     <div className={style.tubiao}>
-                    <Mapchar heightChart1={heightChart1} lineData={lineData}/>
+                    <Mapchar heightChart1={heightChart1} lineData={lineData360}/>
                     </div>
             </div>
         </div>
@@ -52,35 +52,35 @@ let Component = React.createClass({
                 <p className={style.wenzi}>知识产权</p>
                     <div className={style.tubiao}>
                         <div className={style.lyuan}> 
-                            <p className={style.p2}>{pieData&&pieData.value[0]}</p>
+                            <p className={style.p2}>{pieData360&&pieData360.value[0]}</p>
                             <Mp heightPie={heightPie}/>
                         </div>
                         <div className={style.lwenzi}>
-                            <p className={style.p1}>{pieData&&pieData.name[0]}</p>
+                            <p className={style.p1}>{pieData360&&pieData360.name[0]}</p>
                         </div>
 
                         <div className={style.lyuan02} id='bck2'>
-                            <p className={style.p2}>{pieData&&pieData.value[1]}</p>
+                            <p className={style.p2}>{pieData360&&pieData360.value[1]}</p>
                             <Mpto heightPie={heightPie}/>
                         </div>
                         <div className={style.lwenzi02}>
-                            <p className={style.p1}>{pieData&&pieData.name[1]}</p>
+                            <p className={style.p1}>{pieData360&&pieData360.name[1]}</p>
                         </div>
 
                         <div className={style.lyuan03}>
-                            <p className={style.p2}>{pieData&&pieData.value[2]}</p>
+                            <p className={style.p2}>{pieData360&&pieData360.value[2]}</p>
                             <Mpse heightPie={heightPie}/>
                         </div>
                         <div className={style.lwenzi03}>
-                            <p className={style.p1}>{pieData&&pieData.name[2]}</p>
+                            <p className={style.p1}>{pieData360&&pieData360.name[2]}</p>
                         </div>
 
                         <div className={style.lyuan04}>  
-                            <p className={style.p2}>{pieData&&pieData.value[3]}</p>
+                            <p className={style.p2}>{pieData360&&pieData360.value[3]}</p>
                             <Mpsp heightPie={heightPie}/>
                         </div>
                         <div className={style.lwenzi04}>
-                            <p className={style.p1}>{pieData&&pieData.name[3]}</p>
+                            <p className={style.p1}>{pieData360&&pieData360.name[3]}</p>
                         </div>
                     </div>
             </div>
@@ -95,7 +95,7 @@ let Component = React.createClass({
                 </div>
                 <p className={style.wenzi}>人才资源结构</p>
                     <div className={style.tubiao}>
-                      <Manapr heightChart1={heightChart1} columnData={columnData}/>
+                      <Manapr heightChart1={heightChart1} columnData={columnData360}/>
                     </div>
             </div>
         </div>
@@ -110,9 +110,9 @@ const mapStateToProps = (state) => {
     return {
         heightChart1:state.vars.heightChart1,
         heightPie:state.vars.heightPie,
-        lineData:state.vars.lineData,
-        columnData:state.vars.columnData,
-        pieData:state.vars.pieData
+        lineData360:state.vars.lineData360,
+        columnData360:state.vars.columnData360,
+        pieData360:state.vars.pieData360
     }
 };
 
@@ -146,7 +146,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data1,success1);       
         function success1(data){
             console.log('line1',data)
-            dispatch(actions.setVars('lineData',data.query.detail));
+            dispatch(actions.setVars('lineData360',data.query.detail));
         };
         //人才资源结构  
         let param_json2={
@@ -164,7 +164,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data2,success2);       
         function success2(data){
             console.log('column1',data)
-            dispatch(actions.setVars('columnData',data.query.detail));
+            dispatch(actions.setVars('columnData360',data.query.detail));
         };
         //知识产权  
         let param_json3={
@@ -182,7 +182,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data3,success3);       
         function success3(data){
             console.log('pie1',data)
-            dispatch(actions.setVars('pieData',data.query.detail));
+            dispatch(actions.setVars('pieData360',data.query.detail));
         };
     }
   }

@@ -8,15 +8,15 @@ let Component = React.createClass({
     },
 
     render() {
-    	let {}=this.props;
+    	let {lineDataA}=this.props;
         let configPie = {
             chart: {
-                type: 'bar',
+                type: 'line',
                 backgroundColor: 'rgba(0, 38, 82, 0.1)',
                 plotBorderWidth: 0,
                 borderWidth: 0,
                 plotShadow: false,
-                height:'120'
+                height:'150'
             },
             title: {
                 text: null,
@@ -27,7 +27,7 @@ let Component = React.createClass({
             },
             tooltip: {
                 // pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                pointFormat: "<b>{point.percentage:.0f}%</b>"
+                pointFormat: "<b>{point.y} 万元</b>"
             },
             credits: {
                 enabled: false //不显示highCharts版权信息
@@ -56,23 +56,24 @@ let Component = React.createClass({
                         fontSize:'10px'  //字体
                     }
                 },
-                categories: ['n1', 'n2', 'n3', 'n4', 'n5']
+                categories: lineDataA&&lineDataA.mon,
             },
             yAxis: {
                 min: 0,
             	lineWidth: 1,
                 title:{
-                	text:'总量',
+                	text:'万元',
                 	align: 'high',
 	                offset: 0,
 	                rotation: 0,
-	                y: -15,
-	                x:0,
+	                y: 10,
+	                x: 20,
 	                style:{
 	                	fontSize:'10px',
 	                	color:'white',
 	                }
                 },
+                
                 gridLineWidth:0,
                 labels: {
                 	format:'{value}',
@@ -84,7 +85,7 @@ let Component = React.createClass({
                 },
             },
             series: [{
-                data: [5, 3, 4, 7, 2],
+                data: lineDataA&&lineDataA.num,
                 cursor: 'pointer',
                 events: {
                     click: function(e) {
@@ -102,7 +103,9 @@ let Component = React.createClass({
 
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        lineDataA:state.vars.lineDataA,
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {

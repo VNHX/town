@@ -8,6 +8,7 @@ import css from './floor.scss';
 import Column from './column.jsx';//柱图
 import Table from "./table.jsx";//table表格
 import Pie from "./pieChart.jsx";//pie1
+import Right from './right.jsx';//右屏
 
 let Component = React.createClass({
   componentDidMount() {
@@ -67,7 +68,7 @@ let Component = React.createClass({
                 <div className={css.bg}></div>
     		</div>
     		<div className={css.rightBox}>
-
+                <Right/>
     		</div>
           	<Nav/>
         </div>

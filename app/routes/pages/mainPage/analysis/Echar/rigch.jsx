@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightPie,bb,setTitle,rightPie}=this.props;
+        let {heightPie,bb,setTitle,rightPieAna}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -68,7 +68,7 @@ let Component = React.createClass({
                 type: 'pie',
                 innerSize: '60%',
                 name: '市场份额',
-                data: rightPie&&rightPie.value
+                data: rightPieAna&&rightPieAna.value
             }],
             credits: {
                 enabled: false //不显示highCharts版权信息
@@ -84,7 +84,7 @@ let Component = React.createClass({
 
 const mapStateToProps = (state) => {
     return {
-        rightPie:state.vars.rightPie
+        rightPieAna:state.vars.rightPieAna
     }
 };
 
