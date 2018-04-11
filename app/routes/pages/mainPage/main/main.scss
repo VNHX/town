@@ -265,7 +265,7 @@
 				font-size: 1rem;
 				.total{
 					float: left;
-					width: 60%;
+					width: 56%;
 					height: 1rem;
 					background: #57a247;
 					border-radius: .4rem;
@@ -273,7 +273,7 @@
 				}
 				.num{
 					float: left;
-					width: 40%;
+					width: 44%;
 					padding-left: 5%;
 				}	
 			}
@@ -282,7 +282,7 @@
 				font-size: 1rem;
 				.total{
 					float: left;
-					width: 50%;
+					width: 43%;
 					height: 1rem;
 					background: #ff7e26;
 					border-radius: .4rem;
@@ -290,7 +290,7 @@
 				}
 				.num{
 					float: left;
-					width: 50%;
+					width: 57%;
 					padding-left: 10%;
 				}	
 			}			
@@ -488,7 +488,7 @@
 				font-size: 1rem;
 				.total{
 					float: left;
-					width: 60%;
+					width: 56%;
 					height: 1rem;
 					background: #57a247;
 					border-radius: .4rem;
@@ -496,7 +496,7 @@
 				}
 				.num{
 					float: left;
-					width: 40%;
+					width: 44%;
 					padding-left: 5%;
 				}	
 			}
@@ -505,7 +505,7 @@
 				font-size: 1rem;
 				.total{
 					float: left;
-					width: 50%;
+					width: 43%;
 					height: 1rem;
 					background: #ff7e26;
 					border-radius: .4rem;
@@ -513,7 +513,7 @@
 				}
 				.num{
 					float: left;
-					width: 50%;
+					width: 57%;
 					padding-left: 10%;
 				}	
 			}			
@@ -548,7 +548,7 @@
 	.overviewPro{
 		position :absolute;
 		left:7%;
-		top: 58%;
+		top: 53%;
 		height: 18rem;
 		width: 19rem;
 		background: url(../img/2.png);
@@ -561,6 +561,7 @@
 			height:2rem;
 			line-height: 2rem;
 			font-size:1.2rem;
+			margin-top:-1rem;
 		}
 		.icon{
 			display:inline-block;
@@ -573,6 +574,9 @@
 			height:2rem;
 			line-height:2rem;
 			font-size:1rem;
+			.num{
+				float:right;
+			}
 		}
 		.total{
 			width:100%;
@@ -589,7 +593,7 @@
 	.boardPro{
 		position :absolute;
 		left:14%;
-		top: 11%;
+		top: 17%;
 		height: 16rem;
 		width: 16rem;
 		background: url(../img/3.png);

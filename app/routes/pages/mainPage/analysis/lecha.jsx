@@ -22,7 +22,7 @@ let Component = React.createClass({
 
 
   render() {
-    let {heightChart3,columnYear,lineYear,analysisTableData}=this.props;
+    let {heightChart3,columnYear,lineYear,analysisTableData,analysisAllData,analysisTaxData}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.hcomit} id='meini'>
@@ -57,7 +57,7 @@ let Component = React.createClass({
                         <span className={style.year} onClick={()=>lineYear('2017')}>2017</span>
                     </p>
                         <div className={style.tubiao}>
-                            <Lmicha heightChart3={heightChart3}/>
+                            <Lmicha analysisTaxData={analysisTaxData} heightChart3={heightChart3}/>
                         </div>
                 </div>
             </div>
@@ -85,8 +85,8 @@ let Component = React.createClass({
             <div className={style.cmi}>
                 <div className={style.cmou}></div>
                 <div className={style.comiwen}>o产业总览</div>
-                <div className={style.comiwen2}><span>183</span><span className={style.name}>家</span></div>
-                <Ttranfrom />
+                <div className={style.comiwen2}><span>{analysisAllData&&analysisAllData[0]}</span><span className={style.name}>家</span></div>
+                <Ttranfrom analysisAllData={analysisAllData} />
             </div>
         </div>                  
     )
@@ -95,7 +95,9 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
         heightChart3:state.vars.heightChart3,  
-        analysisTableData:state.vars.analysisTableData      
+        analysisTableData:state.vars.analysisTableData,
+        analysisAllData:state.vars.analysisAllData,
+        analysisTaxData:state.vars.analysisTaxData    
     }
 };
 
@@ -113,7 +115,7 @@ const mapDispatchToProps = (dispatch) => {
             "query":{
                 "target":"clientQydaInf",
                 "function":"getQyfbczData",
-                "year":"2018"
+                "year":"2017"
             }
         };
         let data1={
@@ -130,7 +132,7 @@ const mapDispatchToProps = (dispatch) => {
         //小镇税收情况    
         let param_json2={
             "query":{
-                "target":"clientProjectInf",
+                "target":"clientQydaInf",
                 "function":"getYqssqkData",
                 "year":"2018"
             }
@@ -143,13 +145,13 @@ const mapDispatchToProps = (dispatch) => {
         };
         myAjax(data2,success2);       
         function success2(data){
-            console.log('chart2',data)
-            //dispatch(actions.setVars('analysisChart1Data',data.query.detail));
+            console.log('小镇税收情况',data)
+            dispatch(actions.setVars('analysisTaxData',data.query.detail));
         };
         //产业总览    
         let param_json3={
             "query":{
-                "target":"clientProjectInf",
+                "target":"clientQydaInf",
                 "function":"getCyzl",
             }
         };
@@ -161,8 +163,8 @@ const mapDispatchToProps = (dispatch) => {
         };
         myAjax(data3,success3);       
         function success3(data){
-            console.log('chart3',data)
-            //dispatch(actions.setVars('analysisChart1Data',data.query.detail));
+            console.log('产业总览',data)
+            dispatch(actions.setVars('analysisAllData',data.query.detail.list));
         };
         //纳税前十    
         let param_json4={
@@ -179,7 +181,7 @@ const mapDispatchToProps = (dispatch) => {
         };
         myAjax(data4,success4);       
         function success4(data){
-            console.log('table4',data)
+            console.log('纳税前十',data)
             dispatch(actions.setVars('analysisTableData',data.query.list));
         };
     },
@@ -206,7 +208,7 @@ const mapDispatchToProps = (dispatch) => {
     lineYear:(year)=>{//小镇税收情况年份数据            
         let param_json2={
             "query":{
-                "target":"clientProjectInf",
+                "target":"clientQydaInf",
                 "function":"getYqssqkData",
                 "year":year
             }
@@ -220,7 +222,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data2,success2);       
         function success2(data){
             console.log('chart2',data)
-            //dispatch(actions.setVars('analysisChart1Data',data.query.detail));
+            dispatch(actions.setVars('analysisTaxData',data.query.detail));
         };
     }
   }

@@ -12,7 +12,7 @@ let Component = React.createClass({
   },
 
   render() {
-    let {}=this.props;
+    let {analysisAllData}=this.props;
     return (
       <div>
          <div className={style.donghua_dayuan}>
@@ -21,9 +21,9 @@ let Component = React.createClass({
           </div>
         </div> 
         <div className={style.ncl}>
-          <p className={style.mini}>100</p>
+          <p className={style.mini}>{analysisAllData&&analysisAllData[1]}</p>
           <p className={style.miz}>今年入驻</p>
-          <p className={style.mini01}>3200%</p>
+          <p className={style.mini01}>{analysisAllData&&analysisAllData[2]}%</p>
           <p className={style.miz01}>同比</p>
         </div>
 
@@ -32,9 +32,9 @@ let Component = React.createClass({
             <div className={`${style.neidayuan01} ${style.right01}`}></div>
           </div>
           <div className={style.ncl}>
-          <p className={style.mini}>0.00</p>
+          <p className={style.mini}>{analysisAllData&&analysisAllData[3]}</p>
           <p className={style.miz}>今年产值/万元</p>
-          <p className={style.mini01}>0%</p>
+          <p className={style.mini01}>{analysisAllData&&analysisAllData[4]}%</p>
           <p className={style.miz01}>同比</p>
         </div>
         </div> 
@@ -43,9 +43,9 @@ let Component = React.createClass({
             <div className={`${style.neidayuan01} ${style.right01}`}></div>
           </div>
           <div className={style.ncl}>
-          <p className={style.mini}>0</p>
+          <p className={style.mini}>{analysisAllData&&analysisAllData[5]}</p>
           <p className={style.miz}>今年退圆</p>
-          <p className={style.mini01}>0%</p>
+          <p className={style.mini01}>{analysisAllData&&analysisAllData[6]}%</p>
           <p className={style.miz01}>同比</p>           
         </div>
         </div> 

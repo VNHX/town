@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart3}=this.props;
+        let {heightChart3,analysisTaxData}=this.props;
         let configPie = {
             chart: {
                 type: 'line',
@@ -32,7 +32,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['企业所得税', '增值税', '消费税', '营业税', '个人所得税',],
+                categories: analysisTaxData&&analysisTaxData.name,
                 gridLineColor: "#fff",
                 gridLineWidth: 1,
                 lineColor: "#fff",              
@@ -87,7 +87,7 @@ let Component = React.createClass({
             },
             series: [{
                 // name: '东京',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4,]
+                data: analysisTaxData&&analysisTaxData.value
             }],
             colors:['#e07b71']
         };

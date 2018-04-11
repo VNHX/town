@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart3,columnData}=this.props;
+        let {heightChart3,columnDataAna}=this.props;
         let configPie = {
             chart: {
               type: 'column',
@@ -96,17 +96,17 @@ let Component = React.createClass({
               }
           },
           series: [{
-              name: columnData&&columnData[0].name,
-              data: columnData&&columnData[0].value,
+              name: columnDataAna&&columnDataAna[0].name,
+              data: columnDataAna&&columnDataAna[0].value,
           }, {
-              name: columnData&&columnData[1].name,
-              data: columnData&&columnData[1].value,
+              name: columnDataAna&&columnDataAna[1].name,
+              data: columnDataAna&&columnDataAna[1].value,
           }, {
-              name: columnData&&columnData[2].name,
-              data: columnData&&columnData[2].value,
+              name: columnDataAna&&columnDataAna[2].name,
+              data: columnDataAna&&columnDataAna[2].value,
           },{
-              name: columnData&&columnData[3].name,
-              data: columnData&&columnData[3].value,
+              name: columnDataAna&&columnDataAna[3].name,
+              data: columnDataAna&&columnDataAna[3].value,
           }],
     
             credits: {
@@ -123,7 +123,7 @@ let Component = React.createClass({
 
 const mapStateToProps = (state) => {
     return {
-        columnData:state.vars.columnData 
+        columnDataAna:state.vars.columnDataAna 
     }
 };
 

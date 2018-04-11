@@ -19,7 +19,7 @@ let Component = React.createClass({
       },
 
   render() {
-    let {heightChart3,heightPie,pieData,total,rightLine}=this.props;
+    let {heightChart3,heightPie,pieDataHa,total,rightLine,hatchPro}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.rigfst} >
@@ -33,7 +33,7 @@ let Component = React.createClass({
                     <p className={style.wenzi}>行业类型分析</p>
                         <div className={style.tubiao}>
                             <div className={style.total}>共{total&&total}家</div>
-                            <Leftcha pieData={pieData} heightPie={heightPie}/>
+                            <Leftcha pieData={pieDataHa} heightPie={heightPie}/>
                         </div>
                         <div className={style.rigtk}>
                             <div className={style.rigtu}>
@@ -118,7 +118,7 @@ let Component = React.createClass({
                             <span></span>
                         </div>
                     <p className={style.wenzi}>重点项目</p>
-                      <Rigcd />
+                      <Rigcd hatchPro={hatchPro} />
                 </div>
             </div>
         </div>
@@ -130,9 +130,10 @@ const mapStateToProps = (state) => {
     return {
         heightChart3:state.vars.heightChart3,
         heightPie:state.vars.heightPie,
-        pieData:state.vars.pieData,
+        pieDataHa:state.vars.pieDataHa,
         total:state.vars.total,
-        rightLine:state.vars.rightLine
+        rightLine:state.vars.rightLine,
+        hatchPro:state.vars.hatchPro
     }
 };
 
@@ -173,7 +174,7 @@ const mapDispatchToProps = (dispatch) => {
                 pieData[i].push(data.query.detail.name[i]);
                 pieData[i].push(data.query.detail.value[i]);
             }
-            dispatch(actions.setVars('pieData',pieData));
+            dispatch(actions.setVars('pieDataHa',pieData));
             dispatch(actions.setVars('total',data.query.detail.total));
         };
         //近两年意向项目情况  
@@ -230,9 +231,8 @@ const mapDispatchToProps = (dispatch) => {
         };
         myAjax(data4,success4);       
         function success4(data){
-            console.log('重点项目',data);
-            
-            //dispatch(actions.setVars('total',data.query.detail.total));
+            console.log('重点项目',data);            
+            dispatch(actions.setVars('hatchPro',data.query.list));
         };
     },
    

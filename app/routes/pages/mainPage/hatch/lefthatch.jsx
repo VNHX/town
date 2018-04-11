@@ -17,7 +17,7 @@ let Component = React.createClass({
   },
 
   render() {
-    let {heightChart5,columnData,totalData}=this.props;
+    let {heightChart5,columnDataHa,totalData}=this.props;
     return (
         <div className={style.comit}>
             <div className={style.hxmit}>
@@ -33,7 +33,7 @@ let Component = React.createClass({
                     </div>
                     <p className={style.wenzi}>年度签约项目统计</p>
                         <div className={style.tubiao}>
-                             <Leftchart columnData={columnData} heightChart5={heightChart5}/>
+                             <Leftchart columnData={columnDataHa} heightChart5={heightChart5}/>
                          </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
       heightChart5:state.vars.heightChart5,
-      columnData:state.vars.columnData
+      columnDataHa:state.vars.columnDataHa
     }
 };
 
@@ -106,7 +106,7 @@ const mapDispatchToProps = (dispatch) => {
         myAjax(data1,success1);       
         function success1(data){
             console.log('年度签约项目',data)
-            dispatch(actions.setVars('columnData',data.query.detail));
+            dispatch(actions.setVars('columnDataHa',data.query.detail));
         };
     }
   }

@@ -8,53 +8,36 @@ let Component = React.createClass({
     this.props.init();
   },
   render() {
-    let {}=this.props;
+    let {hatchPro}=this.props;
     return (
         <div className={style.ss}>
-  <table>
+            <table>
               <thead>
                 <tr>
-                  <th colSpan="2">前期洽谈</th><th colSpan="2">项目建议书/项目申请</th>
-                  <th colSpan="2">项目立项</th><th colSpan="2">项目选址</th>
-                  <th colSpan="2">签订合同</th>
+                  <th>企业名称</th>
+                  <th>前期洽谈</th>
+                  <th>项目建议书/项目申请</th>
+                  <th>项目立项</th>
+                  <th>项目选址</th>
+                  <th>签订合同</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>年份</th><th>企业名称</th>
-                  <th>数量</th><th>同比</th>
-                  <th>数量</th><th>同比</th>
-                  <th>数量</th><th>同比</th>
-                  <th>数量</th><th>同比</th>
-                </tr>
-                <tr>
-                  <th>2016</th><th>珠海汽车工业(集团)有限公司</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                </tr>
-                <tr>
-                  <th>2017</th><th>珠海汽车工业(集团)有限公司</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                </tr>
-                <tr>
-                  <th>2018</th><th>珠海汽车工业(集团)有限公司</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                  <th>1</th><th>100.00%</th>
-                </tr>
-                <tr>
-                  <th>合计</th><th>身子罗灿科技有限公司</th>
-                  <th>0</th><th></th>
-                  <th>0</th><th></th>
-                  <th>0</th><th></th>
-                  <th>0</th><th></th>
-                </tr>
+                {
+                  hatchPro&&hatchPro.map((value,key)=>{
+                    return(
+                      <tr key={key}>
+                        <td>{value.name}</td>
+                        <td>{value.milestionelist[0].value=='Y'&&'√'}</td>
+                        <td>{value.milestionelist[1].value=='Y'&&'√'}</td>
+                        <td>{value.milestionelist[2].value=='Y'&&'√'}</td>
+                        <td>{value.milestionelist[3].value=='Y'&&'√'}</td>
+                        <td>{value.milestionelist[4].value=='Y'&&'√'}</td>
+                      </tr>
+                    )
+                  })
+
+                }
               </tbody>
             </table>
         </div>            

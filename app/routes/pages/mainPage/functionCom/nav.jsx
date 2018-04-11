@@ -4,10 +4,11 @@ import {connect} from 'react-redux';
 var actions = require('redux/actions');
 var {browserHistory} = require('react-router');
 import css from './nav.scss';
+import webSocket from '../functionCom/socketClient.js';
 
 let Component = React.createClass({
   componentDidMount() {
-    this.props.init();
+    this.props.init(this.props.nowPage);
   },
   showNav: ()=> {
     $("#nav").show('slow')
@@ -16,7 +17,7 @@ let Component = React.createClass({
     $("#nav").hide('slow')
   },
   render() {
-    let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage,toManagement,toFloor}=this.props;
+    let {toMain,toOverview,toHatch,toAnalysis,toManage,nowPage,toManagement,toFloor,floorId}=this.props;
     return (
     	<div className={css.menu} onMouseLeave={()=>this.hideNav()}>
           	<div className={css.img}><div className={css.src} onClick={()=>this.showNav()}></div></div>
@@ -36,14 +37,32 @@ let Component = React.createClass({
 const mapStateToProps = (state) => {
     return {
       nowPage:state.vars.nowPage,
+      floorId:state.vars.floorId,
       
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    init: ()=> {
-      
+    init: (nowPage)=> {
+      //console.log('456',nowPage)
+      var myData = new Date();//Id 
+      var times = myData.getTime().toString();
+      var str= times.substr(times.length-5);
+      webSocket.getConnect('zz/zz',str,success,true);
+      function success(res){
+        console.log(999,res);
+        let page=['main','overview','analysis','hatch','manage','management'];
+        if(res>5){
+            browserHistory.push('/app/all/project/town/floor');     
+            let floorId=res-6;
+            dispatch(actions.setVars('floorId',floorId));
+            console.log('111',floorId)
+                   
+        }else{
+            browserHistory.push('/app/all/project/town/'+page[res])
+        }      
+      }
     },
     toMain:()=>{
     	browserHistory.push('/app/all/project/town/main')
