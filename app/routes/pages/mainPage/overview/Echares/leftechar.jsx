@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart6}=this.props;
+        let {heightChart6,overFirstData}=this.props;
         let configPie = {
             chart: {
                 type: 'bar',
@@ -26,7 +26,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['企业介绍', '招商会', '主动上门', '自主开发'],
+                categories: overFirstData&&overFirstData.name,
                  // lineWidth :0,//去掉x轴线
                  tickWidth:0,//去掉刻度
                  labels : {
@@ -88,11 +88,11 @@ let Component = React.createClass({
             colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
             series: [{
                 name: '本年签约项目',
-                data: [5, 3, 7, 9,],
+                data: overFirstData&&overFirstData.value1,
                 color:'#59acf8',
             },{
                 name: '累计签约项目',
-                data: [3, 4, 4, 9,],
+                data: overFirstData&&overFirstData.value2,
                 color:'#b1444a',
             }]
         };

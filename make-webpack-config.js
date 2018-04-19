@@ -69,7 +69,7 @@ module.exports = function (options) {
   var extensions = ["", ".web.js", ".js", ".jsx"];
   var root = path.join(__dirname, "app");
   var publicPath = options.devServer ? "http://" + getIp() + ":2993/_assets/" :
-    "//mws.fengjr.com/public/dist/mobile-web/mall/";
+    "//192.168.1.110:9001/public/";
   var output = {
     path: path.join(buildPath, options.prerender ? "prerender" : "public"),
     publicPath: publicPath,

@@ -2,6 +2,19 @@
 	height: 100%;
 	width: 100%;
 	padding: 10px 10px;
+	.alert{
+		position: fixed;
+		top: 20%;
+		left: 40%;
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		width: 20%;
+		background: #00e1ff;
+		text-align: center;
+		border-radius: 10px;
+		color: #a94442;
+	}
 	.leftBox{
 		float: left;
 		width:33.3%;
@@ -247,6 +260,9 @@
 							background: #48a6cc;
 							color:white;
 							letter-spacing:5px;
+							border-radius: 5px;
+							padding-left: 5px;
+							padding-right: 3px;
 						}
 					}
 				}

@@ -19,7 +19,8 @@ let Component = React.createClass({
     return (
     	<div className={css.rightBg}>
     		<canvas id="q" width="100%" height="1000" opacity="0.8"></canvas>
-        </div>
+        <div className={css.logoBg}></div>
+      </div>
     )
   }
 });

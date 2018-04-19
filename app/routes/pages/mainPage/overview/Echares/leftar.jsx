@@ -9,7 +9,8 @@ let Component = React.createClass({
 
     render() {
 
-        let{heightPie}=this.props;
+        let{heightPie,overSecondData}=this.props;
+        console.log('overSecondData',overSecondData)
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -20,7 +21,7 @@ let Component = React.createClass({
                 // height:100,
                 height:heightPie,
                 // marginLeft:200,
-                marginRight:160,
+                //marginRight:160,
                 // marginTop:120,
             },
             title: {
@@ -32,7 +33,7 @@ let Component = React.createClass({
 
             tooltip: {
                 enabled: true,
-                valueDecimals : 2, // 保留小数位数
+                valueDecimals : 0, // 保留小数位数
                 backgroundColor : '#0c1733', // 提示框背景色
                 borderColor: '#152e4d',         // 边框颜色
                 borderWidth:3,
@@ -41,14 +42,14 @@ let Component = React.createClass({
                 animation: true,               // 是否启用动画效果
                 style: {                      // 文字内容相关样式
                     color: "#d8c1a2",
-                    fontSize: "12px",
+                    fontSize: "16px",
                     fontWeight: "blod",
                     lineHeight:30,
                 },  
-                pointFormat: '<br/>{series.name}: <b>{point.percentage:.1f}%</b>',
-                positioner: function () { // 固定提示框
-                    return { x: 480, y: 120 };
-                },
+                pointFormat: '<br/><b>{series.name}: </b><b>{point.y}家{point.percentage:.1f}%</b>',
+                // positioner: function () { // 固定提示框
+                //     //return { x: 480, y: 120 };
+                // },
                 //pointFormat: "<b>{point.percentage:.0f}%</b>"
             },
             credits: {
@@ -66,7 +67,7 @@ let Component = React.createClass({
                         format: '{point.name}',
                         style: {
                             color: "#d1d2d3",
-                            fontSize: '20px',
+                            fontSize: '16px',
                             fontFamily:"微软雅黑"
 
                         },
@@ -77,12 +78,8 @@ let Component = React.createClass({
             },
             series: [{
                 type: 'pie',
-                name: "",
-                data:[
-                    ['农产品',9],
-                    ['电子信息',8],
-                    ['制造业',9],
-                ],
+                name: "占比",
+                data:overSecondData&&overSecondData,
                 style: {fontSize:"20px", color:'#fff', }
             }],
             colors:['#edd87b','#becf88','#eea584','#94eee2','#f0ae7a','#f3ce5b']

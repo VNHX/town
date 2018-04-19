@@ -96,7 +96,9 @@ let Component = React.createClass({
           </div>   
           <div className={css.circleBig_bottom}></div>
         </div>   
-
+        <div className={css.bg1}></div>
+        <div className={css.bg2}></div>
+        <div className={css.bg3}></div>
         <div className={`${css.circle} ${css.circle4}`}>
           <div className={css.line_right1}></div>
           <img src={circle1}/>

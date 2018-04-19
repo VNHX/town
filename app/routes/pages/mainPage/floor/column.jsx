@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-    	let {}=this.props;
+    	let {floorOneData}=this.props;
         let configPie = {
             chart: {
                 type: 'bar',
@@ -58,7 +58,7 @@ let Component = React.createClass({
                         fontSize:'10px'  //字体
                     }
                 },
-                categories: ['园区从业人员数量', '国千人才计划', '省千人才计划', '580人才计划', '留学人员']
+                categories: floorOneData&&floorOneData.name,
             },
             yAxis: {
                 min: 0,
@@ -86,7 +86,7 @@ let Component = React.createClass({
                 },
             },
             series: [{
-                data: [5, 3, 4, 7, 2],
+                data: floorOneData&&floorOneData.value,
                 cursor: 'pointer',
                 events: {
                     click: function(e) {

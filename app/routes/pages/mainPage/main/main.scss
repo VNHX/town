@@ -7,6 +7,39 @@
 	width:100%;
 	position:relative;
 	color: #fff;
+	.bg1{
+		height: 14rem;
+		width: 14rem;
+		border-radius: 7rem;
+		position: absolute;
+		left: 36%;
+		top:7%;
+		background: url(../img/view.png);
+		background-size: 150% 100%;
+		opacity:0.5;
+	}
+	.bg2{
+		height: 14rem;
+		width: 14rem;
+		border-radius: 7rem;
+		position: absolute;
+		left: 58%;
+		top:66%;
+		background: url(../img/view2.png);
+		background-size: 120% 100%;
+		opacity:0.5;
+	}
+	.bg3{
+		height: 14rem;
+		width: 14rem;
+		border-radius: 7rem;
+		position: absolute;
+		left: 39%;
+		top:53%;
+		background: url(../img/view3.png);
+		background-size: 150% 100%;
+		opacity:0.5;
+	}
 	.middle{
 		position:absolute;
 		width:30%;

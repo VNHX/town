@@ -9,7 +9,7 @@ let Component = React.createClass({
 
     render() {
 
-        let{heightPie}=this.props;
+        let{heightPie,overFourthData}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -45,7 +45,7 @@ let Component = React.createClass({
                     fontWeight: "blod",
                     lineHeight:40,
                 },  
-                pointFormat: '<br/>{series.name}: <b>{point.percentage:.1f}%</b>',
+                pointFormat: '<br/>{series.name}: <b>{point.y}家{point.percentage:.1f}%</b>',
                 positioner: function () { // 固定提示框
                     return { x: 400, y: 100 };
                 },
@@ -77,16 +77,8 @@ let Component = React.createClass({
             },
             series: [{
                 type: 'pie',
-                name: "",
-                data:[
-                    ['农产品',9],
-                    ['制造业',5],
-                    ['智能家电',7],
-                    ['智能交通',6],
-                    ['电子信息',8],
-                    ['金融业',6.4],
-                  
-                ],
+                name: "占比",
+                data:overFourthData&&overFourthData,
                 style: {fontSize:"20px", }
             }],
             colors:['#63c1c9','#dccfe3','#eeb764','#55a2f4','#ec8677','#f5d648']

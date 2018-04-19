@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart7}=this.props;
+        let {heightChart7,overSixData}=this.props;
         let configPie = {
             
         chart: {
@@ -29,14 +29,7 @@ let Component = React.createClass({
             text: ''
         },
         xAxis: [{
-                    categories: [
-                        '农业产品',
-                        '制造业',
-                        '智能家电',
-                        '物流交通',
-                        '电子信息',
-                        '金融企业',
-                    ],
+                    categories: overSixData&&overSixData.name,
                     tickWidth:0,//去掉刻度
                     // lineWidth :0,//去掉x轴线
                     // gridLineColor: "#fff",
@@ -162,17 +155,14 @@ let Component = React.createClass({
                 name: '累计签约',
                 type: 'column',
                 yAxis: 1,
-                data: [4,2,3,7,8,4],
+                data: overSixData&&overSixData.value_1,
                 // color:'#66c3ca'
             },{
-            name: '本年签约',
-            // yAxis: 1,
-            data: [3,7,3,6,5,8],
-        },
-            {
-            name: '投资金额',
-            data: [1,2,3,6,5,2],
-        }],
+                name: '本年签约',
+                // yAxis: 1,
+                data: overSixData&&overSixData.value_2,
+            }
+        ],
         colors:['#66c3ca','#f1a784','#01c3ff',]
         };
         return (

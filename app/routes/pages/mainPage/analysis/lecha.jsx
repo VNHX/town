@@ -85,7 +85,7 @@ let Component = React.createClass({
             <div className={style.cmi}>
                 <div className={style.cmou}></div>
                 <div className={style.comiwen}>o产业总览</div>
-                <div className={style.comiwen2}><span>{analysisAllData&&analysisAllData[0]}</span><span className={style.name}>家</span></div>
+                <div className={style.comiwen2}><span>{analysisAllData&&analysisAllData[0]}</span><span>家</span></div>
                 <Ttranfrom analysisAllData={analysisAllData} />
             </div>
         </div>                  

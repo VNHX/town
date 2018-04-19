@@ -1,6 +1,6 @@
 module.exports = {
 	getConnect: function(topic, clientId, cb, bool) {
-		var clstrx = '192.168.1.113:1884';
+		var clstrx = '192.168.1.103:1884';
 		//var clstrx ='192.168.50.225:1884';
 		var clstr = clstrx.split(":");
 		console.log(555, clstr)
@@ -42,9 +42,9 @@ module.exports = {
 		// called when a message arrives
 		function onMessageArrived(message) {
 			// var fdata = (message._getPayloadString)();
-			console.log(22, message)
-			var fdata = JSON.parse((message._getPayloadString)());
-			cb(fdata)
+			console.log(22, (message._getPayloadString)())
+			//var fdata = JSON.parse((message._getPayloadString)());
+			cb((message._getPayloadString)())
 
 
 		}

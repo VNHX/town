@@ -1,5 +1,15 @@
 .rightBg{
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	overflow: hidden;	
+	position: relative;
+	.logoBg{
+		background: url(../img/QYlogo.png) no-repeat;
+		background-size: 100% 100%;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }

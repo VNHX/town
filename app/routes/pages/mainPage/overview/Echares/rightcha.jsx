@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {heightChart7}=this.props;
+        let {heightChart7,overFiveData}=this.props;
         let configPie = {
             chart: {
                 type: 'bar',
@@ -26,7 +26,7 @@ let Component = React.createClass({
                 text: ''
             },
             xAxis: {
-                categories: ['入住申请', '资格审核', '安排看房', '入住审批', '签合同'],
+                categories: overFiveData&&overFiveData.name,
                 tickWidth:0,//去掉刻度
                  // lineWidth :0,//去掉x轴线
                 lineColor: "#fff",              
@@ -95,10 +95,10 @@ let Component = React.createClass({
             },
             series: [{
                 name: '销售',
-                data: [10,40,60,120,12],
+                data: overFiveData&&overFiveData.value_1,
             },{
                 name: '租凭',
-                data: [19,20,30,100,20],
+                data: overFiveData&&overFiveData.value_2,
             }
         ],
             colors:['#b77a5d','#ccb778']

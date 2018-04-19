@@ -10,28 +10,29 @@ let Component = React.createClass({
     this.props.init();
   },
   render() {
-    let {}=this.props;
+    let {floorFourData}=this.props;
     return (
     	<div className={css.table}>
             <table>
                 <thead>
                     <tr>
-                        <th style={{width:'50%'}}>企业名称</th>
-                        <th style={{width:'20%'}}>员工人数</th>
-                        <th style={{width:'30%'}}>注册资金</th>
+                        <th style={{width:'65%'}}>企业名称</th>
+                        <th style={{width:'15%'}}>员工人数</th>
+                        <th style={{width:'20%'}}>注册资金</th>
                     </tr>                    
                 </thead>
                 <tbody>
-                    <tr>
-                        <td style={{width:'50%'}}>1</td>
-                        <td style={{width:'20%'}}>2</td>
-                        <td style={{width:'30%'}}>3</td>
-                    </tr>
-                    <tr>
-                        <td style={{width:'50%'}}>1</td>
-                        <td style={{width:'20%'}}>2</td>
-                        <td style={{width:'30%'}}>3</td>
-                    </tr>
+                {
+                    floorFourData&&floorFourData.map((value,key)=>{
+                        return(
+                            <tr key={key}>
+                                <td style={{width:'65%'}}>{value.name}</td>
+                                <td style={{width:'15%'}}>{value.staff}</td>
+                                <td style={{width:'20%'}}>{value.money}</td>
+                            </tr>
+                        )
+                    })
+                }
                 </tbody>
             </table>
         </div>

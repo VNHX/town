@@ -8,48 +8,35 @@ let Component = React.createClass({
     this.props.init();
   },
   render() {
-    let {}=this.props;
+    let {overSevenData}=this.props;
     return (
         <div className={style.ss}>
           <table >
-          <tbody>
-          <tr>
-              <th>部门名称</th><th>累计项目</th>
-              <th>累计签约</th><th>签约比例</th>
-              <th>本年项目</th><th>本年签约</th>
-              <th>本年签约比例</th>
-          </tr>
-          <tr>
-              <td>办公室</td><td>4</td>
-              <td>2</td><td>40.00%</td>
-              <td>1</td><td>1</td>
-              <td>0.0%</td>
-          </tr>
-          <tr >
-              <td>产业管理服务中心</td><td>4</td>
-              <td>2</td><td>40.00%</td>
-              <td>1</td><td>1</td>
-              <td>0.0%</td>
-          </tr>
-          <tr>
-              <td>创新服务中心</td><td>4</td>
-              <td>2</td><td>40.00%</td>
-              <td>1</td><td>1</td>
-              <td>0.0%</td>
-          </tr>
-          <tr>
-              <td>项目招商服务中心</td><td>4</td>
-              <td>2</td><td>40.00%</td>
-              <td>1</td><td>1</td>
-              <td>0.0%</td>
-          </tr>
-          <tr>
-              <td>智慧圆运营管理平台</td><td>4</td>
-              <td>2</td><td>40.00%</td>
-              <td>1</td><td>1</td>
-              <td>0.0%</td>
-          </tr>
-          </tbody>
+            <thead>
+              <tr>
+                  <th>部门名称</th><th>累计项目</th>
+                  <th>累计签约</th><th>签约比例</th>
+                  <th>本年项目</th><th>本年签约</th>
+                  <th>本年签约比例</th>
+              </tr>            
+            </thead>
+            <tbody>
+            {
+              overSevenData&&overSevenData.map((value,key)=>{
+                return(
+                  <tr key={key}>
+                    <td>{value.name}</td>
+                    <td>{value.ljxm}</td>
+                    <td>{value.ljqy}</td>
+                    <td>{value.qybl}</td>
+                    <td>{value.bnxm}</td>
+                    <td>{value.bnqy}</td>
+                    <td>{value.qybl}</td>
+                  </tr>
+                )
+              })
+            }
+            </tbody>
           </table>
         </div>            
     )

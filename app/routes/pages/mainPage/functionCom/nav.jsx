@@ -51,16 +51,15 @@ const mapDispatchToProps = (dispatch) => {
       var str= times.substr(times.length-5);
       webSocket.getConnect('zz/zz',str,success,true);
       function success(res){
-        console.log(999,res);
+        let num=Number(res);
         let page=['main','overview','analysis','hatch','manage','management'];
-        if(res>5){
+        if(num>5){
             browserHistory.push('/app/all/project/town/floor');     
-            let floorId=res-6;
+            let floorId=num-6;
             dispatch(actions.setVars('floorId',floorId));
-            console.log('111',floorId)
-                   
+            //webSocket.getConnect('zz/zz',str,success,false);       
         }else{
-            browserHistory.push('/app/all/project/town/'+page[res])
+            browserHistory.push('/app/all/project/town/'+page[num])
         }      
       }
     },

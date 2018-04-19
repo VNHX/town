@@ -8,7 +8,7 @@ let Component = React.createClass({
     },
 
     render() {
-        let {}=this.props;
+        let {floorTwoData}=this.props;
         let configPie = {
             chart: {
                 backgroundColor: "rgba(46, 46, 65, 0)",
@@ -55,7 +55,7 @@ let Component = React.createClass({
 	            type: 'pie',
 	            innerSize: '40%',
 	            name: '投资情况占比',
-	            data: [['金融',4],['制造',5],['家电',3],['电子',6]],
+	            data: floorTwoData&&floorTwoData,
 	        }],
             colors:['#f19d63','#86afc1','#559cf8','#edd87d'],
         };
