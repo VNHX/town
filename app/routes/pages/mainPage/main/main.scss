@@ -2,56 +2,84 @@
 	0%{ transform: rotate(0deg); }
   100%{ transform: rotate(360deg); }
 }
+@keyframes carousel{
+	0%{ left: 0; }
+  100%{ left: -100%; }
+}
 .main{
 	height:100%;
 	width:100%;
 	position:relative;
 	color: #fff;
+	background: url(../img/bj.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+	.carousel{
+		position: absolute;
+		top: 0;
+		left: -20%;
+		z-index: 5;
+		height:100%;
+		width:200%;
+		background: url(../img/carousel.png);
+		background-size: 50% 100%;
+		animation:carousel 50s infinite;
+		animation-timing-function: linear;
+	}
 	.bg1{
 		height: 14rem;
 		width: 14rem;
-		border-radius: 7rem;
 		position: absolute;
-		left: 36%;
+		left: 32%;
 		top:7%;
-		background: url(../img/view.png);
-		background-size: 150% 100%;
+		//background: url(../img/view.png);
+		background-size: 110% 100%;
 		opacity:0.5;
 	}
 	.bg2{
 		height: 14rem;
 		width: 14rem;
-		border-radius: 7rem;
 		position: absolute;
-		left: 58%;
+		left: 63%;
 		top:66%;
-		background: url(../img/view2.png);
-		background-size: 120% 100%;
+		//background: url(../img/view2.png);
+		background-size: 110% 100%;
 		opacity:0.5;
 	}
 	.bg3{
 		height: 14rem;
 		width: 14rem;
-		border-radius: 7rem;
 		position: absolute;
 		left: 39%;
 		top:53%;
-		background: url(../img/view3.png);
-		background-size: 150% 100%;
+		//background: url(../img/view3.png);
+		background-size: 110% 100%;
+		opacity:0.5;
+	}
+	.bg4{
+		height: 14rem;
+		width: 14rem;
+		position: absolute;
+		left: 58%;
+		top:16%;
+		//background: url(../img/view4.png);
+		background-size: 110% 100%;
 		opacity:0.5;
 	}
 	.middle{
+		z-index: 9;
 		position:absolute;
 		width:30%;
 		height:100%;
 		left:35%;
+		top: 0;
 		display:flex;
 		justify-content:center;
 		align-items:center;
 		.circleBig{
 			display:inline-block;
-			height:32rem;
-			width:32rem;
+			height:38rem;
+			width:38rem;
 			background: url(./../img/bigCircle.png);
 			background-size:100% 100%;
 			animation:turn 20s infinite linear;
@@ -104,13 +132,14 @@
 			position:absolute;
 			z-index:1;
 			display:inline-block;
-			height:46rem;
-			width:57rem;
+			height:50rem;
+			width:110rem;
 			background: url(./../img/bottom.png);
 			background-size:100% 100%;
 		}
 	}	
 	.circle1{
+		z-index: 9;
 		display:inline-block;		
 		height:24rem;
 		width:24rem;
@@ -170,6 +199,7 @@
 		}
 	}
 	.circle2{
+		z-index: 9;
 		position:absolute;
 		display:inline-block;
 		height:24rem;
@@ -249,6 +279,7 @@
 		}
 	}
 	.circle3{
+		z-index: 9;
 		position:absolute;
 		left:30%;
 		top:62%;
@@ -275,7 +306,7 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:3rem 2rem;
+			padding:3.4rem 2rem;
 			.title{
 				height:2rem;
 				width: 68%;
@@ -295,7 +326,8 @@
 			}
 			.percent1{
 				padding-left: .5rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 56%;
@@ -312,7 +344,8 @@
 			}
 			.percent2{
 				padding-left: 1rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 43%;
@@ -329,7 +362,8 @@
 			}			
 			.percent3{
 				padding-left: 1.5rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 40%;
@@ -347,6 +381,7 @@
 		}
 	}
 	.circle4{
+		z-index: 9;
 		position:absolute;
 		display:inline-block;
 		height:25rem;
@@ -357,9 +392,9 @@
 			background: url(../img/line_right1.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:-41rem;
-			top:20rem;
-			height:12rem;
+			left:-38rem;
+			top:19rem;
+			height:14rem;
 			width:60rem;
 		}	
 		img{
@@ -417,6 +452,7 @@
 		}
 	}
 	.circle5{
+		z-index: 9;
 		position:absolute;
 		display:inline-block;
 		height:24rem;
@@ -427,10 +463,10 @@
 			background: url(../img/line_right2.png);
 			background-size: 100% 100%;
 			position:absolute;
-			left:-94rem;
+			left:-91rem;
 			top:0rem;
 			height:20rem;
-			width:125rem;
+			width:122rem;
 		}	
 		img{
 			height:100%;
@@ -480,6 +516,7 @@
 		}
 	}
 	.circle6{
+		z-index: 9;
 		position:absolute;
 		display:inline-block;
 		left:82%;
@@ -497,7 +534,7 @@
 			left:0;
 			height:100%;
 			width:100%;
-			padding:4rem 3rem;
+			padding:3.8rem 3rem;
 			.title{
 				height:2rem;
 				width: 80%;
@@ -518,7 +555,8 @@
 			}
 			.percent1{
 				padding-left: .5rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 56%;
@@ -535,7 +573,8 @@
 			}
 			.percent2{
 				padding-left: 1rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 43%;
@@ -552,7 +591,8 @@
 			}			
 			.percent3{
 				padding-left: 1.5rem;
-				font-size: 1rem;
+				font-size: 0.9rem;
+				height: 3rem;
 				.total{
 					float: left;
 					width: 40%;
@@ -570,6 +610,7 @@
 		}
 	}
 	.leftBg{
+		z-index: 9;
 		position:absolute;
 		left:0;
 		top:0;
@@ -579,6 +620,7 @@
 		background-size: 100% 100%;
 	}
 	.overviewPro{
+		z-index: 9;
 		position :absolute;
 		left:7%;
 		top: 53%;
@@ -624,6 +666,7 @@
 		}
 	}
 	.boardPro{
+		z-index: 9;
 		position :absolute;
 		left:14%;
 		top: 17%;
@@ -652,6 +695,7 @@
 		}	
 	}
 	.boardRight{
+		z-index: 9;
 		position :absolute;
 		right:1%;
 		top: 5%;
@@ -728,6 +772,7 @@
 		}
 	}	
 	.line_bar1{
+		z-index: 9;
 		background: url(../img/hx_guang.png);
 		background-size: 100% 100%;
 		position:absolute;
@@ -737,6 +782,7 @@
 		width:8%;
 	}
 	.line_bar2{
+		z-index: 9;
 		background: url(../img/hx_guang.png);
 		background-size: 100% 100%;
 		position:absolute;

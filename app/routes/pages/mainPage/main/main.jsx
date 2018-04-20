@@ -18,6 +18,11 @@ let Component = React.createClass({
     let {weekday,timeNow,dateNow,rczyData,TotalOutput,ProjectTotal,Cyzl,Xzzl,InvService,Cyzl2,IndexProjectTypes,ZscqData,lineDataA}=this.props;
     return (
       <div className={css.main}>
+        <div className={css.bg1}></div>
+        <div className={css.bg2}></div>
+        <div className={css.bg3}></div>
+        <div className={css.bg4}></div>
+        <div className={css.carousel}></div>
         <div className={`${css.circle} ${css.circle1}`}>
           <div className={css.line_left1}></div>
           <img className={css.bg} src={circle1}/>
@@ -58,7 +63,7 @@ let Component = React.createClass({
             <div className={css.percent1}>
               <div className={css.name}>今年入住：{Cyzl&&Cyzl.list[0]}</div>
               <div className={css.total}><div className={css.per}></div></div>
-              <div className={css.num}>同比{Cyzl&&Cyzl.list[1]}%</div>
+              <div className={css.num}>同比{Cyzl&&Number(Cyzl.list[1]).toFixed(0)}%</div>
             </div>
             <div className={css.percent2}>
               <div className={css.name}>今年产值/万元：{Cyzl&&Cyzl.list[2]}</div>
@@ -96,9 +101,6 @@ let Component = React.createClass({
           </div>   
           <div className={css.circleBig_bottom}></div>
         </div>   
-        <div className={css.bg1}></div>
-        <div className={css.bg2}></div>
-        <div className={css.bg3}></div>
         <div className={`${css.circle} ${css.circle4}`}>
           <div className={css.line_right1}></div>
           <img src={circle1}/>
@@ -142,7 +144,7 @@ let Component = React.createClass({
             <div className={css.percent1}>
               <div className={css.name}>今年入住：{Cyzl2&&Cyzl2.list[0]}</div>
               <div className={css.total}><div className={css.per}></div></div>
-              <div className={css.num}>同比{Cyzl2&&Cyzl2.list[1]}%</div>
+              <div className={css.num}>同比{Cyzl2&&Number(Cyzl2.list[1]).toFixed(0)}%</div>
             </div>
             <div className={css.percent2}>
               <div className={css.name}>今年产值/万元：{Cyzl2&&Cyzl2.list[2]}</div>

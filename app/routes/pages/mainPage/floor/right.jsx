@@ -19,7 +19,28 @@ let Component = React.createClass({
     return (
     	<div className={css.rightBg}>
     		<canvas id="q" width="100%" height="1000" opacity="0.8"></canvas>
-        <div className={css.logoBg}></div>
+        <div className={css.logoBg}>
+          <div className={css.imgBox1}><img id="img1" /></div>
+          <div className={css.imgBox2}><img id="img2" /></div>
+          <div className={css.imgBox3}><img id="img3" /></div>
+          <div className={css.imgBox4}><img id="img4" /></div>
+          <div className={css.imgBox5}><img id="img5" /></div>
+          <div className={css.imgBox6}><img id="img6" /></div>
+          <div className={css.imgBox7}><img id="img7" /></div>
+          <div className={css.imgBox8}><img id="img8" /></div>
+          <div className={css.imgBox9}><img id="img9" /></div>
+          <div className={css.imgBox10}><img id="img10" /></div>
+          <div className={css.imgBox11}><img id="img11" /></div>
+          <div className={css.imgBox12}><img id="img12" /></div>
+          <div className={css.imgBox13}><img id="img13" /></div>
+          <div className={css.imgBox14}><img id="img14" /></div>
+          <div className={css.imgBox15}><img id="img15" /></div>
+          <div className={css.imgBox16}><img id="img16" /></div>
+          <div className={css.imgBox17}><img id="img17" /></div>
+          <div className={css.imgBox18}><img id="img18" /></div>
+          <div className={css.imgBox19}><img id="img19" /></div>
+          <div className={css.imgBox20}><img id="img20" /></div>
+        </div>
       </div>
     )
   }

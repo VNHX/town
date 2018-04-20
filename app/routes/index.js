@@ -5,7 +5,7 @@ module.exports = {
   path: '/app/',
   component: BaseApplication,
   childRoutes: [
-    require('./pages'),
+    require('./pages/mainPage'),
     require('./404')
   ]
 };

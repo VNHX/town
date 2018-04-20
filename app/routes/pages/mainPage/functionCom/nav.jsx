@@ -54,35 +54,35 @@ const mapDispatchToProps = (dispatch) => {
         let num=Number(res);
         let page=['main','overview','analysis','hatch','manage','management'];
         if(num>5){
-            browserHistory.push('/app/all/project/town/floor');     
+            browserHistory.push('/app/project/town/floor');     
             let floorId=num-6;
             dispatch(actions.setVars('floorId',floorId));
             //webSocket.getConnect('zz/zz',str,success,false);       
         }else{
-            browserHistory.push('/app/all/project/town/'+page[num])
+            browserHistory.push('/app/project/town/'+page[num])
         }      
       }
     },
     toMain:()=>{
-    	browserHistory.push('/app/all/project/town/main')
+    	browserHistory.push('/app/project/town/main')
     },
     toOverview: ()=>{
-      	browserHistory.push('/app/all/project/town/overview')
+      	browserHistory.push('/app/project/town/overview')
     },
     toHatch: ()=>{
-      	browserHistory.push('/app/all/project/town/hatch')
+      	browserHistory.push('/app/project/town/hatch')
     },
     toAnalysis: ()=>{
-      	browserHistory.push('/app/all/project/town/analysis')
+      	browserHistory.push('/app/project/town/analysis')
     },
     toManage: ()=>{
-      	browserHistory.push('/app/all/project/town/manage')
+      	browserHistory.push('/app/project/town/manage')
     },
     toManagement: ()=>{
-      browserHistory.push('/app/all/project/town/management')
+      browserHistory.push('/app/project/town/management')
     },
     toFloor: ()=>{
-      browserHistory.push('/app/all/project/town/floor')
+      browserHistory.push('/app/project/town/floor')
     }
   }
 };

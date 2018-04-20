@@ -9,7 +9,9 @@ import Column from './column.jsx';//柱图
 import Table from "./table.jsx";//table表格
 import Pie from "./pieChart.jsx";//pie1
 import Right from './right.jsx';//右屏
-let floorData=['1号楼','2号楼','3号楼','4号楼','5号楼','6号楼','7号楼','8/9号楼','群楼'];
+import floorNum from "../functionCom/floorId";
+const floorData=floorNum.floorData;//楼栋名称
+const idArr=floorNum.idArr;//楼栋id
 import ajax from '../functionCom/myAjax.js';
 let myAjax=ajax.myAjax;
 import webSocket from '../functionCom/socketClient.js';
@@ -112,7 +114,6 @@ const mapDispatchToProps = (dispatch) => {
     init: (floorId)=> {
         console.log('init',floorId)
         function go(floorId){//初始
-                let idArr=["","","55","56","","","","57","54"];
                 let AllData={};
                 if(floorId&&idArr[floorId]!=""){
                     //人才资源结构
@@ -258,7 +259,7 @@ const mapDispatchToProps = (dispatch) => {
         function success(res){
             let num=Number(res);
             if(num>5){
-                browserHistory.push('/app/all/project/town/floor');     
+                browserHistory.push('/app/project/town/floor');     
                 let floorId=num-6;
                 dispatch(actions.setVars('floorId',floorId));
                 go(floorId);                                 
